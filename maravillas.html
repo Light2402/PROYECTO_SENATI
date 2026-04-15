@@ -3,57 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maravillas del mundo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Las 7 Maravillas Modernas</title>
+    <link rel="stylesheet" href="css/maravillas.css">
 </head>
 <body>
+
 <header>
-    <h1>Maravillas del mundo</h1>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="maravillas.html">Maravillas</a>
-        <a href="animales.html">Animales</a>
-        <a href="gastronomia.html">Gastronomía</a>
-        <a href="index.html#contacto">Contacto</a>
+    <nav class="navbar">
+        <div class="logo">Mundo Maravilla</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="maravillas.html" class="active">Maravillas</a></li>
+            <li><a href="animales.html">Animales</a></li>
+            <li><a href="gastronomia.html">Gastronomía</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
     </nav>
 </header>
+
 <main>
-    <section class="intro">
-        <h2>Maravillas</h2>
-        <p>Las maravillas del mundo son monumentos excepcionales que combinan historia, arquitectura y belleza natural. Cada una de ellas representa logros únicos de culturas distintas y sigue atrayendo visitantes de todo el planeta.</p>
+    <section class="hero-section">
+        <h2>Las 7 Maravillas del Mundo Moderno</h2>
+        <p>Un recorrido por las joyas arquitectónicas y culturales que definen la grandeza de la humanidad.</p>
     </section>
 
-    <article>
-        <h3>Machu Picchu</h3>
-        <p>Antigua ciudad inca ubicada en Perú, famosa por su arquitectura de piedra y su entorno montañoso.</p>
-    </article>
-    <article>
-        <h3>Chichén Itzá</h3>
-        <p>Ciudad maya ubicada en México, conocida por la pirámide de Kukulkán y sus técnicas de astronomía.</p>
-    </article>
-    <article>
-        <h3>Cristo Redentor</h3>
-        <p>Estatua monumental de Brasil, símbolo de Río de Janeiro y vista icónica desde lo alto del Corcovado.</p>
-    </article>
-    <article>
-        <h3>Coliseo Romano</h3>
-        <p>Antiguo anfiteatro de Roma que fue el centro del entretenimiento y la cultura en la antigua civilización romana.</p>
-    </article>
-    <article>
-        <h3>Taj Mahal</h3>
-        <p>Mausoleo de mármol blanco en India, construido como un monumento al amor eterno.</p>
-    </article>
-    <article>
-        <h3>Petra</h3>
-        <p>Ciudad tallada en roca en Jordania, famosa por sus fachadas excavadas en acantilados rocosos.</p>
-    </article>
-    <article>
-        <h3>Gran Muralla China</h3>
-        <p>Extensa fortificación que se extiende a través de China y simboliza la defensa histórica y la ingeniería antigua.</p>
-    </article>
+    <div class="grid-container">
+        <article class="card" data-maravilla="machu-picchu">
+            <div class="card-img"></div>
+            <div class="card-content">
+                <h3>Machu Picchu</h3>
+                <span class="country">Perú</span>
+                <p class="card-desc">Antigua ciudad inca del siglo XV, ubicada en la cordillera de los Andes. Es una obra maestra de ingeniería y arquitectura.</p>
+            </div>
+        </article>
+
+        <article class="card" data-maravilla="chichen-itza">
+            <div class="card-img"></div>
+            <div class="card-content">
+                <h3>Chichén Itzá</h3>
+                <span class="country">México</span>
+                <p class="card-desc">Centro político y económico de la civilización maya. Su estructura más famosa es el Templo de Kukulkán.</p>
+            </div>
+        </article>
+
+        <article class="card" data-maravilla="cristo-redentor">
+            <div class="card-img"></div>
+            <div class="card-content">
+                <h3>Cristo Redentor</h3>
+                <span class="country">Brasil</span>
+                <p class="card-desc">Estatua art déco de 30 metros de altura situada en la cima del Cerro del Corcovado, vigilando Río de Janeiro.</p>
+            </div>
+        </article>
+
+        <article class="card" data-maravilla="coliseo-romano">
+            <div class="card-img"></div>
+            <div class="card-content">
+                <h3>Coliseo Romano</h3>
+                <span class="country">Italia</span>
+                <p class="card-desc">El anfiteatro más grande jamás construido, símbolo del poder del Imperio Romano en la antigüedad.</p>
+            </div>
+        </article>
+
+        <article class="card" data-maravilla="taj-mahal">
+            <div class="card-img"></div>
+            <div class="card-content">
+                <h3>Taj Mahal</h3>
+                <span class="country">India</span>
+                <p class="card-desc">Un mausoleo de mármol blanco construido por el emperador Shah Jahan en memoria de su esposa favorita.</p>
+            </div>
+        </article>
+
+        <article class="card" data-maravilla="petra">
+            <div class="card-img"></div>
+            <div class="card-content">
+                <h3>Petra</h3>
+                <span class="country">Jordania</span>
+                <p class="card-desc">La famosa "Ciudad Rosa", tallada directamente en las rocas de arenisca. Fue la capital del antiguo reino nabateo.</p>
+            </div>
+        </article>
+
+        <article class="card" data-maravilla="gran-muralla">
+            <div class="card-img"></div>
+            <div class="card-content">
+                <h3>Gran Muralla China</h3>
+                <span class="country">China</span>
+                <p class="card-desc">Una serie de fortificaciones construidas para proteger los estados chinos de las invasiones nómadas.</p>
+            </div>
+        </article>
+    </div>
 </main>
+
 <footer>
-    <p>Proyecto grupal 7 maravillas</p>
+    <p>&copy; 2026 Proyecto Grupal: 7 Maravillas del Mundo</p>
 </footer>
+
 </body>
 </html>
