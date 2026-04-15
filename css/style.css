@@ -138,6 +138,28 @@ main h2::after {
     border-radius: 2px;
 }
 
+main section.intro,
+main section.overview {
+    grid-column: 1 / -1;
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+}
+
+main section.overview {
+    margin-bottom: 30px;
+}
+
+main section.intro p,
+main section.overview p {
+    max-width: 850px;
+    margin-top: 15px;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
 /* GRID ARTICLES */
 main {
     display: grid;
