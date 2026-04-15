@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto grupal sobre las 7 maravillas del mundo con datos, ubicación y gastronomía local.">
     <title>Las 7 maravillas del mundo</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,58 +11,160 @@
 <body>
 
 <header>
-    <h1>Las 7 maravillas del mundo</h1>
+    <div class="brand">
+        <span class="logo">🌍</span>
+        <div>
+            <p class="eyebrow">Proyecto grupal</p>
+            <h1>Las 7 maravillas del mundo</h1>
+        </div>
+    </div>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Maravillas</a>
-        <a href="#">Ubicacion</a>
-        <a href="#">Comida de la zona</a>
-        <a href="#">Contacto</a>
+    <nav aria-label="Menú principal">
+        <ul>
+            <li><a href="#maravillas">Maravillas</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+            <li><a href="#gastronomia">Comida</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
 </header>
 
 <main>
+    <section class="hero">
+        <div class="hero-text">
+            <p class="eyebrow">Descubre</p>
+            <h2>Las maravillas que el mundo protege</h2>
+            <p>Explora información relevante de cada sitio, su ubicación y la gastronomía típica de la región.</p>
+        </div>
+    </section>
 
-    <h2>Listado de las maravillas</h2>
+    <section id="maravillas" class="cards-section">
+        <div class="section-header">
+            <p class="eyebrow">Selección</p>
+            <h2>Listado de las maravillas</h2>
+        </div>
 
-    <article>
-        <h3>Machu Picchu</h3>
-        <p>Antigua ciudad inca ubicada en Perú.</p>
-    </article>
+        <div class="card-grid">
+            <article class="card">
+                <h3>Machu Picchu</h3>
+                <p><strong>País:</strong> Perú</p>
+                <p>Antigua ciudad inca ubicada en los Andes, famosa por su arquitectura y paisajes en la cima de la montaña.</p>
+            </article>
 
-    <article>
-        <h3>Chichén Itzá</h3>
-        <p>Ciudad maya ubicada en México.</p>
-    </article>
+            <article class="card">
+                <h3>Chichén Itzá</h3>
+                <p><strong>País:</strong> México</p>
+                <p>Ciudad maya conocida por su pirámide de Kukulkán y sus construcciones astronómicas.</p>
+            </article>
 
-    <article>
-        <h3>Cristo Redentor</h3>
-        <p>Estatua ubicada en Río de Janeiro, Brasil.</p>
-    </article>
+            <article class="card">
+                <h3>Cristo Redentor</h3>
+                <p><strong>País:</strong> Brasil</p>
+                <p>Estatua monumental en Río de Janeiro, icono del arte brasileño y símbolo de bienvenida.</p>
+            </article>
 
-    <!-- NUEVAS MARAVILLAS -->
+            <article class="card">
+                <h3>Coliseo Romano</h3>
+                <p><strong>País:</strong> Italia</p>
+                <p>Anfiteatro clásico en Roma, construido para los espectáculos públicos del Imperio romano.</p>
+            </article>
 
-    <article>
-        <h3>Coliseo Romano</h3>
-        <p>Anfiteatro histórico ubicado en Roma, Italia.</p>
-    </article>
+            <article class="card">
+                <h3>Taj Mahal</h3>
+                <p><strong>País:</strong> India</p>
+                <p>Mausoleo de mármol blanco construido como símbolo de amor eterno por el emperador Shah Jahan.</p>
+            </article>
 
-    <article>
-        <h3>Taj Mahal</h3>
-        <p>Mausoleo de mármol blanco ubicado en India.</p>
-    </article>
+            <article class="card">
+                <h3>Petra</h3>
+                <p><strong>País:</strong> Jordania</p>
+                <p>Ciudad antigua tallada en roca rojiza, reconocida por sus fachadas monumentales excavadas en la montaña.</p>
+            </article>
 
-    <article>
-        <h3>Petra</h3>
-        <p>Antigua ciudad tallada en roca ubicada en Jordania.</p>
-    </article>
+            <article class="card">
+                <h3>Gran Muralla China</h3>
+                <p><strong>País:</strong> China</p>
+                <p>Extensa fortificación construida para proteger el territorio, con más de 20 mil kilómetros de longitud.</p>
+            </article>
+        </div>
+    </section>
 
-    <article>
-        <h3>Gran Muralla China</h3>
-        <p>Extensa fortificación construida a lo largo de China.</p>
-    </article>
+    <section id="ubicacion" class="info-section">
+        <div class="section-header">
+            <p class="eyebrow">Ubicación</p>
+            <h2>¿Dónde se encuentran?</h2>
+        </div>
 
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>América</h3>
+                <p>Machu Picchu y Chichén Itzá son joyas del continente americano que combinan cultura ancestral y naturaleza.</p>
+            </div>
+            <div class="info-card">
+                <h3>Europa</h3>
+                <p>El Coliseo Romano representa el legado histórico de Europa en la antigüedad clásica.</p>
+            </div>
+            <div class="info-card">
+                <h3>Asia y Oriente Medio</h3>
+                <p>Taj Mahal, Petra y la Gran Muralla China son ejemplos de monumentos icónicos en Asia y cercanías.</p>
+            </div>
+            <div class="info-card">
+                <h3>Sudamérica</h3>
+                <p>Cristo Redentor es uno de los monumentos más reconocidos de Sudamérica y un símbolo de Brasil.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gastronomia" class="info-section">
+        <div class="section-header">
+            <p class="eyebrow">Gastronomía</p>
+            <h2>Comida típica de cada región</h2>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Perú</h3>
+                <p>Ceviche y lomo saltado son platos tradicionales que representan la riqueza de la cocina peruana.</p>
+            </div>
+            <div class="info-card">
+                <h3>México</h3>
+                <p>Tacos, mole y elotes son ejemplos del sabor intenso y la herencia culinaria mexicana.</p>
+            </div>
+            <div class="info-card">
+                <h3>Italia</h3>
+                <p>La pasta y la pizza son parte del orgullo culinario italiano, con ingredientes mediterráneos frescos.</p>
+            </div>
+            <div class="info-card">
+                <h3>India</h3>
+                <p>El curry y el biryani destacan por su mezcla de especias aromáticas y texturas únicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="section-header">
+            <p class="eyebrow">Contacto</p>
+            <h2>Escribe tu opinión</h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-copy">
+                <p>¿Tienes sugerencias para el proyecto o quieres compartir una nueva maravilla? Déjanos tus datos y un mensaje.</p>
+            </div>
+            <form class="contact-form">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Tu nombre" required>
+
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" placeholder="ejemplo@mail.com" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="4" placeholder="Tu mensaje"></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
 </main>
 
 <footer>
