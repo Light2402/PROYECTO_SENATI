@@ -1,0 +1,159 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Un gris muy claro para el fondo */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header y Navegación (Ahora integrado y elegante) */
+header {
+    padding: 1rem 0;
+    position: absolute; /* Para que se superponga al fondo */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: #fff; /* Logo blanco para destacar */
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para legibilidad */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #d4af37; /* Color dorado para el enlace activo */
+}
+
+/* Hero Section (Ahora con color/fondo integrado) */
+.hero-section {
+    text-align: center;
+    padding: 8rem 2rem 4rem 2rem; /* Más espacio arriba para el header */
+    background: linear-gradient(135deg, #1a2a44, #3a506b); /* Un degradado azul elegante */
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.hero-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #d4af37; /* Título dorado */
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+/* Grid de Maravillas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Estilo de las Tarjetas (Con Imágenes) */
+.card {
+    background: #fff;
+    border-radius: 15px; /* Bordes más suaves */
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* El contenedor de la imagen */
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Asignación de imágenes (Asegúrate de tener las fotos) */
+.card[data-maravilla="machu-picchu"] .card-img { background-image: url('../img/machu-picchu.jpg'); }
+.card[data-maravilla="chichen-itza"] .card-img { background-image: url('../img/chichen-itza.jpg'); }
+.card[data-maravilla="cristo-redentor"] .card-img { background-image: url('../img/cristo-redentor.jpg'); }
+.card[data-maravilla="coliseo-romano"] .card-img { background-image: url('../img/coliseo-romano.jpg'); }
+.card[data-maravilla="taj-mahal"] .card-img { background-image: url('../img/taj-mahal.jpg'); }
+.card[data-maravilla="petra"] .card-img { background-image: url('../img/petra.jpg'); }
+.card[data-maravilla="gran-muralla"] .card-img { background-image: url('../img/gran-muralla.jpg'); }
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card h3 {
+    color: #1a1a1a;
+    margin-bottom: 0.2rem;
+}
+
+.country {
+    display: block;
+    color: #d4af37; /* Tono dorado para el país */
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: auto; /* Mueve el texto hacia abajo */
+}
+
+/* Footer */
+footer {
+    background-color: #1a2a44;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
