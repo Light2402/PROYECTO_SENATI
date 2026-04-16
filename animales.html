@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animales</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animales.css">
 </head>
+
 <body>
 <header>
     <h1>Animales</h1>
@@ -23,33 +24,156 @@
         <p>Las regiones que albergan las maravillas del mundo también son hogar de especies únicas. Aquí se muestran algunos animales representativos de esos lugares.</p>
     </section>
 
-    <article>
-        <h3>Cóndor andino</h3>
-        <p>Icono de los Andes, este ave majestuosa sobrevuela los valles cercanos a Machu Picchu.</p>
-    </article>
-    <article>
-        <h3>Jaguar</h3>
-        <p>Gran felino de América Latina que habita bosques y selvas cerca de algunas zonas arqueológicas.</p>
-    </article>
-    <article>
-        <h3>Mono araña</h3>
-        <p>Habitante de las selvas tropicales de México y América Central, cercano a las tierras mayas.</p>
-    </article>
-    <article>
-        <h3>Macaco rhesus</h3>
-        <p>Mono común en los alrededores del Taj Mahal y otras regiones de India.</p>
-    </article>
-    <article>
-        <h3>Camello</h3>
-        <p>Animal emblemático del desierto en Jordania, cercano a la antigua ciudad de Petra.</p>
-    </article>
-    <article>
-        <h3>Panda gigante</h3>
-        <p>Símbolo de China, representando la riqueza natural de la región de la Gran Muralla.</p>
-    </article>
+    <div class="filter-section">
+        <label for="filtro-maravillas">Filtrar por maravilla:</label>
+        <select id="filtro-maravillas">
+            <option value="">Todos</option>
+            <option value="machu-picchu">Machu Picchu</option>
+            <option value="cristo-redentor">Cristo Redentor</option>
+            <option value="chichen-itza">Chichén Itzá</option>
+            <option value="taj-mahal">Taj Mahal</option>
+            <option value="petra">Petra</option>
+            <option value="gran-muralla">Gran Muralla China</option>
+            <option value="coliseo">Coliseo</option>
+        </select>
+    </div>
+
+    <div class="gallery">
+        <!-- MACHU PICCHU -->
+        <div class="maravilla-grupo" data-grupo="machu-picchu">
+            <h2 class="maravilla-titulo">🇵🇪 Machu Picchu</h2>
+            <div class="animales-grid">
+                <article data-maravilla="machu-picchu"><img src="assets/imagnes%20animales/llama_in_machu_picchu.jpg" alt="Llama"><h3>Llama</h3><p>El animal más icónico; verás muchas pastando libremente en Machu Picchu.</p><span class="maravilla-tag">Machu Picchu</span></article>
+                <article data-maravilla="machu-picchu"><img src="assets/imagnes%20animales/Oso%20de%20anteojos.jpg" alt="Oso de anteojos"><h3>Oso de anteojos</h3><p>El único oso de Sudamérica, habita en los bosques nubosos de Machu Picchu.</p><span class="maravilla-tag">Machu Picchu</span></article>
+                <article data-maravilla="machu-picchu"><img src="assets/imagnes%20animales/C%C3%B3ndor%20andino.png" alt="Cóndor andino"><h3>Cóndor andino</h3><p>Ave sagrada que sobrevuela las cumbres de los Andes en Machu Picchu.</p><span class="maravilla-tag">Machu Picchu</span></article>
+                <article data-maravilla="machu-picchu"><img src="assets/imagnes%20animales/Gallito%20de%20las%20rocas.jpg" alt="Gallito de las rocas"><h3>Gallito de las rocas</h3><p>El ave nacional del Perú, de color rojo brillante, presente en Machu Picchu.</p><span class="maravilla-tag">Machu Picchu</span></article>
+                <article data-maravilla="machu-picchu"><img src="assets/imagnes%20animales/Venado%20de%20cola%20blanca.jpg" alt="Venado de cola blanca"><h3>Venado de cola blanca</h3><p>Se le ve ocasionalmente en las zonas boscosas de Machu Picchu.</p><span class="maravilla-tag">Machu Picchu</span></article>
+                <article data-maravilla="machu-picchu"><img src="assets/imagnes%20animales/Vizcacha.webp" alt="Vizcacha"><h3>Vizcacha</h3><p>Un roedor que parece un conejo con cola larga, habita en Machu Picchu.</p><span class="maravilla-tag">Machu Picchu</span></article>
+                <article data-maravilla="machu-picchu"><img src="assets/imagnes%20animales/Colibrí%20gigante.jpg" alt="Colibrí gigante"><h3>Colibrí gigante</h3><p>La especie de colibrí más grande del mundo, vuela en Machu Picchu.</p><span class="maravilla-tag">Machu Picchu</span></article>
+            </div>
+            <div class="maravilla-separator"></div>
+        </div>
+
+        <!-- CHICHÉN ITZÁ -->
+        <div class="maravilla-grupo" data-grupo="chichen-itza">
+            <h2 class="maravilla-titulo">🇲🇽 Chichén Itzá</h2>
+            <div class="animales-grid">
+                <article data-maravilla="chichen-itza"><img src="assets/imagnes%20animales/Iguana%20rayada.jpeg" alt="Iguana rayada"><h3>Iguana rayada</h3><p>Se encuentran por cientos tomando el sol sobre las ruinas de Chichén Itzá.</p><span class="maravilla-tag">Chichén Itzá</span></article>
+                <article data-maravilla="chichen-itza"><img src="assets/imagnes%20animales/Serpiente%20de%20cascabel.webp" alt="Serpiente de cascabel"><h3>Serpiente de cascabel</h3><p>Muy importante en la mitología maya (Kukulcán) en Chichén Itzá.</p><span class="maravilla-tag">Chichén Itzá</span></article>
+                <article data-maravilla="chichen-itza"><img src="assets/imagnes%20animales/Jaguar.jpg" alt="Jaguar"><h3>Jaguar</h3><p>El felino sagrado de los mayas que aún habita la selva de Chichén Itzá.</p><span class="maravilla-tag">Chichén Itzá</span></article>
+                <article data-maravilla="chichen-itza"><img src="assets/imagnes%20animales/Pájaro%20Toh.webp" alt="Pájaro Toh"><h3>Pájaro Toh</h3><p>Conocido por su cola en forma de raqueta y por vivir cerca de cenotes en Chichén Itzá.</p><span class="maravilla-tag">Chichén Itzá</span></article>
+                <article data-maravilla="chichen-itza"><img src="assets/imagnes%20animales/Mono%20araña.webp" alt="Mono araña"><h3>Mono araña</h3><p>Habita en las copas de los árboles de la selva de Yucatán, cerca de Chichén Itzá.</p><span class="maravilla-tag">Chichén Itzá</span></article>
+                <article data-maravilla="chichen-itza"><img src="assets/imagnes%20animales/Pecarí.jpg" alt="Pecarí"><h3>Pecarí</h3><p>Un tipo de cerdo silvestre que recorre los caminos selváticos de Chichén Itzá.</p><span class="maravilla-tag">Chichén Itzá</span></article>
+                <article data-maravilla="chichen-itza"><img src="assets/imagnes%20animales/Coatí.jpg" alt="Coatí"><h3>Coatí</h3><p>Animal curioso que suele acercarse a las zonas turísticas de Chichén Itzá.</p><span class="maravilla-tag">Chichén Itzá</span></article>
+            </div>
+            <div class="maravilla-separator"></div>
+        </div>
+
+        <!-- COLISEO -->
+        <div class="maravilla-grupo" data-grupo="coliseo">
+            <h2 class="maravilla-titulo">🇮🇹 El Coliseo</h2>
+            <div class="animales-grid">
+                <article data-maravilla="coliseo"><img src="assets/imagnes%20animales/Gato%20callejero.jpg" alt="Gato callejero"><h3>Gato callejero</h3><p>Roma es famosa por sus colonias de gatos que viven entre las ruinas del Coliseo.</p><span class="maravilla-tag">Coliseo</span></article>
+                <article data-maravilla="coliseo"><img src="assets/imagnes%20animales/Murciélago%20hortelano.jpg" alt="Murciélago hortelano"><h3>Murciélago hortelano</h3><p>Habita en las grietas antiguas de la estructura del Coliseo.</p><span class="maravilla-tag">Coliseo</span></article>
+                <article data-maravilla="coliseo"><img src="assets/imagnes%20animales/Vencejo%20común.jpg" alt="Vencejo común"><h3>Vencejo común</h3><p>Aves que anidan en lo alto de los muros del Coliseo Romano.</p><span class="maravilla-tag">Coliseo</span></article>
+                <article data-maravilla="coliseo"><img src="assets/imagnes%20animales/Mochuelo%20común.jpg" alt="Mochuelo común"><h3>Mochuelo común</h3><p>Pequeña lechuza que se puede ver al atardecer en el Coliseo.</p><span class="maravilla-tag">Coliseo</span></article>
+                <article data-maravilla="coliseo"><img src="assets/imagnes%20animales/Rata%20de%20campo.jpg" alt="Rata de campo"><h3>Rata de campo</h3><p>Común en las zonas arqueológicas abiertas del Coliseo.</p><span class="maravilla-tag">Coliseo</span></article>
+                <article data-maravilla="coliseo"><img src="assets/imagnes%20animales/Halcón%20peregrino.jpg" alt="Halcón peregrino"><h3>Halcón peregrino</h3><p>Se les ve cazando en los cielos de la ciudad antigua alrededor del Coliseo.</p><span class="maravilla-tag">Coliseo</span></article>
+                <article data-maravilla="coliseo"><img src="assets/imagnes%20animales/Lagartija%20italiana.jpg" alt="Lagartija italiana"><h3>Lagartija italiana</h3><p>Muy común en las piedras calientes del monumento del Coliseo.</p><span class="maravilla-tag">Coliseo</span></article>
+            </div>
+            <div class="maravilla-separator"></div>
+        </div>
+
+        <!-- GRAN MURALLA CHINA -->
+        <div class="maravilla-grupo" data-grupo="gran-muralla">
+            <h2 class="maravilla-titulo">🇨🇳 Gran Muralla China</h2>
+            <div class="animales-grid">
+                <article data-maravilla="gran-muralla"><img src="assets/imagnes%20animales/Leopardo%20de%20las%20nieves.jpg" alt="Leopardo de las nieves"><h3>Leopardo de las nieves</h3><p>Habita en las zonas más altas y remotas del norte cerca de la Gran Muralla.</p><span class="maravilla-tag">Gran Muralla China</span></article>
+                <article data-maravilla="gran-muralla"><img src="assets/imagnes%20animales/Ciervo%20común.jpg" alt="Ciervo común"><h3>Ciervo común</h3><p>Se encuentra en los bosques que rodean los tramos de la Gran Muralla.</p><span class="maravilla-tag">Gran Muralla China</span></article>
+                <article data-maravilla="gran-muralla"><img src="assets/imagnes%20animales/Cigüeña%20negra.png" alt="Cigüeña negra"><h3>Cigüeña negra</h3><p>Ave migratoria que anida cerca de los ríos de la zona de la Gran Muralla.</p><span class="maravilla-tag">Gran Muralla China</span></article>
+                <article data-maravilla="gran-muralla"><img src="assets/imagnes%20animales/Zorro%20rojo.webp" alt="Zorro rojo"><h3>Zorro rojo</h3><p>Común en las áreas boscosas cercanas a Pekín y la Gran Muralla.</p><span class="maravilla-tag">Gran Muralla China</span></article>
+                <article data-maravilla="gran-muralla"><img src="assets/imagnes%20animales/Jabalí.jpg" alt="Jabalí"><h3>Jabalí</h3><p>Un habitante frecuente de las montañas chinas cerca de la Gran Muralla.</p><span class="maravilla-tag">Gran Muralla China</span></article>
+                <article data-maravilla="gran-muralla"><img src="assets/imagnes%20animales/Águila%20real.webp" alt="Águila real"><h3>Águila real</h3><p>Majestuosa ave que patrulla las torres de vigilancia desde el aire en la Gran Muralla.</p><span class="maravilla-tag">Gran Muralla China</span></article>
+                <article data-maravilla="gran-muralla"><img src="assets/imagnes%20animales/Gato%20montés%20chino.webp" alt="Gato montés chino"><h3>Gato montés chino</h3><p>Un felino pequeño y solitario de la región de la Gran Muralla China.</p><span class="maravilla-tag">Gran Muralla China</span></article>
+            </div>
+            <div class="maravilla-separator"></div>
+        </div>
+
+        <!-- PETRA -->
+        <div class="maravilla-grupo" data-grupo="petra">
+            <h2 class="maravilla-titulo">🇯🇴 Petra</h2>
+            <div class="animales-grid">
+                <article data-maravilla="petra"><img src="assets/imagnes%20animales/Dromedario.jpg" alt="Dromedario"><h3>Dromedario</h3><p>El medio de transporte histórico y más icónico del desierto en Petra.</p><span class="maravilla-tag">Petra</span></article>
+                <article data-maravilla="petra"><img src="assets/imagnes%20animales/Caballo%20árabe.webp" alt="Caballo árabe"><h3>Caballo árabe</h3><p>Muy común para transportar turistas por el Siq de Petra.</p><span class="maravilla-tag">Petra</span></article>
+                <article data-maravilla="petra"><img src="assets/imagnes%20animales/Agama%20del%20Sinaí.jpg" alt="Agama del Sinaí"><h3>Agama del Sinaí</h3><p>Un lagarto que se vuelve de color azul brillante al sol en Petra.</p><span class="maravilla-tag">Petra</span></article>
+                <article data-maravilla="petra"><img src="assets/imagnes%20animales/Caracal.webp" alt="Caracal"><h3>Caracal</h3><p>Un lince del desierto con orejas puntiagudas muy elegante, habita en Petra.</p><span class="maravilla-tag">Petra</span></article>
+                <article data-maravilla="petra"><img src="assets/imagnes%20animales/Perro%20Canaan.jpg" alt="Perro Canaan"><h3>Perro Canaan</h3><p>Raza antigua que deambula por las colinas rocosas de Petra.</p><span class="maravilla-tag">Petra</span></article>
+                <article data-maravilla="petra"><img src="assets/imagnes%20animales/Cabra%20montés%20(Íbice).jpg" alt="Cabra montés"><h3>Cabra montés (Íbice)</h3><p>Capaz de escalar los riscos más empinados de Petra.</p><span class="maravilla-tag">Petra</span></article>
+                <article data-maravilla="petra"><img src="assets/imagnes%20animales/Búho%20real%20del%20desierto.jpg" alt="Búho real del desierto"><h3>Búho real del desierto</h3><p>Se esconde en las cuevas y fachadas talladas de Petra.</p><span class="maravilla-tag">Petra</span></article>
+            </div>
+            <div class="maravilla-separator"></div>
+        </div>
+
+        <!-- TAJ MAHAL -->
+        <div class="maravilla-grupo" data-grupo="taj-mahal">
+            <h2 class="maravilla-titulo">🇮🇳 Taj Mahal</h2>
+            <div class="animales-grid">
+                <article data-maravilla="taj-mahal"><img src="assets/imagnes%20animales/Pavo%20real.jpg" alt="Pavo real"><h3>Pavo real</h3><p>Ave nacional de India, muy común en los jardines del Taj Mahal.</p><span class="maravilla-tag">Taj Mahal</span></article>
+                <article data-maravilla="taj-mahal"><img src="assets/imagnes%20animales/Langur%20gris.webp" alt="Langur gris"><h3>Langur gris</h3><p>Monos de cara negra que suelen estar en los alrededores del Taj Mahal.</p><span class="maravilla-tag">Taj Mahal</span></article>
+                <article data-maravilla="taj-mahal"><img src="assets/imagnes%20animales/Ardilla%20de%20las%20palmeras.avif" alt="Ardilla de las palmeras"><h3>Ardilla de las palmeras</h3><p>Pequeñas ardillas con rayas en la espalda près del Taj Mahal.</p><span class="maravilla-tag">Taj Mahal</span></article>
+                <article data-maravilla="taj-mahal"><img src="assets/imagnes%20animales/Vaca%20sagrada.jpeg" alt="Vaca sagrada"><h3>Vaca sagrada</h3><p>Se ven frecuentemente en las calles aledañas al monumento del Taj Mahal.</p><span class="maravilla-tag">Taj Mahal</span></article>
+                <article data-maravilla="taj-mahal"><img src="assets/imagnes%20animales/Elefante%20asiático.jpg" alt="Elefante asiático"><h3>Elefante asiático</h3><p>Tradicionalmente usados en ceremonias en la región de Agra del Taj Mahal.</p><span class="maravilla-tag">Taj Mahal</span></article>
+                <article data-maravilla="taj-mahal"><img src="assets/imagnes%20animales/Ganso%20de%20cabeza%20barrada.jpg" alt="Ganso de cabeza barrada"><h3>Ganso de cabeza barrada</h3><p>Migra hacia los ríos cercanos del Taj Mahal.</p><span class="maravilla-tag">Taj Mahal</span></article>
+                <article data-maravilla="taj-mahal"><img src="assets/imagnes%20animales/Chacal%20dorado.webp" alt="Chacal dorado"><h3>Chacal dorado</h3><p>Se le puede escuchar en las áreas verdes cercanas al río Yamuna del Taj Mahal.</p><span class="maravilla-tag">Taj Mahal</span></article>
+            </div>
+            <div class="maravilla-separator"></div>
+        </div>
+
+        <!-- CRISTO REDENTOR -->
+        <div class="maravilla-grupo" data-grupo="cristo-redentor">
+            <h2 class="maravilla-titulo">🇧🇷 Cristo Redentor</h2>
+            <div class="animales-grid">
+                <article data-maravilla="cristo-redentor"><img src="assets/imagnes%20animales/Mono%20Tití.jpg" alt="Mono Tití"><h3>Mono Tití</h3><p>Pequeños primates muy sociables que saltan entre los árboles cerca del Cristo Redentor.</p><span class="maravilla-tag">Cristo Redentor</span></article>
+                <article data-maravilla="cristo-redentor"><img src="assets/imagnes%20animales/Tucán%20toco.jpg" alt="Tucán toco"><h3>Tucán toco</h3><p>Con su enorme pico naranja, es el ave más vistosa del parque del Cristo Redentor.</p><span class="maravilla-tag">Cristo Redentor</span></article>
+                <article data-maravilla="cristo-redentor"><img src="assets/imagnes%20animales/Coatí%20de%20cola%20anillada.webp" alt="Coatí de cola anillada"><h3>Coatí de cola anillada</h3><p>Siempre buscando comida cerca de los miradores del Cristo Redentor.</p><span class="maravilla-tag">Cristo Redentor</span></article>
+                <article data-maravilla="cristo-redentor"><img src="assets/imagnes%20animales/Mariposa%20Morfo%20Azul.jpg" alt="Mariposa Morfo Azul"><h3>Mariposa Morfo Azul</h3><p>Mariposas gigantes de un color azul eléctrico en el área del Cristo Redentor.</p><span class="maravilla-tag">Cristo Redentor</span></article>
+                <article data-maravilla="cristo-redentor"><img src="assets/imagnes%20animales/PortadaGavilán%20pollero.jpg" alt="Gavilán pollero"><h3>Gavilán pollero</h3><p>Ave de rapiña común en los cielos de Río cerca del Cristo Redentor.</p><span class="maravilla-tag">Cristo Redentor</span></article>
+                <article data-maravilla="cristo-redentor"><img src="assets/imagnes%20animales/Boa%20constrictora.jpg" alt="Boa constrictora"><h3>Boa constrictora</h3><p>Habita en la densa selva de Tijuca que rodea al Cristo Redentor.</p><span class="maravilla-tag">Cristo Redentor</span></article>
+                <article data-maravilla="cristo-redentor"><img src="assets/imagnes%20animales/Pereza%20de%20tres%20dedos.jpg" alt="Pereza de tres dedos"><h3>Pereza de tres dedos</h3><p>Se mueve lentamente por las copas de los árboles cercanos al Cristo Redentor.</p><span class="maravilla-tag">Cristo Redentor</span></article>
+            </div>
+            <div class="maravilla-separator"></div>
+        </div>
+    </div>
 </main>
 <footer>
     <p>Proyecto grupal 7 maravillas</p>
 </footer>
+
+<script>
+    const filtroSelect = document.getElementById('filtro-maravillas');
+    const articulos = document.querySelectorAll('article');
+
+    const grupos = document.querySelectorAll('.maravilla-grupo');
+
+    filtroSelect.addEventListener('change', function() {
+        const filtroSeleccionado = this.value;
+
+        if (filtroSeleccionado === '') {
+            // Mostrar todos los grupos
+            grupos.forEach(grupo => {
+                grupo.style.display = 'block';
+            });
+        } else {
+            // Ocultar todos, luego mostrar solo el seleccionado
+            grupos.forEach(grupo => {
+                if (grupo.getAttribute('data-grupo') === filtroSeleccionado) {
+                    grupo.style.display = 'block';
+                } else {
+                    grupo.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
