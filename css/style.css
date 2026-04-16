@@ -404,15 +404,24 @@ footer p {
 
     main {
         margin: 40px auto;
+        display: block;
         grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    main section.intro,
+    main section.overview,
+    article {
+        padding: 25px;
+    }
+
+    main section.overview ul,
+    main section.overview ol {
+        margin-left: 1.2rem;
     }
 
     main h2 {
         font-size: 2rem;
-    }
-
-    article {
-        padding: 25px;
     }
 
     body {
