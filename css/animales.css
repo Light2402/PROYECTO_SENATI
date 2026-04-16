@@ -335,48 +335,205 @@ footer p {
         min-width: unset;
     }
 
-    
-
-/* RESPONSIVE */
+/* RESPONSIVE - MODAL HAMBURGUESA */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+        flex-direction: row;
+        padding: 15px 20px;
+        justify-content: space-between;
+        align-items: center;
     }
 
     header h1 {
         font-size: 1.5rem;
     }
 
-    nav {
+    .hamburger {
+        display: flex !important;
         flex-direction: column;
-        gap: 15px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 101;
+        padding: 5px;
+        gap: 0;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+        flex-direction: column;
+        gap: 0;
         width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        padding: 0;
+        border-bottom: 3px solid var(--accent);
+    }
+
+    nav.active {
+        max-height: 300px;
+        padding: 20px 0;
     }
 
     nav a {
-        font-size: 0.9rem;
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
 
     main {
-        padding: 0 20px;
-        margin: 40px auto;
+        padding: 0 15px;
+        margin: 30px auto;
     }
 
     .intro {
-        padding: 25px;
-    }
-
-    .intro h2 {
-        font-size: 1.8rem;
-    }
-
-    article {
         padding: 20px;
     }
 
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .filter-section label {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .filter-section select {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .maravilla-titulo {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .animales-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    article {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    article img {
+        height: 150px;
+    }
+
     article h3 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    article p {
+        font-size: 0.85rem;
+        margin: 0 10px;
+        line-height: 1.5;
+    }
+
+    .maravilla-tag {
+        padding: 4px 8px;
+        font-size: 0.65rem;
+        margin: 8px 10px 10px 10px;
+    }
+
+    .maravilla-separator {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 15px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        top: 55px;
+    }
+
+    main {
+        padding: 0 10px;
+        margin: 20px auto;
+    }
+
+    .maravilla-titulo {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .animales-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    article img {
+        height: 180px;
+    }
+
+    article h3 {
+        font-size: 1rem;
+        margin-top: 8px;
+        margin-left: 8px;
+    }
+
+    article p {
+        font-size: 0.8rem;
+        margin: 0 8px;
+    }
+
+    .maravilla-tag {
+        padding: 3px 6px;
+        font-size: 0.6rem;
+        margin: 6px 8px 8px 8px;
     }
 }

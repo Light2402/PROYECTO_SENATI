@@ -105,12 +105,38 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* MAIN */
-main {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
+/* HAMBURGER BUTTON */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+    padding: 5px;
 }
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
 /* MAIN */
 main {
     max-width: 1200px;

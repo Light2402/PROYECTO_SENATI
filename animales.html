@@ -10,7 +10,12 @@
 <body>
 <header>
     <h1>Animales</h1>
-    <nav>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="nav-menu">
         <a href="index.html">Inicio</a>
         <a href="maravillas.html">Maravillas</a>
         <a href="animales.html">Animales</a>
@@ -149,21 +154,36 @@
 </footer>
 
 <script>
-    const filtroSelect = document.getElementById('filtro-maravillas');
-    const articulos = document.querySelectorAll('article');
+    // Menú hamburguesa
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Filtro de maravillas
+    const filtroSelect = document.getElementById('filtro-maravillas');
     const grupos = document.querySelectorAll('.maravilla-grupo');
 
     filtroSelect.addEventListener('change', function() {
         const filtroSeleccionado = this.value;
 
         if (filtroSeleccionado === '') {
-            // Mostrar todos los grupos
             grupos.forEach(grupo => {
                 grupo.style.display = 'block';
             });
         } else {
-            // Ocultar todos, luego mostrar solo el seleccionado
             grupos.forEach(grupo => {
                 if (grupo.getAttribute('data-grupo') === filtroSeleccionado) {
                     grupo.style.display = 'block';
