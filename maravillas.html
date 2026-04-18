@@ -3,91 +3,386 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maravillas del Mundo</title>
+    <title>Las 7 Maravillas del Mundo</title>
     <link rel="stylesheet" href="css/maravillas.css">
 </head>
 <body>
 
 <header>
-    <h1>Mundo Maravilla</h1>
-    <nav>
+    <h1>Las 7 maravillas del mundo</h1>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-menu">
         <a href="index.html">Inicio</a>
-        <a href="maravillas.html">Maravillas</a>
+        <a href="maravillas.html" class="active">Maravillas</a>
         <a href="animales.html">Animales</a>
         <a href="gastronomia.html">Gastronomía</a>
     </nav>
 </header>
 
-<main>
-    <section class="intro">
-        <h2>Las 7 Maravillas Modernas</h2>
-        <p>Las 7 maravillas del mundo moderno son monumentos emblemáticos que destacan por su gran valor histórico, cultural y arquitectónico. Cada una refleja el ingenio, la creatividad y el esfuerzo de las civilizaciones que las construyeron.
+<!-- INTRO -->
+<section class="intro-simple">
+    <h2>Las 7 Maravillas Modernas</h2>
+    <p>Las 7 maravillas del mundo moderno son monumentos emblemáticos que destacan por su gran valor histórico, cultural y arquitectónico. Cada una refleja el ingenio, la creatividad y el esfuerzo de las civilizaciones que las construyeron. A lo largo del tiempo, estas obras han logrado mantenerse como símbolos representativos de la humanidad y continúan siendo admiradas en todo el mundo.</p>
+</section>
 
-A lo largo del tiempo, estas obras han logrado mantenerse como símbolos representativos de la humanidad y continúan siendo admiradas en todo el mundo.</p>
-    </section>
-
-    <article>
-        <div class="card-img-container">
-            <img src="img/machu-picchu.jpg" alt="Machu Picchu" class="card-img">
+<!-- HERO SECTION OCULTO -->
+<section class="hero" style="display:none">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <p class="hero-eyebrow">✦ Patrimonio de la Humanidad ✦</p>
+        <h2 class="hero-title">Las 7 Maravillas<br><span class="hero-title-accent">del Mundo Moderno</span></h2>
+        <p class="hero-sub">Monumentos extraordinarios que desafían el tiempo, el ingenio y la imaginación humana a lo largo de todos los continentes.</p>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-num">7</span>
+                <span class="stat-label">Maravillas</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num">6</span>
+                <span class="stat-label">Continentes</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num">2007</span>
+                <span class="stat-label">Elegidas</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num">100M+</span>
+                <span class="stat-label">Votos emitidos</span>
+            </div>
         </div>
-        <h3>Machu Picchu</h3>
-        <p>Antigua ciudad inca ubicada en Perú, famosa por su arquitectura de piedra y su impresionante entorno montañoso en los Andes.</p>
+        <a href="#main-grid" class="hero-cta">Explorar maravillas ↓</a>
+    </div>
+</section>
+
+<!-- FILTRO / BÚSQUEDA -->
+<div class="toolbar">
+    <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="Buscar maravilla..." autocomplete="off">
+    </div>
+    <div class="filter-tags">
+        <button class="tag-btn active" data-continent="all">Todas</button>
+        <button class="tag-btn" data-continent="america">América</button>
+        <button class="tag-btn" data-continent="europa">Europa</button>
+        <button class="tag-btn" data-continent="asia">Asia</button>
+        <button class="tag-btn" data-continent="africa">Medio Oriente</button>
+    </div>
+</div>
+
+<!-- GRID DE MARAVILLAS -->
+<main id="main-grid">
+
+    <article class="wonder-card" data-continent="america" data-name="machu picchu" style="--delay: 0.1s">
+        <div class="card-media">
+            <img src="img/machu-picchu.jpg" alt="Machu Picchu" loading="lazy">
+            <div class="card-overlay"></div>
+            <span class="card-country">🇵🇪 Perú</span>
+            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+        </div>
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="card-year">Siglo XV</span>
+                <span class="card-continent">América</span>
+            </div>
+            <h3>Machu Picchu</h3>
+            <p>Antigua ciudad inca en lo alto de los Andes, famosa por su arquitectura de piedra y su impresionante entorno montañoso.</p>
+            <div class="card-footer">
+                <div class="card-tags">
+                    <span>Inca</span>
+                    <span>Arqueología</span>
+                </div>
+                <button class="detail-btn" data-wonder="machu">Ver más</button>
+            </div>
+        </div>
     </article>
 
-    <article>
-        <div class="card-img-container">
-            <img src="img/chichen-itza.jpg" alt="Chichén Itzá" class="card-img">
+    <article class="wonder-card" data-continent="america" data-name="chichen itza" style="--delay: 0.2s">
+        <div class="card-media">
+            <img src="img/chichen-itza.jpg" alt="Chichén Itzá" loading="lazy">
+            <div class="card-overlay"></div>
+            <span class="card-country">🇲🇽 México</span>
+            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
         </div>
-        <h3>Chichén Itzá</h3>
-        <p>Ciudad maya en México, conocida por la majestuosa pirámide de Kukulkán y sus avanzados conocimientos astronómicos.</p>
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="card-year">Siglo VI</span>
+                <span class="card-continent">América</span>
+            </div>
+            <h3>Chichén Itzá</h3>
+            <p>Ciudad maya con la pirámide de Kukulkán, reflejo de los avanzados conocimientos astronómicos de esta civilización.</p>
+            <div class="card-footer">
+                <div class="card-tags">
+                    <span>Maya</span>
+                    <span>Astronomía</span>
+                </div>
+                <button class="detail-btn" data-wonder="chichen">Ver más</button>
+            </div>
+        </div>
     </article>
 
-    <article>
-        <div class="card-img-container">
-            <img src="img/cristo-redentor.jpg" alt="Cristo Redentor" class="card-img">
+    <article class="wonder-card" data-continent="america" data-name="cristo redentor" style="--delay: 0.3s">
+        <div class="card-media">
+            <img src="img/cristo-redentor.jpg" alt="Cristo Redentor" loading="lazy">
+            <div class="card-overlay"></div>
+            <span class="card-country">🇧🇷 Brasil</span>
+            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
         </div>
-        <h3>Cristo Redentor</h3>
-        <p>Estatua monumental en Brasil, símbolo de fe y hospitalidad que vigila la ciudad de Río de Janeiro desde el Corcovado.</p>
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="card-year">1931</span>
+                <span class="card-continent">América</span>
+            </div>
+            <h3>Cristo Redentor</h3>
+            <p>Estatua monumental que vigila Río de Janeiro desde el Corcovado, símbolo de fe y hospitalidad brasileña.</p>
+            <div class="card-footer">
+                <div class="card-tags">
+                    <span>Escultura</span>
+                    <span>Moderno</span>
+                </div>
+                <button class="detail-btn" data-wonder="cristo">Ver más</button>
+            </div>
+        </div>
     </article>
 
-    <article>
-        <div class="article-content">
-            <div class="card-img-container">
-                <img src="img/coliseo.jpg" alt="Coliseo Romano" class="card-img">
+    <article class="wonder-card" data-continent="europa" data-name="coliseo romano" style="--delay: 0.4s">
+        <div class="card-media">
+            <img src="img/coliseo.jpg" alt="Coliseo Romano" loading="lazy">
+            <div class="card-overlay"></div>
+            <span class="card-country">🇮🇹 Italia</span>
+            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+        </div>
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="card-year">70 d.C.</span>
+                <span class="card-continent">Europa</span>
             </div>
             <h3>Coliseo Romano</h3>
-            <p>El anfiteatro más grande del Imperio Romano, centro de la vida social y espectáculos en la antigua Roma.</p>
+            <p>El anfiteatro más grande del Imperio Romano, centro de espectáculos y la vida social de la antigua Roma.</p>
+            <div class="card-footer">
+                <div class="card-tags">
+                    <span>Romano</span>
+                    <span>Anfiteatro</span>
+                </div>
+                <button class="detail-btn" data-wonder="coliseo">Ver más</button>
+            </div>
         </div>
     </article>
 
-    <article>
-        <div class="card-img-container">
-            <img src="img/taj-mahal.jpg" alt="Taj Mahal" class="card-img">
+    <article class="wonder-card" data-continent="asia" data-name="taj mahal" style="--delay: 0.5s">
+        <div class="card-media">
+            <img src="img/taj-mahal.jpg" alt="Taj Mahal" loading="lazy">
+            <div class="card-overlay"></div>
+            <span class="card-country">🇮🇳 India</span>
+            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
         </div>
-        <h3>Taj Mahal</h3>
-        <p>Mausoleo de mármol blanco en India, construido por el emperador Shah Jahan como el máximo monumento al amor.</p>
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="card-year">1648</span>
+                <span class="card-continent">Asia</span>
+            </div>
+            <h3>Taj Mahal</h3>
+            <p>Mausoleo de mármol blanco construido por el emperador Shah Jahan como el máximo monumento al amor eterno.</p>
+            <div class="card-footer">
+                <div class="card-tags">
+                    <span>Mughal</span>
+                    <span>Mausoleo</span>
+                </div>
+                <button class="detail-btn" data-wonder="taj">Ver más</button>
+            </div>
+        </div>
     </article>
 
-    <article>
-        <div class="card-img-container">
-            <img src="img/petra.jpg" alt="Petra" class="card-img">
+    <article class="wonder-card" data-continent="africa" data-name="petra" style="--delay: 0.6s">
+        <div class="card-media">
+            <img src="img/petra.jpg" alt="Petra" loading="lazy">
+            <div class="card-overlay"></div>
+            <span class="card-country">🇯🇴 Jordania</span>
+            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
         </div>
-        <h3>Petra</h3>
-        <p>La ciudad de piedra en Jordania, famosa por sus fachadas esculpidas directamente en los acantilados de color rosado.</p>
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="card-year">Siglo IV a.C.</span>
+                <span class="card-continent">Medio Oriente</span>
+            </div>
+            <h3>Petra</h3>
+            <p>La ciudad de piedra nabatea esculpida directamente en los acantilados de arenisca color rosado de Jordania.</p>
+            <div class="card-footer">
+                <div class="card-tags">
+                    <span>Nabateo</span>
+                    <span>Rupestre</span>
+                </div>
+                <button class="detail-btn" data-wonder="petra">Ver más</button>
+            </div>
+        </div>
     </article>
 
-    <article>
-        <div class="card-img-container">
-            <img src="img/muralla.jpg" alt="Gran Muralla China" class="card-img">
+    <article class="wonder-card" data-continent="asia" data-name="gran muralla china" style="--delay: 0.7s">
+        <div class="card-media">
+            <img src="img/muralla.jpg" alt="Gran Muralla China" loading="lazy">
+            <div class="card-overlay"></div>
+            <span class="card-country">🇨🇳 China</span>
+            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
         </div>
-        <h3>Gran Muralla China</h3>
-        <p>Extensa fortificación construida para proteger las fronteras chinas, una de las mayores hazañas de la ingeniería antigua.</p>
+        <div class="card-body">
+            <div class="card-meta">
+                <span class="card-year">Siglo VII a.C.</span>
+                <span class="card-continent">Asia</span>
+            </div>
+            <h3>Gran Muralla China</h3>
+            <p>Extensa fortificación de más de 21,000 km, una de las mayores hazañas de ingeniería de la humanidad.</p>
+            <div class="card-footer">
+                <div class="card-tags">
+                    <span>Chino</span>
+                    <span>Fortificación</span>
+                </div>
+                <button class="detail-btn" data-wonder="muralla">Ver más</button>
+            </div>
+        </div>
     </article>
+
+    <!-- Sin resultados -->
+    <div class="no-results" id="noResults" style="display:none;">
+        <p>No se encontraron maravillas con ese filtro.</p>
+    </div>
+
 </main>
 
+<!-- CONTADOR FAVORITOS -->
+<div class="fav-toast" id="favToast">
+    <span id="favCount">0</span> favorito(s) seleccionado(s) ✦
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div class="modal-img-wrap">
+            <img id="modalImg" src="" alt="">
+        </div>
+        <div class="modal-content">
+            <p id="modalCountry" class="modal-country"></p>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div class="modal-facts" id="modalFacts"></div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-    <p>Proyecto Grupal</p>
+    <div class="footer-inner">
+        <span class="footer-logo">✦ Mundo Maravilla</span>
+        <p>Proyecto grupal — Las 7 Maravillas del Mundo</p>
+    </div>
 </footer>
 
+<script>
+const wonders = {
+    machu:   { img: 'img/machu-picchu.jpg',    country: '🇵🇪 Perú',    title: 'Machu Picchu',      desc: 'Ubicada a 2,430 metros sobre el nivel del mar en los Andes peruanos, Machu Picchu fue construida por el inca Pachacútec hacia 1450. Es un ejemplo excepcional de arquitectura y urbanismo inca, adaptándose perfectamente al terreno montañoso.', facts: ['Altura: 2,430 m s.n.m.','Área: 325 km²','Reconocida: 2007','Visitantes: ~1.5M al año'] },
+    chichen: { img: 'img/chichen-itza.jpg',    country: '🇲🇽 México',   title: 'Chichén Itzá',      desc: 'La pirámide de Kukulkán, también llamada El Castillo, tiene 91 escalones en cada uno de sus 4 lados más 1 en la cima, totalizando 365, igual que los días del año maya. Durante los equinoccios, la sombra crea la ilusión de una serpiente descendiendo.', facts: ['Altura pirámide: 30 m','Escalones: 365 (1 por día del año)','Civilización: Maya','Periodo: 600–1200 d.C.'] },
+    cristo:  { img: 'img/cristo-redentor.jpg', country: '🇧🇷 Brasil',   title: 'Cristo Redentor',   desc: 'Inaugurado en 1931, el Cristo Redentor fue diseñado por el escultor francés Paul Landowski. Se levanta sobre el Cerro Corcovado a 710 metros de altura y extiende sus brazos 28 metros, abrazando simbólicamente la ciudad de Río de Janeiro.', facts: ['Altura total: 38 m','Envergadura: 28 m','Material: Esteatita y concreto','Inauguración: 12 oct. 1931'] },
+    coliseo: { img: 'img/coliseo.jpg',         country: '🇮🇹 Italia',   title: 'Coliseo Romano',    desc: 'El Coliseo, o Anfiteatro Flavio, fue construido entre 70 y 80 d.C. y podía albergar entre 50,000 y 80,000 espectadores. Fue escenario de combates de gladiadores, caza de animales y ejecuciones públicas durante siglos.', facts: ['Capacidad: 50,000–80,000 personas','Dimensiones: 188×156 m','Construido: 70–80 d.C.','Material: Travertino y ladrillo'] },
+    taj:     { img: 'img/taj-mahal.jpg',       country: '🇮🇳 India',    title: 'Taj Mahal',         desc: 'El emperador mogol Shah Jahan mandó construirlo en memoria de su esposa Mumtaz Mahal, fallecida en 1631. Tardó 22 años y empleó a más de 20,000 artesanos. Su mármol blanco cambia de color según la luz: rosado al amanecer, blanco puro al mediodía.', facts: ['Construido: 1631–1648','Mármol: de Makrana, Rajastán','Trabajadores: +20,000','UNESCO: desde 1983'] },
+    petra:   { img: 'img/petra.jpg',           country: '🇯🇴 Jordania', title: 'Petra',             desc: 'Llamada "La Ciudad Rosa" por el color de sus rocas, Petra fue la capital del reino nabateo. Sus edificios más icónicos, como Al-Khazneh (El Tesoro), fueron tallados directamente en la piedra arenisca hace más de 2,000 años.', facts: ['Civilización: Nabatea','Fundación: Siglo IV a.C.','Apodo: La Ciudad Rosa','Redescubierta: 1812 por Burckhardt'] },
+    muralla: { img: 'img/muralla.jpg',         country: '🇨🇳 China',    title: 'Gran Muralla China',desc: 'La Gran Muralla no es una sola pared continua, sino una serie de murallas construidas por diferentes dinastías durante siglos. Su longitud total supera los 21,000 km. Fue construida principalmente para proteger a China de las invasiones del norte.', facts: ['Longitud total: +21,000 km','Dynastías: Qin, Han, Ming','Período: Siglo VII a.C.–XVII d.C.','Trabajadores: millones'] }
+};
+
+// Modal
+const overlay = document.getElementById('modalOverlay');
+const modal = document.getElementById('modal');
+document.querySelectorAll('.detail-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const key = btn.dataset.wonder;
+        const d = wonders[key];
+        document.getElementById('modalImg').src = d.img;
+        document.getElementById('modalImg').alt = d.title;
+        document.getElementById('modalCountry').textContent = d.country;
+        document.getElementById('modalTitle').textContent = d.title;
+        document.getElementById('modalDesc').textContent = d.desc;
+        document.getElementById('modalFacts').innerHTML = d.facts.map(f => `<div class="fact-item"><span class="fact-dot">✦</span>${f}</div>`).join('');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+});
+document.getElementById('modalClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+// Favoritos
+let favCount = 0;
+const toast = document.getElementById('favToast');
+document.querySelectorAll('.fav-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const active = btn.classList.toggle('active');
+        favCount += active ? 1 : -1;
+        btn.textContent = active ? '♥' : '♡';
+        document.getElementById('favCount').textContent = favCount;
+        if (favCount > 0) {
+            toast.classList.add('show');
+        } else {
+            toast.classList.remove('show');
+        }
+    });
+});
+
+// Filtro por continente
+document.querySelectorAll('.tag-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterCards();
+    });
+});
+
+// Búsqueda
+document.getElementById('searchInput').addEventListener('input', filterCards);
+
+function filterCards() {
+    const continent = document.querySelector('.tag-btn.active').dataset.continent;
+    const search = document.getElementById('searchInput').value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.wonder-card');
+    let visible = 0;
+    cards.forEach(card => {
+        const matchContinent = continent === 'all' || card.dataset.continent === continent;
+        const matchSearch = card.dataset.name.includes(search);
+        if (matchContinent && matchSearch) {
+            card.style.display = '';
+            visible++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+}
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('open');
+});
+navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('open');
+    });
+});
+
+// Stagger animation on load
+document.querySelectorAll('.wonder-card').forEach((card, i) => {
+    card.style.animationDelay = `${0.1 + i * 0.1}s`;
+});
+</script>
 </body>
 </html>
