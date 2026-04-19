@@ -10,10 +10,13 @@
 <body>
 
 <header>
-    <div class="logo">
-        Las 7 maravillas <span>del mundo</span>
-    </div>
-    <nav>
+    <h1>Las 7 maravillas del mundo</h1>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="nav-menu">
         <a href="index.html">Inicio</a>
         <a href="maravillas.html">Maravillas</a>
         <a href="animales.html">Animales</a>
@@ -44,10 +47,10 @@
             </ul>
         </div>
         <div class="gastro-img-container">
-            <img src="imagen/ceviche.jpg" class="img-principal">
+            <img src="imagen/ceviche.jpg" class="img-principal" alt="Ceviche">
             <div class="gastro-gallery">
-                <img src="imagen/lomo.jpg">
-                <img src="imagen/causa.jpg">
+                <img src="imagen/lomo.jpg" alt="Lomo saltado">
+                <img src="imagen/causa.jpg" alt="Causa limeña">
             </div>
         </div>
     </div>
@@ -65,10 +68,10 @@
             </ul>
         </div>
         <div class="gastro-img-container">
-            <img src="imagen/tacos.jpg" class="img-principal">
+            <img src="imagen/tacos.jpg" class="img-principal" alt="Tacos">
             <div class="gastro-gallery">
-                <img src="imagen/cochinita.jpg">
-                <img src="imagen/guacamole.jpg">
+                <img src="imagen/cochinita.jpg" alt="Cochinita pibil">
+                <img src="imagen/guacamole.jpg" alt="Guacamole">
             </div>
         </div>
     </div>
@@ -86,10 +89,10 @@
             </ul>
         </div>
         <div class="gastro-img-container">
-            <img src="imagen/feijoada.jpg" class="img-principal">
+            <img src="imagen/feijoada.jpg" class="img-principal" alt="Feijoada">
             <div class="gastro-gallery">
-                <img src="imagen/churrasco.jpg">
-                <img src="imagen/panqueijo.jpg">
+                <img src="imagen/churrasco.jpg" alt="Churrasco">
+                <img src="imagen/panqueijo.jpg" alt="Pão de queijo">
             </div>
         </div>
     </div>
@@ -107,10 +110,10 @@
             </ul>
         </div>
         <div class="gastro-img-container">
-            <img src="imagen/pizza.jpg" class="img-principal">
+            <img src="imagen/pizza.jpg" class="img-principal" alt="Pizza">
             <div class="gastro-gallery">
-                <img src="imagen/pasta.jpg">
-                <img src="imagen/lasagna.jpg">
+                <img src="imagen/pasta.jpg" alt="Pasta">
+                <img src="imagen/lasagna.jpg" alt="Lasagna">
             </div>
         </div>
     </div>
@@ -128,10 +131,10 @@
             </ul>
         </div>
         <div class="gastro-img-container">
-            <img src="imagen/curry.jpg" class="img-principal">
+            <img src="imagen/curry.jpg" class="img-principal" alt="Curry">
             <div class="gastro-gallery">
-                <img src="imagen/tikka.jpg">
-                <img src="imagen/naan.jpg">
+                <img src="imagen/tikka.jpg" alt="Tikka masala">
+                <img src="imagen/naan.jpg" alt="Naan">
             </div>
         </div>
     </div>
@@ -149,10 +152,10 @@
             </ul>
         </div>
         <div class="gastro-img-container">
-            <img src="imagen/falafel.jpg" class="img-principal">
+            <img src="imagen/falafel.jpg" class="img-principal" alt="Falafel">
             <div class="gastro-gallery">
-                <img src="imagen/hummus.jpg">
-                <img src="imagen/shawarma.jpg">
+                <img src="imagen/hummus.jpg" alt="Hummus">
+                <img src="imagen/shawarma.jpg" alt="Shawarma">
             </div>
         </div>
     </div>
@@ -170,10 +173,10 @@
             </ul>
         </div>
         <div class="gastro-img-container">
-            <img src="imagen/dimsum.jpg" class="img-principal">
+            <img src="imagen/dimsum.jpg" class="img-principal" alt="Dim sum">
             <div class="gastro-gallery">
-                <img src="imagen/arroz.jpg">
-                <img src="imagen/pato.jpg">
+                <img src="imagen/arroz.jpg" alt="Arroz frito">
+                <img src="imagen/pato.jpg" alt="Pato pekinés">
             </div>
         </div>
     </div>
@@ -182,8 +185,25 @@
 </main>
 
 <footer>
-    <p>Proyecto grupal 7 maravillas - Gastronomía del Mundo</p>
+    <p>Proyecto grupal 7 maravillas</p>
 </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('open');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('open');
+        });
+    });
+</script>
 
 </body>
 </html>
