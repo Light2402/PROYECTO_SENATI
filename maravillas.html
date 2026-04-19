@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
 <header>
     <h1>Las 7 maravillas del mundo</h1>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú">
@@ -21,7 +24,9 @@
     </nav>
 </header>
 
-<!-- HERO -->
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
 <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -59,10 +64,14 @@
     </div>
 </section>
 
-<!-- FILTRO / BÚSQUEDA -->
+<!-- ══════════════════════════════════════
+     TOOLBAR
+══════════════════════════════════════ -->
 <div class="toolbar">
     <div class="search-wrap">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
         <input type="text" id="searchInput" placeholder="Buscar maravilla..." autocomplete="off">
     </div>
     <div class="filter-tags">
@@ -73,15 +82,17 @@
     </div>
 </div>
 
-<!-- GRID DE MARAVILLAS -->
+<!-- ══════════════════════════════════════
+     GRID DE MARAVILLAS
+══════════════════════════════════════ -->
 <main id="main-grid">
 
-    <article class="wonder-card" data-continent="america" data-name="machu picchu" style="--delay: 0.1s">
+    <article class="wonder-card" data-continent="america" data-name="machu picchu" style="--delay:0.1s">
         <div class="card-media">
             <img src="img/machu-picchu.jpg" alt="Machu Picchu" loading="lazy">
             <div class="card-overlay"></div>
             <span class="card-country">🇵🇪 Perú</span>
-            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+            <button class="fav-btn" aria-label="Favorito">♡</button>
         </div>
         <div class="card-body">
             <div class="card-meta">
@@ -91,21 +102,18 @@
             <h3>Machu Picchu</h3>
             <p>Antigua ciudad inca en lo alto de los Andes, famosa por su arquitectura de piedra y su impresionante entorno montañoso.</p>
             <div class="card-footer">
-                <div class="card-tags">
-                    <span>Inca</span>
-                    <span>Arqueología</span>
-                </div>
-                <button class="detail-btn" data-wonder="machu">Ver más</button>
+                <div class="card-tags"><span>Inca</span><span>Arqueología</span></div>
+                <button class="detail-btn" data-wonder="machu">Ver más →</button>
             </div>
         </div>
     </article>
 
-    <article class="wonder-card" data-continent="america" data-name="chichen itza" style="--delay: 0.2s">
+    <article class="wonder-card" data-continent="america" data-name="chichen itza" style="--delay:0.2s">
         <div class="card-media">
             <img src="img/chichen-itza.jpg" alt="Chichén Itzá" loading="lazy">
             <div class="card-overlay"></div>
             <span class="card-country">🇲🇽 México</span>
-            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+            <button class="fav-btn" aria-label="Favorito">♡</button>
         </div>
         <div class="card-body">
             <div class="card-meta">
@@ -115,21 +123,18 @@
             <h3>Chichén Itzá</h3>
             <p>Ciudad maya con la pirámide de Kukulkán, reflejo de los avanzados conocimientos astronómicos de esta civilización.</p>
             <div class="card-footer">
-                <div class="card-tags">
-                    <span>Maya</span>
-                    <span>Astronomía</span>
-                </div>
-                <button class="detail-btn" data-wonder="chichen">Ver más</button>
+                <div class="card-tags"><span>Maya</span><span>Astronomía</span></div>
+                <button class="detail-btn" data-wonder="chichen">Ver más →</button>
             </div>
         </div>
     </article>
 
-    <article class="wonder-card" data-continent="america" data-name="cristo redentor" style="--delay: 0.3s">
+    <article class="wonder-card" data-continent="america" data-name="cristo redentor" style="--delay:0.3s">
         <div class="card-media">
             <img src="img/cristo-redentor.jpg" alt="Cristo Redentor" loading="lazy">
             <div class="card-overlay"></div>
             <span class="card-country">🇧🇷 Brasil</span>
-            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+            <button class="fav-btn" aria-label="Favorito">♡</button>
         </div>
         <div class="card-body">
             <div class="card-meta">
@@ -139,21 +144,18 @@
             <h3>Cristo Redentor</h3>
             <p>Estatua monumental que vigila Río de Janeiro desde el Corcovado, símbolo de fe y hospitalidad brasileña.</p>
             <div class="card-footer">
-                <div class="card-tags">
-                    <span>Escultura</span>
-                    <span>Moderno</span>
-                </div>
-                <button class="detail-btn" data-wonder="cristo">Ver más</button>
+                <div class="card-tags"><span>Escultura</span><span>Moderno</span></div>
+                <button class="detail-btn" data-wonder="cristo">Ver más →</button>
             </div>
         </div>
     </article>
 
-    <article class="wonder-card" data-continent="europa" data-name="coliseo romano" style="--delay: 0.4s">
+    <article class="wonder-card" data-continent="europa" data-name="coliseo romano" style="--delay:0.4s">
         <div class="card-media">
             <img src="img/coliseo.jpg" alt="Coliseo Romano" loading="lazy">
             <div class="card-overlay"></div>
             <span class="card-country">🇮🇹 Italia</span>
-            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+            <button class="fav-btn" aria-label="Favorito">♡</button>
         </div>
         <div class="card-body">
             <div class="card-meta">
@@ -163,21 +165,18 @@
             <h3>Coliseo Romano</h3>
             <p>El anfiteatro más grande del Imperio Romano, centro de espectáculos y la vida social de la antigua Roma.</p>
             <div class="card-footer">
-                <div class="card-tags">
-                    <span>Romano</span>
-                    <span>Anfiteatro</span>
-                </div>
-                <button class="detail-btn" data-wonder="coliseo">Ver más</button>
+                <div class="card-tags"><span>Romano</span><span>Anfiteatro</span></div>
+                <button class="detail-btn" data-wonder="coliseo">Ver más →</button>
             </div>
         </div>
     </article>
 
-    <article class="wonder-card" data-continent="asia" data-name="taj mahal" style="--delay: 0.5s">
+    <article class="wonder-card" data-continent="asia" data-name="taj mahal" style="--delay:0.5s">
         <div class="card-media">
             <img src="img/taj-mahal.jpg" alt="Taj Mahal" loading="lazy">
             <div class="card-overlay"></div>
             <span class="card-country">🇮🇳 India</span>
-            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+            <button class="fav-btn" aria-label="Favorito">♡</button>
         </div>
         <div class="card-body">
             <div class="card-meta">
@@ -187,21 +186,18 @@
             <h3>Taj Mahal</h3>
             <p>Mausoleo de mármol blanco construido por el emperador Shah Jahan como el máximo monumento al amor eterno.</p>
             <div class="card-footer">
-                <div class="card-tags">
-                    <span>Mughal</span>
-                    <span>Mausoleo</span>
-                </div>
-                <button class="detail-btn" data-wonder="taj">Ver más</button>
+                <div class="card-tags"><span>Mughal</span><span>Mausoleo</span></div>
+                <button class="detail-btn" data-wonder="taj">Ver más →</button>
             </div>
         </div>
     </article>
 
-    <article class="wonder-card" data-continent="asia" data-name="petra" style="--delay: 0.6s">
+    <article class="wonder-card" data-continent="asia" data-name="petra" style="--delay:0.6s">
         <div class="card-media">
             <img src="img/petra.jpg" alt="Petra" loading="lazy">
             <div class="card-overlay"></div>
             <span class="card-country">🇯🇴 Jordania</span>
-            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+            <button class="fav-btn" aria-label="Favorito">♡</button>
         </div>
         <div class="card-body">
             <div class="card-meta">
@@ -209,23 +205,20 @@
                 <span class="card-continent">Asia</span>
             </div>
             <h3>Petra</h3>
-            <p>La ciudad de piedra nabatea esculpida directamente en los acantilados de arenisca color rosado de Jordania.</p>
+            <p>La ciudad nabatea esculpida directamente en los acantilados de arenisca color rosado de Jordania.</p>
             <div class="card-footer">
-                <div class="card-tags">
-                    <span>Nabateo</span>
-                    <span>Rupestre</span>
-                </div>
-                <button class="detail-btn" data-wonder="petra">Ver más</button>
+                <div class="card-tags"><span>Nabateo</span><span>Rupestre</span></div>
+                <button class="detail-btn" data-wonder="petra">Ver más →</button>
             </div>
         </div>
     </article>
 
-    <article class="wonder-card" data-continent="asia" data-name="gran muralla china" style="--delay: 0.7s">
+    <article class="wonder-card" data-continent="asia" data-name="gran muralla china" style="--delay:0.7s">
         <div class="card-media">
             <img src="img/muralla.jpg" alt="Gran Muralla China" loading="lazy">
             <div class="card-overlay"></div>
             <span class="card-country">🇨🇳 China</span>
-            <button class="fav-btn" aria-label="Favorito" title="Marcar favorito">♡</button>
+            <button class="fav-btn" aria-label="Favorito">♡</button>
         </div>
         <div class="card-body">
             <div class="card-meta">
@@ -235,30 +228,28 @@
             <h3>Gran Muralla China</h3>
             <p>Extensa fortificación de más de 21,000 km, una de las mayores hazañas de ingeniería de la humanidad.</p>
             <div class="card-footer">
-                <div class="card-tags">
-                    <span>Chino</span>
-                    <span>Fortificación</span>
-                </div>
-                <button class="detail-btn" data-wonder="muralla">Ver más</button>
+                <div class="card-tags"><span>Chino</span><span>Fortificación</span></div>
+                <button class="detail-btn" data-wonder="muralla">Ver más →</button>
             </div>
         </div>
     </article>
 
-    <!-- Sin resultados -->
     <div class="no-results" id="noResults" style="display:none;">
         <p>No se encontraron maravillas con ese filtro.</p>
     </div>
 
 </main>
 
-<!-- CONTADOR FAVORITOS -->
+<!-- TOAST FAVORITOS -->
 <div class="fav-toast" id="favToast">
     <span id="favCount">0</span> favorito(s) seleccionado(s) ✦
 </div>
 
-<!-- MODAL -->
+<!-- ══════════════════════════════════════
+     MODAL SIMPLE
+══════════════════════════════════════ -->
 <div class="modal-overlay" id="modalOverlay">
-    <div class="modal modal-xl" id="modal">
+    <div class="modal">
 
         <button class="modal-close" id="modalClose">✕</button>
 
@@ -292,13 +283,16 @@
     </div>
 </div>
 
-<!-- FOOTER -->
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
 <footer>
     <div class="footer-inner">
         <span class="footer-logo">✦ Mundo Maravilla</span>
         <p>Proyecto grupal — Las 7 Maravillas del Mundo</p>
     </div>
 </footer>
+
 <script src="js/maravillas.js"></script>
 </body>
 </html>
