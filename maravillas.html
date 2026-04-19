@@ -9,7 +9,7 @@
 <body>
 
 <!-- ══════════════════════════════════════
-     HEADER
+     HEADER PRINCIPAL
 ══════════════════════════════════════ -->
 <header>
     <h1>Las 7 maravillas del mundo</h1>
@@ -245,53 +245,151 @@
     <span id="favCount">0</span> favorito(s) seleccionado(s) ✦
 </div>
 
-<!-- ══════════════════════════════════════
-     MODAL SIMPLE
-══════════════════════════════════════ -->
-<div class="modal-overlay" id="modalOverlay">
-    <div class="modal">
-
-        <button class="modal-close" id="modalClose">✕</button>
-
-        <div class="modal-left">
-            <img id="modalImg" src="" alt="">
-            <img id="modalImg2" class="modal-img-extra" src="" alt="">
-        </div>
-
-        <div class="modal-right">
-            <p id="modalCountry" class="modal-country"></p>
-            <h2 id="modalTitle"></h2>
-
-            <div class="modal-section">
-                <h4>Historia</h4>
-                <p id="modalHistory"></p>
-            </div>
-
-            <div class="modal-section">
-                <h4>Cultura</h4>
-                <p id="modalCulture"></p>
-            </div>
-
-            <div class="modal-section">
-                <h4>Reconocimiento</h4>
-                <p id="modalYear"></p>
-            </div>
-
-            <div class="modal-facts" id="modalFacts"></div>
-        </div>
-
-    </div>
-</div>
-
-<!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
+<!-- FOOTER-->
 <footer>
     <div class="footer-inner">
         <span class="footer-logo">✦ Mundo Maravilla</span>
         <p>Proyecto grupal — Las 7 Maravillas del Mundo</p>
     </div>
 </footer>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     VISTA DETALLE — se desliza desde la derecha y ocupa
+     toda la pantalla (position:fixed, inset:0)
+══════════════════════════════════════════════════════════ -->
+<div id="detail-view">
+
+    <!-- Header del detalle -->
+    <div class="dv-header">
+        <button class="dv-back">← Volver a Maravillas</button>
+        <div class="dv-nav-btns">
+            <button class="dv-prev" data-key="">← Anterior</button>
+            <button class="dv-next" data-key="">Siguiente →</button>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="dv-hero">
+        <div class="dv-hero-bg"></div>
+        <div class="dv-hero-overlay"></div>
+        <div class="dv-hero-content">
+            <div>
+                <span class="dv-badge">✦ Maravilla del Mundo Moderno · 2007 ✦</span>
+                <h2 class="dv-title"></h2>
+                <p class="dv-subtitle"></p>
+            </div>
+            <div class="dv-stats-grid"></div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="dv-breadcrumb">
+        <a onclick="closeDetail ? closeDetail() : null">Inicio</a>
+        <span>›</span>
+        <a onclick="closeDetail ? closeDetail() : null">Maravillas</a>
+        <span>›</span>
+        <span id="dv-bc-name" style="color:rgba(255,255,255,0.8);"></span>
+    </div>
+
+    <div class="dv-body">
+
+        <!-- ── HISTORIA ── -->
+        <section class="dv-section-historia">
+            <div>
+                <p class="dv-section-label">Historia</p>
+                <h3 class="dv-section-title dv-hist-title"></h3>
+                <p class="dv-lead dv-hist-lead"></p>
+                <p class="dv-body-text dv-hist-body1"></p>
+                <p class="dv-body-text dv-hist-body2"></p>
+                <div class="dv-timeline"></div>
+            </div>
+            <div class="dv-hist-img-wrap">
+                <img class="dv-hist-img-main" src="" alt="">
+                <div class="dv-hist-badge">
+                    <span class="big"></span>
+                    <span class="sm"></span>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /dv-body -->
+
+    <div class="dv-divider"></div>
+
+    <!-- ── CULTURA ── -->
+    <div class="dv-body">
+        <section class="dv-section-cultura">
+            <div class="dv-cultura-images">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div>
+                <p class="dv-section-label">Cultura</p>
+                <h3 class="dv-section-title dv-cult-title"></h3>
+                <p class="dv-lead dv-cult-lead"></p>
+                <p class="dv-body-text dv-cult-body1"></p>
+                <p class="dv-body-text dv-cult-body2"></p>
+                <div class="dv-pilares-grid"></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="dv-divider"></div>
+
+    <!-- ── RECONOCIMIENTO ── -->
+    <section class="dv-section-reconoc">
+        <div class="dv-reconoc-inner">
+            <div class="dv-reconoc-text">
+                <p class="dv-section-label">Reconocimiento</p>
+                <h3 class="dv-section-title dv-reconoc-title"></h3>
+                <p class="dv-body-text dv-reconoc-body1"></p>
+                <p class="dv-body-text dv-reconoc-body2"></p>
+            </div>
+            <div class="dv-awards"></div>
+        </div>
+    </section>
+
+    <!-- ── DATOS CURIOSOS ── -->
+    <div class="dv-body">
+        <section class="dv-section-datos">
+            <div class="dv-datos-header">
+                <p class="dv-section-label">Datos</p>
+                <h3 class="dv-section-title" style="text-align:center;">Cifras que impresionan</h3>
+            </div>
+            <div class="dv-datos-grid"></div>
+        </section>
+    </div>
+
+    <!-- ── NAVEGACIÓN ENTRE MARAVILLAS ── -->
+    <nav class="dv-wonder-nav">
+        <button class="dv-wn-link dv-wn-left" data-key="">
+            <img class="dv-wn-thumb" src="" alt="">
+            <div class="dv-wn-text">
+                <div class="dv-wn-dir">← Anterior</div>
+                <div class="dv-wn-name"></div>
+            </div>
+        </button>
+
+        <button class="dv-wn-center" title="Ver todas las maravillas">⊞</button>
+
+        <button class="dv-wn-link dv-wn-right right" data-key="">
+            <img class="dv-wn-thumb" src="" alt="">
+            <div class="dv-wn-text">
+                <div class="dv-wn-dir">Siguiente →</div>
+                <div class="dv-wn-name"></div>
+            </div>
+        </button>
+    </nav>
+
+    <!-- Footer del detalle -->
+    <div class="dv-footer">
+        <p>Proyecto grupal — Las 7 Maravillas del Mundo</p>
+    </div>
+
+</div><!-- /#detail-view -->
+
 
 <script src="js/maravillas.js"></script>
 </body>
