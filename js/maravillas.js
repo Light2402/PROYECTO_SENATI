@@ -3,8 +3,11 @@
    ============================================================ */
 const wonders = {
     machu: {
-        img:      'img/machu-picchu.jpg',
-        img2:     'img/machu-picchu.jpg',
+        img:      'img/pichu1.jpg',
+        img2:     'img/pichu2.jpg',
+        cultImg1: 'img/pichu1.jpg',
+        cultImg2: 'img/pichu3.jpg',
+        cultImg3: 'img/pichu4.jpg',
         country:  '🇵🇪 Perú',
         title:    'Machu Picchu',
         heroSub:  'La ciudad perdida de los Incas, suspendida entre nubes y montañas en los Andes peruanos.',
@@ -55,8 +58,11 @@ const wonders = {
     },
 
     chichen: {
-        img:      'img/chichen-itza.jpg',
-        img2:     'img/chichen-itza.jpg',
+        img:      'img/chichen1.jpg',
+        img2:     'img/chichen2.jpg',
+        cultImg1: 'img/chichen1.jpg',
+        cultImg2: 'img/chichen3.jpg',
+        cultImg3: 'img/chichen4.jpg',
         country:  '🇲🇽 México',
         title:    'Chichén Itzá',
         heroSub:  'La gran metrópolis maya que sincronizó arquitectura y cosmos en la selva de Yucatán.',
@@ -106,8 +112,11 @@ const wonders = {
     },
 
     cristo: {
-        img:      'img/cristo-redentor.jpg',
-        img2:     'img/cristo-redentor.jpg',
+        img:      'img/cristo1.jpg',
+        img2:     'img/cristo2.jpg',
+        cultImg1: 'img/cristo1.jpg',
+        cultImg2: 'img/cristo3.jpg',
+        cultImg3: 'img/cristo4.jpg',
         country:  '🇧🇷 Brasil',
         title:    'Cristo Redentor',
         heroSub:  'El guardián que extiende sus brazos sobre Río de Janeiro desde la cima del Corcovado.',
@@ -157,8 +166,11 @@ const wonders = {
     },
 
     coliseo: {
-        img:      'img/coliseo.jpg',
-        img2:     'img/coliseo.jpg',
+        img:      'img/coliseo1.jpg',
+        img2:     'img/coliseo2.jpg',
+        cultImg1: 'img/coliseo1.jpg',
+        cultImg2: 'img/coliseo3.jpg',
+        cultImg3: 'img/coliseo4.jpg',
         country:  '🇮🇹 Italia',
         title:    'Coliseo Romano',
         heroSub:  'El anfiteatro más grande del mundo antiguo, testigo del esplendor y la brutalidad del Imperio Romano.',
@@ -208,8 +220,11 @@ const wonders = {
     },
 
     taj: {
-        img:      'img/taj-mahal.jpg',
-        img2:     'img/taj-mahal.jpg',
+        img:      'img/taj1.png',
+        img2:     'img/taj2.jpg',
+        cultImg1: 'img/taj1.png',
+        cultImg2: 'img/taj3.png',
+        cultImg3: 'img/taj4.jpg',
         country:  '🇮🇳 India',
         title:    'Taj Mahal',
         heroSub:  'El mausoleo de mármol blanco que un emperador enamorado erigió como monumento eterno al amor.',
@@ -259,8 +274,11 @@ const wonders = {
     },
 
     petra: {
-        img:      'img/petra.jpg',
-        img2:     'img/petra.jpg',
+        img:      'img/petra1.jpg',
+        img2:     'img/petra2.jpg',
+        cultImg1: 'img/petra1.jpg',
+        cultImg2: 'img/petra3.jpg',
+        cultImg3: 'img/petra4.jpg',
         country:  '🇯🇴 Jordania',
         title:    'Petra',
         heroSub:  'La metrópolis nabatea tallada en acantilados de arenisca rojiza, oculta al mundo por siglos.',
@@ -311,8 +329,11 @@ const wonders = {
     },
 
     muralla: {
-        img:      'img/muralla.jpg',
-        img2:     'img/muralla.jpg',
+        img:      'img/muralla1.jpg',
+        img2:     'img/muralla2.jpg',
+        cultImg1: 'img/muralla1.jpg',
+        cultImg2: 'img/muralla3.jpg',
+        cultImg3: 'img/muralla4.jpg',
         country:  '🇨🇳 China',
         title:    'Gran Muralla China',
         heroSub:  'La mayor obra de ingeniería militar de la historia: más de 21,000 km que recorren el alma de China.',
@@ -490,7 +511,7 @@ function openDetail(key) {
     }
 
     const histImg = detailView.querySelector('.dv-hist-img-main');
-    if (histImg) { histImg.src = d.img; histImg.alt = d.title; }
+    if (histImg) { histImg.src = d.img2; histImg.alt = d.title; }
 
     const histBadge = detailView.querySelector('.dv-hist-badge .big');
     const histBadgeSm = detailView.querySelector('.dv-hist-badge .sm');
@@ -499,7 +520,9 @@ function openDetail(key) {
 
     /* Cultura */
     const cultImgs = detailView.querySelectorAll('.dv-cultura-images img');
-    cultImgs.forEach(img => { img.src = d.img; img.alt = d.title; });
+    if (cultImgs[0]) { cultImgs[0].src = d.cultImg1; cultImgs[0].alt = d.title + ' 1'; }
+    if (cultImgs[1]) { cultImgs[1].src = d.cultImg2; cultImgs[1].alt = d.title + ' 2'; }
+    if (cultImgs[2]) { cultImgs[2].src = d.cultImg3; cultImgs[2].alt = d.title + ' 3'; }
 
     setText('.dv-cult-title', d.cultTitle);
     setText('.dv-cult-lead',  d.cultLead);

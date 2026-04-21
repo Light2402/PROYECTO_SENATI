@@ -765,20 +765,22 @@ nav a.active { color: var(--accent); }
 .dv-section-cultura {
     padding: 80px 0;
     display: grid;
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: 1fr 1.1fr;
     gap: 70px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .dv-cultura-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 280px 180px;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
+    align-self: stretch;
 }
 
 .dv-cultura-images img {
-    width: 100%; height: 100%;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: var(--shadow);
@@ -787,7 +789,6 @@ nav a.active { color: var(--accent); }
 }
 
 .dv-cultura-images img:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
-.dv-cultura-images img:first-child { grid-column: 1 / 3; }
 
 .dv-pilares-grid {
     display: grid;
