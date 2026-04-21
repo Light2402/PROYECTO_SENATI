@@ -1,6 +1,6 @@
-/* ============================================================
-   DATOS DE CADA MARAVILLA
-   ============================================================ */
+
+/* DATOS DE CADA MARAVILLA*/
+
 const wonders = {
     machu: {
         img:      'img/pichu1.jpg',
