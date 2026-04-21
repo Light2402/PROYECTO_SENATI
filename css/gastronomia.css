@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 :root {
@@ -19,13 +18,14 @@
 html { scroll-behavior: smooth; }
 
 body {
+    font-family: 'Segoe UI', Calibri, Arial, sans-serif;
     color: #333;
     line-height: 1.8;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #f5f4f0;
     min-height: 100vh;
 }
 
-/* ===== HEADER — idéntico a style.css (index/animales/maravillas) ===== */
+/* ===== HEADER — IDÉNTICO AL ORIGINAL ===== */
 header {
     background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
     padding: 25px 50px;
@@ -53,6 +53,7 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 nav {
@@ -69,6 +70,7 @@ nav a {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 nav a::after {
@@ -88,7 +90,6 @@ nav a:hover::after { width: 100%; }
 nav a.active { color: var(--accent); }
 nav a.active::after { width: 100%; }
 
-/* HAMBURGER — idéntico a style.css */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -112,30 +113,32 @@ nav a.active::after { width: 100%; }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-10px); }
 
-/* ===== INTRO ===== */
+/* ===== INTRO SIMPLE ===== */
 .intro {
     text-align: center;
-    padding: 80px 20px;
+    padding: 70px 20px 50px;
     background: white;
     margin: 40px 5%;
-    border-radius: 20px;
+    border-radius: 16px;
     box-shadow: var(--shadow);
 }
 
 .intro h2 {
-    color: var(--primary);
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--dark);
     font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 22px;
 }
 
 .intro h2::after {
     content: '';
     position: absolute;
-    width: 80px;
+    width: 70px;
     height: 4px;
-    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    background: var(--secondary);
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -143,127 +146,340 @@ nav a.active::after { width: 100%; }
 }
 
 .intro p {
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 24px auto 0;
+    font-size: 1.1rem;
     color: #555;
     line-height: 1.9;
 }
 
-/* ===== SECCIONES GASTRONÓMICAS ===== */
-.gastro-section {
-    padding: 80px 8%;
-    border-bottom: 1px solid #e8e8e8;
+/* ===== WORLD INDEX ===== */
+.world-index {
+    padding: 40px 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-.alt-bg {
-    background-color: rgba(255,255,255,0.55);
+.index-grid {
+    display: flex;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.index-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 22px;
+    border: 2px solid #e8e8e8;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.25s ease;
+    background: #fafafa;
+    min-width: 110px;
+}
+
+.index-card:hover {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(26,95,122,0.2);
+}
+
+.index-flag { font-size: 1.8rem; }
+.index-name { font-weight: 700; font-size: 0.9rem; }
+.index-dish { font-size: 0.75rem; opacity: 0.65; }
+
+/* ===== SECCIONES GASTRONÓMICAS ===== */
+.gastro-section {
+    position: relative;
+    padding: 100px 8%;
+    border-bottom: 1px solid #e0ddd8;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.gastro-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alt-bg { background: #ffffff; }
+
+.section-num {
+    position: absolute;
+    top: 50px;
+    right: 8%;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(26,95,122,0.06);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
 }
 
 .gastro-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 70px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.reverse {
-    flex-direction: row-reverse;
-}
+.reverse { flex-direction: row-reverse; }
 
 /* TEXTO */
 .gastro-text { flex: 1; }
 
-.gastro-text h2 {
-    color: var(--primary);
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+.country-badge {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.country-badge .flag {
+    font-size: 2.8rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+}
+
+.maravilla-label {
+    display: block;
+    font-size: 0.7rem;
     font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 4px;
+}
+
+.gastro-text h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--dark);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.15;
     position: relative;
-    padding-bottom: 14px;
+    padding-bottom: 16px;
 }
 
 .gastro-text h2::after {
     content: '';
     display: block;
-    width: 70px;
-    height: 4px;
+    width: 60px;
+    height: 3px;
     background: linear-gradient(90deg, var(--secondary), var(--accent));
-    margin-top: 10px;
+    margin-top: 14px;
     border-radius: 2px;
 }
 
+.lead-text {
+    font-size: 1.12rem;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 16px;
+    font-weight: 400;
+    border-left: 3px solid var(--accent);
+    padding-left: 18px;
+}
+
 .gastro-text p {
-    margin-bottom: 22px;
-    font-size: 1.05rem;
-    color: #555;
+    margin-bottom: 24px;
+    font-size: 1rem;
+    color: #666;
     line-height: 1.85;
 }
 
-.gastro-text ul {
-    list-style: none;
-    padding: 0;
+/* PLATOS */
+.dishes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
-.gastro-text li {
-    margin-bottom: 14px;
-    padding-left: 18px;
-    border-left: 4px solid var(--primary);
-    font-size: 1.05rem;
-    color: #444;
+.dish-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 18px;
+    background: #fafaf8;
+    border-radius: 12px;
+    border: 1px solid #ebe8e2;
+    transition: all 0.25s ease;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.dish-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dish-card:hover {
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(26,95,122,0.1);
+    transform: translateX(4px);
+}
+
+.dish-card.featured {
+    background: linear-gradient(135deg, rgba(26,95,122,0.04), rgba(243,156,18,0.04));
+    border-color: rgba(26,95,122,0.2);
+}
+
+.dish-icon { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+
+.dish-card strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.dish-card p {
+    font-size: 0.9rem;
+    color: #666;
     line-height: 1.6;
-    transition: border-color 0.3s ease;
+    margin: 0;
 }
 
-.gastro-text li:hover {
-    border-left-color: var(--accent);
+/* CITA */
+.gastro-quote {
+    margin-top: 8px;
+    padding: 18px 22px;
+    background: linear-gradient(135deg, var(--dark), var(--primary));
+    border-radius: 12px;
+}
+
+.gastro-quote blockquote {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.gastro-quote blockquote::before {
+    content: '"';
+    font-size: 2.5rem;
+    color: var(--accent);
+    line-height: 0;
+    vertical-align: -0.5em;
+    margin-right: 4px;
 }
 
 /* IMÁGENES */
 .gastro-img-container {
-    flex: 1.2;
+    flex: 1.1;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
 }
 
 .img-principal {
     width: 100%;
-    height: 420px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 18px;
+    border-radius: 20px;
     box-shadow: var(--shadow-lg);
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    display: block;
 }
 
 .img-principal:hover {
     transform: scale(1.02);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.2);
 }
 
 .gastro-gallery {
-    margin-top: 16px;
+    margin-top: 14px;
     display: flex;
-    gap: 16px;
+    gap: 14px;
 }
 
 .gastro-gallery img {
-    width: calc(50% - 8px);
-    height: 200px;
+    width: calc(50% - 7px);
+    height: 185px;
     object-fit: cover;
     border-radius: 14px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease;
+    display: block;
 }
 
-.gastro-gallery img:hover {
-    transform: scale(1.03);
+.gastro-gallery img:hover { transform: scale(1.04); }
+
+.img-caption {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: #999;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
-/* ===== FOOTER ===== */
+/* ===== CLOSING SECTION ===== */
+.closing-section {
+    padding: 100px 40px;
+    background: linear-gradient(160deg, var(--dark) 0%, var(--primary) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.closing-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(243,156,18,0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.closing-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.closing-content h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.closing-content p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.closing-flags {
+    font-size: 2.2rem;
+    letter-spacing: 8px;
+}
+
+/* ===== FOOTER — IDÉNTICO AL ORIGINAL ===== */
 footer {
     background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
     color: white;
     text-align: center;
     padding: 40px 20px;
-    margin-top: 60px;
     border-top: 3px solid var(--accent);
     box-shadow: var(--shadow-lg);
 }
@@ -303,23 +519,30 @@ footer p {
 
     .gastro-content,
     .reverse { flex-direction: column; gap: 40px; }
-    .gastro-text h2::after { margin: 10px auto; }
-    .intro { margin: 20px 4%; padding: 50px 20px; }
-    .gastro-section { padding: 60px 5%; }
+
+    .gastro-img-container { position: static; }
+    .section-num { font-size: 5rem; top: 20px; right: 5%; }
+    .gastro-section { padding: 70px 5%; }
+    .hero-content h2 { font-size: 2.6rem; }
+    .closing-content h2 { font-size: 2.2rem; }
 }
 
 @media (max-width: 600px) {
     header h1 { font-size: 1.5rem; letter-spacing: 1px; }
-    .intro h2 { font-size: 2rem; }
-    .gastro-text h2 { font-size: 1.7rem; }
-    .img-principal { height: 260px; }
-    .gastro-gallery img { height: 140px; }
+    .hero-content h2 { font-size: 2rem; }
+    .hero-stats { gap: 16px; }
+    .stat-num { font-size: 2rem; }
+    .gastro-text h2 { font-size: 1.8rem; }
+    .img-principal { height: 250px; }
+    .gastro-gallery img { height: 130px; }
+    .index-card { min-width: 85px; padding: 12px 14px; }
+    .closing-content h2 { font-size: 1.8rem; }
+    .closing-flags { font-size: 1.6rem; letter-spacing: 4px; }
 }
 
-/* ===== SCROLL BAR ===== */
+/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--light); }
 ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
-
-::selection { background: var(--accent); color: white; }    
+::selection { background: var(--accent); color: white; }
