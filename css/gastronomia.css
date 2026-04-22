@@ -546,3 +546,76 @@ footer p {
 ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
 ::selection { background: var(--accent); color: white; }
+
+
+/* ==========================================================================
+   ESTILOS PARA "INGREDIENTES ESENCIALES" (AÑADIDOS)
+   ========================================================================== */
+
+.key-ingredients-container {
+    margin-top: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 14px;
+    border: 1px dashed var(--primary);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.key-ingredients-container h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.key-ingredients-container h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(26,95,122,0.1);
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.ingredient-item {
+    background: #fafaf8;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 3px solid var(--accent);
+    transition: transform 0.25s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.ingredient-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ingredient-item:hover {
+    transform: scale(1.03);
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.ing-name {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--primary);
+    margin-bottom: 3px;
+}
+
+.ingredient-item p {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    color: #777 !important;
+    margin-bottom: 0 !important;
+}
