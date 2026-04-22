@@ -8,8 +8,9 @@
 
 :root {
     --primary: #1a5f7a;
+    --secondary: #d4762f;
     --accent: #f39c12;
-    --dark: #0a2342;
+    --dark: #0f2f3b;
     --header-height: 80px;
 }
 
@@ -21,49 +22,94 @@ body {
     overflow-x: hidden;
 }
 
-/* HEADER */
+/* ===== HEADER — IDÉNTICO AL DE GASTRONOMÍA ===== */
 header {
-    background: rgba(10, 35, 66, 0.98);
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-.header-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 40px;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 25px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
 }
 
 header h1 {
-    font-size: 1.8rem;
-    color: white;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-nav ul {
+nav {
     display: flex;
-    gap: 25px;
-    list-style: none;
+    gap: 35px;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-nav a:hover, .nav-active {
-    color: var(--accent);
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -8px;
+    left: 0;
+    background: var(--accent);
+    transition: width 0.3s ease;
+    border-radius: 2px;
 }
+
+nav a:hover { color: var(--accent); }
+nav a:hover::after { width: 100%; }
+nav a.active { color: var(--accent); }
+nav a.active::after { width: 100%; }
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(10px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-10px); }
 
 /* HERO */
 .hero {
@@ -154,7 +200,7 @@ nav a:hover, .nav-active {
     margin: 10px auto;
 }
 
-/* !!! NUEVO: ESTILO PARA LA LISTA HORIZONTAL (Mismo diseño que tu imagen) !!! */
+/* LISTA HORIZONTAL */
 .skills-list {
     list-style: none;
     display: flex;
@@ -174,7 +220,7 @@ nav a:hover, .nav-active {
 
 .skills-list li::before {
     content: "•";
-    color: var(--accent); /* Punto naranja como tus títulos */
+    color: var(--accent);
     font-weight: bold;
     margin-right: 10px;
     font-size: 1.5rem;
@@ -231,3 +277,48 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    header { padding: 20px; }
+
+    nav {
+        position: fixed;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: var(--dark);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        z-index: 999;
+    }
+
+    nav.open { max-height: 300px; }
+
+    nav a {
+        display: block;
+        padding: 16px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        font-size: 0.95rem;
+    }
+
+    nav a::after { display: none; }
+
+    .hamburger { display: flex; }
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 1.5rem; letter-spacing: 1px; }
+    .hero h2 { font-size: 2rem; }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f8f9fa; }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
+::selection { background: var(--accent); color: white; }

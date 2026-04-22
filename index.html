@@ -30,19 +30,22 @@
 
 <body>
 
-<header role="banner" aria-label="Encabezado del sitio">
-    <div class="header-container">
-        <h1>Maravillas del Mundo</h1>
+<!-- HEADER IGUAL AL DE GASTRONOMÍA -->
+<header>
+    <h1>Las 7 maravillas del mundo</h1>
 
-        <nav role="navigation" aria-label="Menú de navegación principal">
-            <ul>
-                <li><a href="index.html" aria-current="page" class="nav-active">Inicio</a></li>
-                <li><a href="maravillas.html">Maravillas</a></li>
-                <li><a href="animales.html">Animales</a></li>
-                <li><a href="gastronomia.html">Gastronomía</a></li>
-            </ul>
-        </nav>
-    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="nav-menu">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="maravillas.html">Maravillas</a>
+        <a href="animales.html">Animales</a>
+        <a href="gastronomia.html">Gastronomía</a>
+    </nav>
 </header>
 
 <main role="main" aria-label="Contenido principal">
@@ -176,6 +179,23 @@
         <p>&copy; 2026 Maravillas del Mundo - Proyecto SENATI.</p>
     </div>
 </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('open');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('open');
+        });
+    });
+</script>
 
 </body>
 </html>
