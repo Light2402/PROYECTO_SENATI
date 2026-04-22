@@ -67,7 +67,10 @@ header {
     font-size: 2rem;
     letter-spacing: 2px;
     font-weight: 700;
-    color: var(--gold);
+    background: linear-gradient(135deg, #e8c97a, #f39c12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
@@ -97,14 +100,14 @@ nav a::after {
     height: 3px;
     bottom: -8px;
     left: 0;
-    background: var(--gold);
+    background: #f39c12;
     transition: width 0.3s ease;
     border-radius: 2px;
 }
 
-nav a:hover { color: var(--gold); }
+nav a:hover { color: #f39c12; }
 nav a:hover::after { width: 100%; }
-nav a.active { color: var(--gold); }
+nav a.active { color: #f39c12; }
 nav a.active::after { width: 100%; }
 
 .hamburger {
