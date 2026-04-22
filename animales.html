@@ -16,17 +16,20 @@
 
 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
+<!-- HEADER IGUAL AL DE GASTRONOMÍA E INDEX -->
 <header id="mainHeader">
-  <a class="header-logo" href="index.html">Fauna <em>&</em> Maravillas</a>
-  <button class="hamburger" id="hamburger" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
-  <nav id="navMenu">
-    <a href="index.html">Inicio</a>
-    <a href="maravillas.html">Maravillas</a>
-    <a href="animales.html" class="active">Animales</a>
-    <a href="gastronomia.html">Gastronomía</a>
-  </nav>
+    <h1>Las 7 maravillas del mundo</h1>
+
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav id="navMenu">
+        <a href="index.html">Inicio</a>
+        <a href="maravillas.html">Maravillas</a>
+        <a href="animales.html" class="active">Animales</a>
+        <a href="gastronomia.html">Gastronomía</a>
+    </nav>
 </header>
 
 <section class="hero">
@@ -462,7 +465,8 @@
       </div>
     </div>
 
-  </div></main>
+  </div>
+</main>
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-shell" id="modalShell">
@@ -514,6 +518,24 @@
 </footer>
 
 <script src="js/animales.js"></script>
+
+<script>
+    // Script hamburguesa igual al de gastronomia e index
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('open');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('open');
+        });
+    });
+</script>
 
 </body>
 </html>
