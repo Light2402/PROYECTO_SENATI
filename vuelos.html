@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuelos a las Maravillas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/vuelos.css">
 </head>
 <body>
@@ -26,8 +26,8 @@
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="stars"></div>
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
     <div class="plane-trail"></div>
     <div class="hero-content">
         <div class="hero-eyebrow">✈ Rutas desde Lima, Perú</div>
@@ -96,7 +96,6 @@
         <div class="section-meta">
             <p class="wonder-label">Maravilla del Mundo</p>
             <h2 class="section-title">Machu Picchu — <span class="country">Perú</span></h2>
-            <div class="section-divider"></div>
         </div>
     </div>
     <div class="flight-layout">
@@ -179,7 +178,6 @@
             </div>
         </div>
     </div>
-    <div class="section-separator"></div>
 </section>
 
 <!-- ===== 02 · MÉXICO ===== -->
@@ -189,7 +187,6 @@
         <div class="section-meta">
             <p class="wonder-label">Maravilla del Mundo</p>
             <h2 class="section-title">Chichén Itzá — <span class="country">México</span></h2>
-            <div class="section-divider"></div>
         </div>
     </div>
     <div class="flight-layout">
@@ -272,7 +269,6 @@
             </div>
         </div>
     </div>
-    <div class="section-separator"></div>
 </section>
 
 <!-- ===== 03 · BRASIL ===== -->
@@ -282,7 +278,6 @@
         <div class="section-meta">
             <p class="wonder-label">Maravilla del Mundo</p>
             <h2 class="section-title">Cristo Redentor — <span class="country">Brasil</span></h2>
-            <div class="section-divider"></div>
         </div>
     </div>
     <div class="flight-layout">
@@ -365,7 +360,6 @@
             </div>
         </div>
     </div>
-    <div class="section-separator"></div>
 </section>
 
 <!-- ===== 04 · ITALIA ===== -->
@@ -375,7 +369,6 @@
         <div class="section-meta">
             <p class="wonder-label">Maravilla del Mundo</p>
             <h2 class="section-title">Coliseo Romano — <span class="country">Italia</span></h2>
-            <div class="section-divider"></div>
         </div>
     </div>
     <div class="flight-layout">
@@ -458,7 +451,6 @@
             </div>
         </div>
     </div>
-    <div class="section-separator"></div>
 </section>
 
 <!-- ===== 05 · INDIA ===== -->
@@ -468,7 +460,6 @@
         <div class="section-meta">
             <p class="wonder-label">Maravilla del Mundo</p>
             <h2 class="section-title">Taj Mahal — <span class="country">India</span></h2>
-            <div class="section-divider"></div>
         </div>
     </div>
     <div class="flight-layout">
@@ -551,7 +542,6 @@
             </div>
         </div>
     </div>
-    <div class="section-separator"></div>
 </section>
 
 <!-- ===== 06 · JORDANIA ===== -->
@@ -561,7 +551,6 @@
         <div class="section-meta">
             <p class="wonder-label">Maravilla del Mundo</p>
             <h2 class="section-title">Petra — <span class="country">Jordania</span></h2>
-            <div class="section-divider"></div>
         </div>
     </div>
     <div class="flight-layout">
@@ -644,7 +633,6 @@
             </div>
         </div>
     </div>
-    <div class="section-separator"></div>
 </section>
 
 <!-- ===== 07 · CHINA ===== -->
@@ -654,7 +642,6 @@
         <div class="section-meta">
             <p class="wonder-label">Maravilla del Mundo</p>
             <h2 class="section-title">Gran Muralla China — <span class="country">China</span></h2>
-            <div class="section-divider"></div>
         </div>
     </div>
     <div class="flight-layout">
@@ -747,7 +734,6 @@
 </main>
 
 <script>
-// Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 if (hamburger && navMenu) {
@@ -757,42 +743,20 @@ if (hamburger && navMenu) {
     });
 }
 
-// Highlight active quick-nav pill on scroll
 const sections = document.querySelectorAll('.flight-section[id]');
 const pills = document.querySelectorAll('.nav-pill');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            pills.forEach(p => { p.style.borderColor = ''; p.style.color = ''; });
+            pills.forEach(p => { p.classList.remove('active'); });
             const active = document.querySelector(`.nav-pill[href="#${entry.target.id}"]`);
-            if (active) {
-                active.style.borderColor = 'var(--gold)';
-                active.style.color = 'var(--gold)';
-            }
+            if (active) active.classList.add('active');
         }
     });
 }, { threshold: 0.3 });
 
 sections.forEach(s => observer.observe(s));
-
-// Fade-in on scroll
-const fadeEls = document.querySelectorAll('.flight-panel, .tips-card, .price-card, .section-header');
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, { threshold: 0.1 });
-
-fadeEls.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    fadeObserver.observe(el);
-});
 </script>
 
 </body>
