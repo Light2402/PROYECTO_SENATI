@@ -1104,37 +1104,27 @@ main {
 ══════════════════════════════════════════════════════════ */
 footer {
   background: var(--dark);
-  padding: 60px;
+  padding: 40px 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 24px;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
 }
 
 .footer-brand {
-  font-family: var(--font-display);
-  font-style: italic;
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, .7);
-}
-
-.footer-brand em {
   color: var(--accent);
-  font-style: normal;
+  letter-spacing: 0.05em;
 }
 
 .footer-text {
-  font-size: .72rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, .5);
-}
-
-.footer-divider {
-  width: 1px;
-  height: 20px;
-  background: rgba(255, 255, 255, .1);
+  font-family: var(--font-body);
+  font-size: .85rem;
+  color: rgba(255, 255, 255, .7);
 }
 
 /* ══════════════════════════════════════════════════════════

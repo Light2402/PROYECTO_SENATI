@@ -1,542 +1,976 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fauna de las Maravillas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/animales.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fauna de las Maravillas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/animales.css">
 </head>
+
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
 
-<!-- HEADER IGUAL AL DE GASTRONOMÍA E INDEX -->
-<header id="mainHeader">
+  <!-- HEADER IGUAL AL DE GASTRONOMÍA E INDEX -->
+  <header id="mainHeader">
     <h1>Las 7 maravillas del mundo</h1>
 
     <button class="hamburger" id="hamburger" aria-label="Menú">
-        <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
     </button>
 
     <nav id="navMenu">
-        <a href="index.html">Inicio</a>
-        <a href="maravillas.html">Maravillas</a>
-        <a href="animales.html" class="active">Animales</a>
-        <a href="gastronomia.html">Gastronomía</a>
-        <a href="vuelos.html">Vuelos</a>
+      <a href="index.html">Inicio</a>
+      <a href="maravillas.html">Maravillas</a>
+      <a href="animales.html" class="active">Fauna</a>
+      <a href="gastronomia.html">Gastronomía</a>
+      <a href="vuelos.html">Vuelos</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-particles"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">Fauna del Mundo · 7 Maravillas</span>
-    <h1 class="hero-title">
-      Animales <em>Extraordinarios</em>
-    </h1>
-    <p class="hero-subtitle">Las regiones que albergan las maravillas del mundo son hogar de especies únicas. Una guía visual de la fauna más fascinante del planeta.</p>
-    <div class="hero-scroll">
-      <span>Explorar</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </div>
-</section>
-
-<main>
-  <section class="intro-section">
-    <div class="intro-inner">
-      <div>
-        <div class="intro-label">Sobre esta colección</div>
-        <h2 class="intro-heading">Animales del <em>mundo</em></h2>
-      </div>
-      <div>
-        <p class="intro-text">Cada maravilla del mundo moderno es también un santuario de vida silvestre. Esta colección reúne las especies más representativas e icónicas de cada lugar, desde las alturas andinas de Machu Picchu hasta las áridas gargantas de Petra.</p>
-        <div class="intro-stats">
-          <div>
-            <div class="intro-stat-num">49<span>sp</span></div>
-            <div class="intro-stat-label">Especies</div>
-          </div>
-          <div>
-            <div class="intro-stat-num">7<span>✦</span></div>
-            <div class="intro-stat-label">Maravillas</div>
-          </div>
-          <div>
-            <div class="intro-stat-num">3<span>continentes</span></div>
-            <div class="intro-stat-label">del mundo</div>
-          </div>
-        </div>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Fauna del Mundo · 7 Maravillas</span>
+      <h1 class="hero-title">
+        Animales <em>Extraordinarios</em>
+      </h1>
+      <p class="hero-subtitle">Las regiones que albergan las maravillas del mundo son hogar de especies únicas. Una guía
+        visual de la fauna más fascinante del planeta.</p>
+      <div class="hero-scroll">
+        <span>Explorar</span>
+        <div class="hero-scroll-line"></div>
       </div>
     </div>
   </section>
 
-  <div class="filter-bar" id="filterBar">
-    <span class="filter-label">Filtrar</span>
-    <div class="filter-pills">
-      <button class="filter-pill active" data-filter="">Todas las especies</button>
-      <button class="filter-pill" data-filter="machu-picchu">Machu Picchu</button>
-      <button class="filter-pill" data-filter="cristo-redentor">Cristo Redentor</button>
-      <button class="filter-pill" data-filter="chichen-itza">Chichén Itzá</button>
-      <button class="filter-pill" data-filter="taj-mahal">Taj Mahal</button>
-      <button class="filter-pill" data-filter="petra">Petra</button>
-      <button class="filter-pill" data-filter="gran-muralla">Gran Muralla</button>
-      <button class="filter-pill" data-filter="coliseo">Coliseo</button>
-    </div>
-  </div>
-
-  <div class="gallery" id="gallery">
-
-    <div class="maravilla-grupo" data-grupo="machu-picchu">
-      <div class="grupo-header">
-        <div class="grupo-meta">
-          <div class="grupo-pais">Perú · América del Sur</div>
-          <h2 class="grupo-nombre">Machu Picchu</h2>
+  <main>
+    <section class="intro-section">
+      <div class="intro-inner">
+        <div>
+          <div class="intro-label">Sobre esta colección</div>
+          <h2 class="intro-heading">Animales del <em>mundo</em></h2>
         </div>
         <div>
-          <div class="grupo-count-num">07</div>
-          <div class="grupo-count">especies</div>
+          <p class="intro-text">Cada maravilla del mundo moderno es también un santuario de vida silvestre. Esta
+            colección reúne las especies más representativas e icónicas de cada lugar, desde las alturas andinas de
+            Machu Picchu hasta las áridas gargantas de Petra.</p>
+          <div class="intro-stats">
+            <div>
+              <div class="intro-stat-num">49<span>sp</span></div>
+              <div class="intro-stat-label">Especies</div>
+            </div>
+            <div>
+              <div class="intro-stat-num">7<span>✦</span></div>
+              <div class="intro-stat-label">Maravillas</div>
+            </div>
+            <div>
+              <div class="intro-stat-num">3<span>continentes</span></div>
+              <div class="intro-stat-label">del mundo</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="animales-grid">
-        <article class="animal-card" data-id="llama-machu">
-          <div class="card-media"><img src="assets/imagnes%20animales/llama_in_machu_picchu.jpg" alt="Llama" loading="lazy"></div>
-          <div class="card-overlay"></div>
-          <div class="card-tag">Machu Picchu</div>
-          <div class="card-content">
-            <div class="card-number">001</div>
-            <h3 class="card-name">Llama</h3>
-            <p class="card-desc">El animal más icónico; verás muchas pastando libremente en las terrazas de la ciudadela inca.</p>
-            <div class="card-cta"><div class="card-cta-line"></div>Descubrir</div>
-          </div>
-        </article>
-        <article class="animal-card" data-id="oso-machu">
-          <div class="card-media"><img src="assets/imagnes%20animales/Oso%20de%20anteojos.jpg" alt="Oso de anteojos" loading="lazy"></div>
-          <div class="card-overlay"></div>
-          <div class="card-tag">Machu Picchu</div>
-          <div class="card-content">
-            <div class="card-number">002</div>
-            <h3 class="card-name">Oso de anteojos</h3>
-            <p class="card-desc">El único oso de Sudamérica, habita en los bosques nubosos que rodean las ruinas.</p>
-            <div class="card-cta"><div class="card-cta-line"></div>Descubrir</div>
-          </div>
-        </article>
-        <article class="animal-card" data-id="condor-machu">
-          <div class="card-media"><img src="assets/imagnes%20animales/C%C3%B3ndor%20andino.png" alt="Cóndor andino" loading="lazy"></div>
-          <div class="card-overlay"></div>
-          <div class="card-tag">Machu Picchu</div>
-          <div class="card-content">
-            <div class="card-number">003</div>
-            <h3 class="card-name">Cóndor andino</h3>
-            <p class="card-desc">Ave sagrada que sobrevuela las cumbres de los Andes con una envergadura colosal.</p>
-            <div class="card-cta"><div class="card-cta-line"></div>Descubrir</div>
-          </div>
-        </article>
-        <article class="animal-card" data-id="gallito-machu">
-          <div class="card-media"><img src="assets/imagnes%20animales/Gallito%20de%20las%20rocas.jpg" alt="Gallito de las rocas" loading="lazy"></div>
-          <div class="card-overlay"></div>
-          <div class="card-tag">Machu Picchu</div>
-          <div class="card-content">
-            <div class="card-number">004</div>
-            <h3 class="card-name">Gallito de las rocas</h3>
-            <p class="card-desc">El ave nacional del Perú, de un rojo brillante inconfundible en la selva andina.</p>
-            <div class="card-cta"><div class="card-cta-line"></div>Descubrir</div>
-          </div>
-        </article>
-        <article class="animal-card" data-id="venado-machu">
-          <div class="card-media"><img src="assets/imagnes%20animales/Venado%20de%20cola%20blanca.jpg" alt="Venado de cola blanca" loading="lazy"></div>
-          <div class="card-overlay"></div>
-          <div class="card-tag">Machu Picchu</div>
-          <div class="card-content">
-            <div class="card-number">005</div>
-            <h3 class="card-name">Venado de cola blanca</h3>
-            <p class="card-desc">Se le ve al amanecer en las zonas boscosas del Santuario Histórico.</p>
-            <div class="card-cta"><div class="card-cta-line"></div>Descubrir</div>
-          </div>
-        </article>
-        <article class="animal-card" data-id="vizcacha-machu">
-          <div class="card-media"><img src="assets/imagnes%20animales/Vizcacha.webp" alt="Vizcacha" loading="lazy"></div>
-          <div class="card-overlay"></div>
-          <div class="card-tag">Machu Picchu</div>
-          <div class="card-content">
-            <div class="card-number">006</div>
-            <h3 class="card-name">Vizcacha</h3>
-            <p class="card-desc">Un roedor ágil que parece un conejo, habitante fiel de las terrazas andinas.</p>
-            <div class="card-cta"><div class="card-cta-line"></div>Descubrir</div>
-          </div>
-        </article>
-        <article class="animal-card" data-id="colibri-machu">
-          <div class="card-media"><img src="assets/imagnes%20animales/Colibrí%20gigante.jpg" alt="Colibrí gigante" loading="lazy"></div>
-          <div class="card-overlay"></div>
-          <div class="card-tag">Machu Picchu</div>
-          <div class="card-content">
-            <div class="card-number">007</div>
-            <h3 class="card-name">Colibrí gigante</h3>
-            <p class="card-desc">La especie de colibrí más grande del planeta, un joya alada en los Andes.</p>
-            <div class="card-cta"><div class="card-cta-line"></div>Descubrir</div>
-          </div>
-        </article>
+    </section>
+
+    <div class="filter-bar" id="filterBar">
+      <span class="filter-label">Filtrar</span>
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="">Todas las especies</button>
+        <button class="filter-pill" data-filter="machu-picchu">Machu Picchu</button>
+        <button class="filter-pill" data-filter="cristo-redentor">Cristo Redentor</button>
+        <button class="filter-pill" data-filter="chichen-itza">Chichén Itzá</button>
+        <button class="filter-pill" data-filter="taj-mahal">Taj Mahal</button>
+        <button class="filter-pill" data-filter="petra">Petra</button>
+        <button class="filter-pill" data-filter="gran-muralla">Gran Muralla</button>
+        <button class="filter-pill" data-filter="coliseo">Coliseo</button>
       </div>
     </div>
 
-    <div class="maravilla-grupo" data-grupo="chichen-itza">
-      <div class="grupo-header">
-        <div class="grupo-meta">
-          <div class="grupo-pais">México · América Central</div>
-          <h2 class="grupo-nombre">Chichén Itzá</h2>
+    <div class="gallery" id="gallery">
+
+      <div class="maravilla-grupo" data-grupo="machu-picchu">
+        <div class="grupo-header">
+          <div class="grupo-meta">
+            <div class="grupo-pais">Perú · América del Sur</div>
+            <h2 class="grupo-nombre">Machu Picchu</h2>
+          </div>
+          <div>
+            <div class="grupo-count-num">07</div>
+            <div class="grupo-count">especies</div>
+          </div>
         </div>
-        <div><div class="grupo-count-num">07</div><div class="grupo-count">especies</div></div>
+        <div class="animales-grid">
+          <article class="animal-card" data-id="llama-machu">
+            <div class="card-media"><img src="assets/imagnes%20animales/llama_in_machu_picchu.jpg" alt="Llama"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Machu Picchu</div>
+            <div class="card-content">
+              <div class="card-number">001</div>
+              <h3 class="card-name">Llama</h3>
+              <p class="card-desc">El animal más icónico; verás muchas pastando libremente en las terrazas de la
+                ciudadela inca.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="oso-machu">
+            <div class="card-media"><img src="assets/imagnes%20animales/Oso%20de%20anteojos.jpg" alt="Oso de anteojos"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Machu Picchu</div>
+            <div class="card-content">
+              <div class="card-number">002</div>
+              <h3 class="card-name">Oso de anteojos</h3>
+              <p class="card-desc">El único oso de Sudamérica, habita en los bosques nubosos que rodean las ruinas.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="condor-machu">
+            <div class="card-media"><img src="assets/imagnes%20animales/C%C3%B3ndor%20andino.png" alt="Cóndor andino"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Machu Picchu</div>
+            <div class="card-content">
+              <div class="card-number">003</div>
+              <h3 class="card-name">Cóndor andino</h3>
+              <p class="card-desc">Ave sagrada que sobrevuela las cumbres de los Andes con una envergadura colosal.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="gallito-machu">
+            <div class="card-media"><img src="assets/imagnes%20animales/Gallito%20de%20las%20rocas.jpg"
+                alt="Gallito de las rocas" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Machu Picchu</div>
+            <div class="card-content">
+              <div class="card-number">004</div>
+              <h3 class="card-name">Gallito de las rocas</h3>
+              <p class="card-desc">El ave nacional del Perú, de un rojo brillante inconfundible en la selva andina.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="venado-machu">
+            <div class="card-media"><img src="assets/imagnes%20animales/Venado%20de%20cola%20blanca.jpg"
+                alt="Venado de cola blanca" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Machu Picchu</div>
+            <div class="card-content">
+              <div class="card-number">005</div>
+              <h3 class="card-name">Venado de cola blanca</h3>
+              <p class="card-desc">Se le ve al amanecer en las zonas boscosas del Santuario Histórico.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="vizcacha-machu">
+            <div class="card-media"><img src="assets/imagnes%20animales/Vizcacha.webp" alt="Vizcacha" loading="lazy">
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Machu Picchu</div>
+            <div class="card-content">
+              <div class="card-number">006</div>
+              <h3 class="card-name">Vizcacha</h3>
+              <p class="card-desc">Un roedor ágil que parece un conejo, habitante fiel de las terrazas andinas.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="colibri-machu">
+            <div class="card-media"><img src="assets/imagnes%20animales/Colibrí%20gigante.jpg" alt="Colibrí gigante"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Machu Picchu</div>
+            <div class="card-content">
+              <div class="card-number">007</div>
+              <h3 class="card-name">Colibrí gigante</h3>
+              <p class="card-desc">La especie de colibrí más grande del planeta, un joya alada en los Andes.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="animales-grid">
-        <article class="animal-card" data-id="iguana-chichen">
-          <div class="card-media"><img src="assets/imagnes%20animales/Iguana%20rayada.jpeg" alt="Iguana rayada" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Chichén Itzá</div>
-          <div class="card-content"><div class="card-number">008</div><h3 class="card-name">Iguana rayada</h3><p class="card-desc">Cientos de ellas toman el sol sobre las piedras mayas, el lagarto más rápido de la Tierra.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="serpiente-chichen">
-          <div class="card-media"><img src="assets/imagnes%20animales/Serpiente%20de%20cascabel.webp" alt="Serpiente de cascabel" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Chichén Itzá</div>
-          <div class="card-content"><div class="card-number">009</div><h3 class="card-name">Serpiente de cascabel</h3><p class="card-desc">El símbolo sagrado de Kukulcán, representado en las sombras del equinoccio.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="jaguar-chichen">
-          <div class="card-media"><img src="assets/imagnes%20animales/Jaguar.jpg" alt="Jaguar" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Chichén Itzá</div>
-          <div class="card-content"><div class="card-number">010</div><h3 class="card-name">Jaguar</h3><p class="card-desc">El felino sagrado de los mayas, el máximo depredador de la selva yucateca.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="pajaro-chichen">
-          <div class="card-media"><img src="assets/imagnes%20animales/Pájaro%20Toh.webp" alt="Pájaro Toh" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Chichén Itzá</div>
-          <div class="card-content"><div class="card-number">011</div><h3 class="card-name">Pájaro Toh</h3><p class="card-desc">El ave de los cenotes, con su cola en forma de raqueta y movimiento hipnótico.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="mono-chichen">
-          <div class="card-media"><img src="assets/imagnes%20animales/Mono%20araña.webp" alt="Mono araña" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Chichén Itzá</div>
-          <div class="card-content"><div class="card-number">012</div><h3 class="card-name">Mono araña</h3><p class="card-desc">Acróbata de la selva maya, usa su cola prensil como un quinto brazo.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="pecari-chichen">
-          <div class="card-media"><img src="assets/imagnes%20animales/Pecarí.jpg" alt="Pecarí" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Chichén Itzá</div>
-          <div class="card-content"><div class="card-number">013</div><h3 class="card-name">Pecarí de collar</h3><p class="card-desc">Viaja en manadas ruidosas por los caminos selváticos de Yucatán.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="coati-chichen">
-          <div class="card-media"><img src="assets/imagnes%20animales/Coatí.jpg" alt="Coatí" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Chichén Itzá</div>
-          <div class="card-content"><div class="card-number">014</div><h3 class="card-name">Coatí</h3><p class="card-desc">Curioso explorador de las ruinas, siempre con su cola erguida como antena.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
+
+      <div class="maravilla-grupo" data-grupo="chichen-itza">
+        <div class="grupo-header">
+          <div class="grupo-meta">
+            <div class="grupo-pais">México · América Central</div>
+            <h2 class="grupo-nombre">Chichén Itzá</h2>
+          </div>
+          <div>
+            <div class="grupo-count-num">07</div>
+            <div class="grupo-count">especies</div>
+          </div>
+        </div>
+        <div class="animales-grid">
+          <article class="animal-card" data-id="iguana-chichen">
+            <div class="card-media"><img src="assets/imagnes%20animales/Iguana%20rayada.jpeg" alt="Iguana rayada"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Chichén Itzá</div>
+            <div class="card-content">
+              <div class="card-number">008</div>
+              <h3 class="card-name">Iguana rayada</h3>
+              <p class="card-desc">Cientos de ellas toman el sol sobre las piedras mayas, el lagarto más rápido de la
+                Tierra.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="serpiente-chichen">
+            <div class="card-media"><img src="assets/imagnes%20animales/Serpiente%20de%20cascabel.webp"
+                alt="Serpiente de cascabel" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Chichén Itzá</div>
+            <div class="card-content">
+              <div class="card-number">009</div>
+              <h3 class="card-name">Serpiente de cascabel</h3>
+              <p class="card-desc">El símbolo sagrado de Kukulcán, representado en las sombras del equinoccio.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="jaguar-chichen">
+            <div class="card-media"><img src="assets/imagnes%20animales/Jaguar.jpg" alt="Jaguar" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Chichén Itzá</div>
+            <div class="card-content">
+              <div class="card-number">010</div>
+              <h3 class="card-name">Jaguar</h3>
+              <p class="card-desc">El felino sagrado de los mayas, el máximo depredador de la selva yucateca.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="pajaro-chichen">
+            <div class="card-media"><img src="assets/imagnes%20animales/Pájaro%20Toh.webp" alt="Pájaro Toh"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Chichén Itzá</div>
+            <div class="card-content">
+              <div class="card-number">011</div>
+              <h3 class="card-name">Pájaro Toh</h3>
+              <p class="card-desc">El ave de los cenotes, con su cola en forma de raqueta y movimiento hipnótico.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="mono-chichen">
+            <div class="card-media"><img src="assets/imagnes%20animales/Mono%20araña.webp" alt="Mono araña"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Chichén Itzá</div>
+            <div class="card-content">
+              <div class="card-number">012</div>
+              <h3 class="card-name">Mono araña</h3>
+              <p class="card-desc">Acróbata de la selva maya, usa su cola prensil como un quinto brazo.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="pecari-chichen">
+            <div class="card-media"><img src="assets/imagnes%20animales/Pecarí.jpg" alt="Pecarí" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Chichén Itzá</div>
+            <div class="card-content">
+              <div class="card-number">013</div>
+              <h3 class="card-name">Pecarí de collar</h3>
+              <p class="card-desc">Viaja en manadas ruidosas por los caminos selváticos de Yucatán.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="coati-chichen">
+            <div class="card-media"><img src="assets/imagnes%20animales/Coatí.jpg" alt="Coatí" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Chichén Itzá</div>
+            <div class="card-content">
+              <div class="card-number">014</div>
+              <h3 class="card-name">Coatí</h3>
+              <p class="card-desc">Curioso explorador de las ruinas, siempre con su cola erguida como antena.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="maravilla-grupo" data-grupo="coliseo">
+        <div class="grupo-header">
+          <div class="grupo-meta">
+            <div class="grupo-pais">Italia · Europa</div>
+            <h2 class="grupo-nombre">El Coliseo</h2>
+          </div>
+          <div>
+            <div class="grupo-count-num">07</div>
+            <div class="grupo-count">especies</div>
+          </div>
+        </div>
+        <div class="animales-grid">
+          <article class="animal-card" data-id="gato-coliseo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Gato%20callejero.jpg" alt="Gato callejero"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Coliseo</div>
+            <div class="card-content">
+              <div class="card-number">015</div>
+              <h3 class="card-name">Gato callejero</h3>
+              <p class="card-desc">Roma es mundialmente famosa por sus colonias felinas protegidas por ley.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="murcielago-coliseo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Murciélago%20hortelano.jpg"
+                alt="Murciélago hortelano" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Coliseo</div>
+            <div class="card-content">
+              <div class="card-number">016</div>
+              <h3 class="card-name">Murciélago hortelano</h3>
+              <p class="card-desc">Anida en las grietas milenarias y controla plagas de insectos en verano.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="vencejo-coliseo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Vencejo%20común.jpg" alt="Vencejo común"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Coliseo</div>
+            <div class="card-content">
+              <div class="card-number">017</div>
+              <h3 class="card-name">Vencejo común</h3>
+              <p class="card-desc">Pasan toda su vida en el aire; solo aterrizan para anidar en los muros.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="mochuelo-coliseo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Mochuelo%20común.jpg" alt="Mochuelo común"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Coliseo</div>
+            <div class="card-content">
+              <div class="card-number">018</div>
+              <h3 class="card-name">Mochuelo común</h3>
+              <p class="card-desc">Símbolo de Atenea y Minerva, caza entre las ruinas del Foro Romano.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="rata-coliseo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Rata%20de%20campo.jpg" alt="Rata de campo"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Coliseo</div>
+            <div class="card-content">
+              <div class="card-number">019</div>
+              <h3 class="card-name">Rata de campo</h3>
+              <p class="card-desc">Los subterráneos del Coliseo, donde vivieron gladiadores, son hoy su laberinto.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="halcon-coliseo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Halcón%20peregrino.jpg" alt="Halcón peregrino"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Coliseo</div>
+            <div class="card-content">
+              <div class="card-number">020</div>
+              <h3 class="card-name">Halcón peregrino</h3>
+              <p class="card-desc">El animal más rápido del planeta, supera los 380 km/h en picada.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="lagartija-coliseo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Lagartija%20italiana.jpg"
+                alt="Lagartija italiana" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Coliseo</div>
+            <div class="card-content">
+              <div class="card-number">021</div>
+              <h3 class="card-name">Lagartija italiana</h3>
+              <p class="card-desc">Se camuflan a la perfección con el travertino romano bajo el sol mediterráneo.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="maravilla-grupo" data-grupo="gran-muralla">
+        <div class="grupo-header">
+          <div class="grupo-meta">
+            <div class="grupo-pais">China · Asia Oriental</div>
+            <h2 class="grupo-nombre">Gran Muralla China</h2>
+          </div>
+          <div>
+            <div class="grupo-count-num">07</div>
+            <div class="grupo-count">especies</div>
+          </div>
+        </div>
+        <div class="animales-grid">
+          <article class="animal-card" data-id="leopardo-muralla">
+            <div class="card-media"><img src="assets/imagnes%20animales/Leopardo%20de%20las%20nieves.jpg"
+                alt="Leopardo de las nieves" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Gran Muralla</div>
+            <div class="card-content">
+              <div class="card-number">022</div>
+              <h3 class="card-name">Leopardo de las nieves</h3>
+              <p class="card-desc">El fantasma de la montaña, habita las zonas más altas e inhóspitas.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="ciervo-muralla">
+            <div class="card-media"><img src="assets/imagnes%20animales/Ciervo%20común.jpg" alt="Ciervo sika"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Gran Muralla</div>
+            <div class="card-content">
+              <div class="card-number">023</div>
+              <h3 class="card-name">Ciervo sika</h3>
+              <p class="card-desc">Pasea por los bosques caducifolios que flanquean la muralla milenaria.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="ciguena-muralla">
+            <div class="card-media"><img src="assets/imagnes%20animales/Cigüeña%20negra.png" alt="Cigüeña negra"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Gran Muralla</div>
+            <div class="card-content">
+              <div class="card-number">024</div>
+              <h3 class="card-name">Cigüeña negra</h3>
+              <p class="card-desc">Ave migratoria cautelosa que anida cerca de los ríos del norte de China.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="zorro-muralla">
+            <div class="card-media"><img src="assets/imagnes%20animales/Zorro%20rojo.webp" alt="Zorro rojo"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Gran Muralla</div>
+            <div class="card-content">
+              <div class="card-number">025</div>
+              <h3 class="card-name">Zorro rojo</h3>
+              <p class="card-desc">Usa las bases de torres abandonadas como madrigueras para sus crías.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="jabali-muralla">
+            <div class="card-media"><img src="assets/imagnes%20animales/Jabalí.jpg" alt="Jabalí" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Gran Muralla</div>
+            <div class="card-content">
+              <div class="card-number">026</div>
+              <h3 class="card-name">Jabalí</h3>
+              <p class="card-desc">Revuelve la tierra de los bosques chinos, renovando la vida del suelo.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="aguila-muralla">
+            <div class="card-media"><img src="assets/imagnes%20animales/Águila%20real.webp" alt="Águila real"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Gran Muralla</div>
+            <div class="card-content">
+              <div class="card-number">027</div>
+              <h3 class="card-name">Águila real</h3>
+              <p class="card-desc">Patrulla las torres de guardia desde el aire, con visión a 3 kilómetros.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="gato-muralla">
+            <div class="card-media"><img src="assets/imagnes%20animales/Gato%20montés%20chino.webp"
+                alt="Gato montés chino" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Gran Muralla</div>
+            <div class="card-content">
+              <div class="card-number">028</div>
+              <h3 class="card-name">Gato montés chino</h3>
+              <p class="card-desc">Uno de los felinos más desconocidos y escurridizos de China.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="maravilla-grupo" data-grupo="petra">
+        <div class="grupo-header">
+          <div class="grupo-meta">
+            <div class="grupo-pais">Jordania · Oriente Medio</div>
+            <h2 class="grupo-nombre">Petra</h2>
+          </div>
+          <div>
+            <div class="grupo-count-num">07</div>
+            <div class="grupo-count">especies</div>
+          </div>
+        </div>
+        <div class="animales-grid">
+          <article class="animal-card" data-id="dromedario-petra">
+            <div class="card-media"><img src="assets/imagnes%20animales/Dromedario.jpg" alt="Dromedario" loading="lazy">
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Petra</div>
+            <div class="card-content">
+              <div class="card-number">029</div>
+              <h3 class="card-name">Dromedario</h3>
+              <p class="card-desc">El vehículo del Imperio Nabateo que hizo posible el comercio en el desierto.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="caballo-petra">
+            <div class="card-media"><img src="assets/imagnes%20animales/Caballo%20árabe.webp" alt="Caballo árabe"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Petra</div>
+            <div class="card-content">
+              <div class="card-number">030</div>
+              <h3 class="card-name">Caballo árabe</h3>
+              <p class="card-desc">Una de las razas más antiguas, guía a los visitantes por el Siq de Petra.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="agama-petra">
+            <div class="card-media"><img src="assets/imagnes%20animales/Agama%20del%20Sinaí.jpg" alt="Agama del Sinaí"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Petra</div>
+            <div class="card-content">
+              <div class="card-number">031</div>
+              <h3 class="card-name">Agama del Sinaí</h3>
+              <p class="card-desc">Se vuelve azul eléctrico al sol, un contraste asombroso con la piedra roja.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="caracal-petra">
+            <div class="card-media"><img src="assets/imagnes%20animales/Caracal.webp" alt="Caracal" loading="lazy">
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Petra</div>
+            <div class="card-content">
+              <div class="card-number">032</div>
+              <h3 class="card-name">Caracal</h3>
+              <p class="card-desc">El lince del desierto, salta 3 metros para atrapar aves en pleno vuelo.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="perro-petra">
+            <div class="card-media"><img src="assets/imagnes%20animales/Perro%20Canaan.jpg" alt="Perro Canaan"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Petra</div>
+            <div class="card-content">
+              <div class="card-number">033</div>
+              <h3 class="card-name">Perro de Canaán</h3>
+              <p class="card-desc">Una de las razas más antiguas del mundo, guardián milenario de Petra.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="cabra-petra">
+            <div class="card-media"><img src="assets/imagnes%20animales/Cabra%20montés%20(Íbice).jpg"
+                alt="Íbice de Nubia" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Petra</div>
+            <div class="card-content">
+              <div class="card-number">034</div>
+              <h3 class="card-name">Íbice de Nubia</h3>
+              <p class="card-desc">Escala acantilados verticales con pezuñas que actúan como ventosas.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="buho-petra">
+            <div class="card-media"><img src="assets/imagnes%20animales/Búho%20real%20del%20desierto.jpg"
+                alt="Búho real del desierto" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Petra</div>
+            <div class="card-content">
+              <div class="card-number">035</div>
+              <h3 class="card-name">Búho real del desierto</h3>
+              <p class="card-desc">Sus plumas aserradas le dan un vuelo absolutamente silencioso.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="maravilla-grupo" data-grupo="taj-mahal">
+        <div class="grupo-header">
+          <div class="grupo-meta">
+            <div class="grupo-pais">India · Asia del Sur</div>
+            <h2 class="grupo-nombre">Taj Mahal</h2>
+          </div>
+          <div>
+            <div class="grupo-count-num">07</div>
+            <div class="grupo-count">especies</div>
+          </div>
+        </div>
+        <div class="animales-grid">
+          <article class="animal-card" data-id="pavo-taj">
+            <div class="card-media"><img src="assets/imagnes%20animales/Pavo%20real.jpg" alt="Pavo real" loading="lazy">
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Taj Mahal</div>
+            <div class="card-content">
+              <div class="card-number">036</div>
+              <h3 class="card-name">Pavo real</h3>
+              <p class="card-desc">El ave nacional de India; sus colores no son pigmentos sino ilusiones ópticas.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="langur-taj">
+            <div class="card-media"><img src="assets/imagnes%20animales/Langur%20gris.webp" alt="Langur gris"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Taj Mahal</div>
+            <div class="card-content">
+              <div class="card-number">037</div>
+              <h3 class="card-name">Langur gris</h3>
+              <p class="card-desc">Primates venerados que pasean con gran confianza por los tejados del complejo.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="ardilla-taj">
+            <div class="card-media"><img src="assets/imagnes%20animales/Ardilla%20de%20las%20palmeras.avif"
+                alt="Ardilla de las palmeras" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Taj Mahal</div>
+            <div class="card-content">
+              <div class="card-number">038</div>
+              <h3 class="card-name">Ardilla de las palmeras</h3>
+              <p class="card-desc">La leyenda dice que sus rayas fueron hechas por los dedos del dios Rama.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="vaca-taj">
+            <div class="card-media"><img src="assets/imagnes%20animales/Vaca%20sagrada.jpeg" alt="Vaca sagrada"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Taj Mahal</div>
+            <div class="card-content">
+              <div class="card-number">039</div>
+              <h3 class="card-name">Vaca sagrada (Zebú)</h3>
+              <p class="card-desc">Símbolo de no violencia, pasea plácidamente por las calles de Agra.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="elefante-taj">
+            <div class="card-media"><img src="assets/imagnes%20animales/Elefante%20asiático.jpg" alt="Elefante asiático"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Taj Mahal</div>
+            <div class="card-content">
+              <div class="card-number">040</div>
+              <h3 class="card-name">Elefante asiático</h3>
+              <p class="card-desc">Transportó los bloques de mármol blanco para construir el Taj en el siglo XVII.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="ganso-taj">
+            <div class="card-media"><img src="assets/imagnes%20animales/Ganso%20de%20cabeza%20barrada.jpg"
+                alt="Ganso de cabeza barrada" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Taj Mahal</div>
+            <div class="card-content">
+              <div class="card-number">041</div>
+              <h3 class="card-name">Ganso de cabeza barrada</h3>
+              <p class="card-desc">Migra sobre el Himalaya, volando donde el oxígeno es extremadamente escaso.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="chacal-taj">
+            <div class="card-media"><img src="assets/imagnes%20animales/Chacal%20dorado.webp" alt="Chacal dorado"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Taj Mahal</div>
+            <div class="card-content">
+              <div class="card-number">042</div>
+              <h3 class="card-name">Chacal dorado</h3>
+              <p class="card-desc">Sus aullidos espectrales resuenan en el silencio nocturno del río Yamuna.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="maravilla-grupo" data-grupo="cristo-redentor">
+        <div class="grupo-header">
+          <div class="grupo-meta">
+            <div class="grupo-pais">Brasil · América del Sur</div>
+            <h2 class="grupo-nombre">Cristo Redentor</h2>
+          </div>
+          <div>
+            <div class="grupo-count-num">07</div>
+            <div class="grupo-count">especies</div>
+          </div>
+        </div>
+        <div class="animales-grid">
+          <article class="animal-card" data-id="mono-cristo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Mono%20Tití.jpg" alt="Mono Tití" loading="lazy">
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Cristo Redentor</div>
+            <div class="card-content">
+              <div class="card-number">043</div>
+              <h3 class="card-name">Mono Tití</h3>
+              <p class="card-desc">Pequeños primates hiperactivos del Parque de la Tijuca, tiene garras en lugar de
+                uñas.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="tucan-cristo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Tucán%20toco.jpg" alt="Tucán toco"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Cristo Redentor</div>
+            <div class="card-content">
+              <div class="card-number">044</div>
+              <h3 class="card-name">Tucán toco</h3>
+              <p class="card-desc">Su enorme pico naranja es un radiador que regula la temperatura corporal.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="coati-cristo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Coatí%20de%20cola%20anillada.webp"
+                alt="Coatí de cola anillada" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Cristo Redentor</div>
+            <div class="card-content">
+              <div class="card-number">045</div>
+              <h3 class="card-name">Coatí de cola anillada</h3>
+              <p class="card-desc">Patrullan los miradores del Corcovado buscando el más mínimo descuido.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="mariposa-cristo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Mariposa%20Morfo%20Azul.jpg"
+                alt="Mariposa Morfo Azul" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Cristo Redentor</div>
+            <div class="card-content">
+              <div class="card-number">046</div>
+              <h3 class="card-name">Mariposa Morfo Azul</h3>
+              <p class="card-desc">Su azul eléctrico no es pigmento, sino el resultado de estructuras microscópicas.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="gavilan-cristo">
+            <div class="card-media"><img src="assets/imagnes%20animales/PortadaGavilán%20pollero.jpg"
+                alt="Gavilán pollero" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Cristo Redentor</div>
+            <div class="card-content">
+              <div class="card-number">047</div>
+              <h3 class="card-name">Gavilán pollero</h3>
+              <p class="card-desc">Ave de rapiña agresiva que defiende con fiereza su nido en el Corcovado.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="boa-cristo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Boa%20constrictora.jpg" alt="Boa constrictora"
+                loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Cristo Redentor</div>
+            <div class="card-content">
+              <div class="card-number">048</div>
+              <h3 class="card-name">Boa constrictora</h3>
+              <p class="card-desc">Silenciosa guardiana del equilibrio del ecosistema en la selva de Tijuca.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+          <article class="animal-card" data-id="pereza-cristo">
+            <div class="card-media"><img src="assets/imagnes%20animales/Pereza%20de%20tres%20dedos.jpg"
+                alt="Perezoso de tres dedos" loading="lazy"></div>
+            <div class="card-overlay"></div>
+            <div class="card-tag">Cristo Redentor</div>
+            <div class="card-content">
+              <div class="card-number">049</div>
+              <h3 class="card-name">Perezoso de tres dedos</h3>
+              <p class="card-desc">Tan lento que en su pelaje crecen algas verdes que le dan camuflaje perfecto.</p>
+              <div class="card-cta">
+                <div class="card-cta-line"></div>Descubrir
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-shell" id="modalShell">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-img-panel">
+        <img id="modalImg" src="" alt="">
+        <div class="modal-img-overlay"></div>
+        <div class="modal-img-badge" id="modalBadge"></div>
+        <div class="modal-img-num" id="modalImgNum">01</div>
+      </div>
+      <div class="modal-content-panel">
+        <div class="modal-scientific" id="modalScientific"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-location">
+          <div class="modal-location-dot"></div>
+          <span id="modalLocation"></span>
+        </div>
+        <div class="modal-tags">
+          <span class="modal-tag" id="modalDiet">🌿 Herbívoro</span>
+          <span class="modal-tag" id="modalConservation">✅ Preocupación Menor</span>
+        </div>
+        <div class="modal-section-label">Historia y Hábitat</div>
+        <p class="modal-text" id="modalHistory"></p>
+        <div class="modal-fact-box">
+          <div class="modal-section-label">Dato Curioso</div>
+          <p id="modalFact"></p>
+        </div>
+        <div class="modal-nav">
+          <button class="modal-nav-btn" id="modalPrev">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12,19 5,12 12,5" />
+            </svg>
+            Anterior
+          </button>
+          <span class="modal-nav-indicator" id="modalIndicator">1 / 49</span>
+          <button class="modal-nav-btn" id="modalNext">
+            Siguiente
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12,5 19,12 12,19" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-
-    <div class="maravilla-grupo" data-grupo="coliseo">
-      <div class="grupo-header">
-        <div class="grupo-meta">
-          <div class="grupo-pais">Italia · Europa</div>
-          <h2 class="grupo-nombre">El Coliseo</h2>
-        </div>
-        <div><div class="grupo-count-num">07</div><div class="grupo-count">especies</div></div>
-      </div>
-      <div class="animales-grid">
-        <article class="animal-card" data-id="gato-coliseo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Gato%20callejero.jpg" alt="Gato callejero" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Coliseo</div>
-          <div class="card-content"><div class="card-number">015</div><h3 class="card-name">Gato callejero</h3><p class="card-desc">Roma es mundialmente famosa por sus colonias felinas protegidas por ley.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="murcielago-coliseo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Murciélago%20hortelano.jpg" alt="Murciélago hortelano" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Coliseo</div>
-          <div class="card-content"><div class="card-number">016</div><h3 class="card-name">Murciélago hortelano</h3><p class="card-desc">Anida en las grietas milenarias y controla plagas de insectos en verano.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="vencejo-coliseo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Vencejo%20común.jpg" alt="Vencejo común" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Coliseo</div>
-          <div class="card-content"><div class="card-number">017</div><h3 class="card-name">Vencejo común</h3><p class="card-desc">Pasan toda su vida en el aire; solo aterrizan para anidar en los muros.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="mochuelo-coliseo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Mochuelo%20común.jpg" alt="Mochuelo común" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Coliseo</div>
-          <div class="card-content"><div class="card-number">018</div><h3 class="card-name">Mochuelo común</h3><p class="card-desc">Símbolo de Atenea y Minerva, caza entre las ruinas del Foro Romano.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="rata-coliseo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Rata%20de%20campo.jpg" alt="Rata de campo" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Coliseo</div>
-          <div class="card-content"><div class="card-number">019</div><h3 class="card-name">Rata de campo</h3><p class="card-desc">Los subterráneos del Coliseo, donde vivieron gladiadores, son hoy su laberinto.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="halcon-coliseo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Halcón%20peregrino.jpg" alt="Halcón peregrino" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Coliseo</div>
-          <div class="card-content"><div class="card-number">020</div><h3 class="card-name">Halcón peregrino</h3><p class="card-desc">El animal más rápido del planeta, supera los 380 km/h en picada.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="lagartija-coliseo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Lagartija%20italiana.jpg" alt="Lagartija italiana" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Coliseo</div>
-          <div class="card-content"><div class="card-number">021</div><h3 class="card-name">Lagartija italiana</h3><p class="card-desc">Se camuflan a la perfección con el travertino romano bajo el sol mediterráneo.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-      </div>
-    </div>
-
-    <div class="maravilla-grupo" data-grupo="gran-muralla">
-      <div class="grupo-header">
-        <div class="grupo-meta">
-          <div class="grupo-pais">China · Asia Oriental</div>
-          <h2 class="grupo-nombre">Gran Muralla China</h2>
-        </div>
-        <div><div class="grupo-count-num">07</div><div class="grupo-count">especies</div></div>
-      </div>
-      <div class="animales-grid">
-        <article class="animal-card" data-id="leopardo-muralla">
-          <div class="card-media"><img src="assets/imagnes%20animales/Leopardo%20de%20las%20nieves.jpg" alt="Leopardo de las nieves" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Gran Muralla</div>
-          <div class="card-content"><div class="card-number">022</div><h3 class="card-name">Leopardo de las nieves</h3><p class="card-desc">El fantasma de la montaña, habita las zonas más altas e inhóspitas.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="ciervo-muralla">
-          <div class="card-media"><img src="assets/imagnes%20animales/Ciervo%20común.jpg" alt="Ciervo sika" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Gran Muralla</div>
-          <div class="card-content"><div class="card-number">023</div><h3 class="card-name">Ciervo sika</h3><p class="card-desc">Pasea por los bosques caducifolios que flanquean la muralla milenaria.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="ciguena-muralla">
-          <div class="card-media"><img src="assets/imagnes%20animales/Cigüeña%20negra.png" alt="Cigüeña negra" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Gran Muralla</div>
-          <div class="card-content"><div class="card-number">024</div><h3 class="card-name">Cigüeña negra</h3><p class="card-desc">Ave migratoria cautelosa que anida cerca de los ríos del norte de China.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="zorro-muralla">
-          <div class="card-media"><img src="assets/imagnes%20animales/Zorro%20rojo.webp" alt="Zorro rojo" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Gran Muralla</div>
-          <div class="card-content"><div class="card-number">025</div><h3 class="card-name">Zorro rojo</h3><p class="card-desc">Usa las bases de torres abandonadas como madrigueras para sus crías.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="jabali-muralla">
-          <div class="card-media"><img src="assets/imagnes%20animales/Jabalí.jpg" alt="Jabalí" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Gran Muralla</div>
-          <div class="card-content"><div class="card-number">026</div><h3 class="card-name">Jabalí</h3><p class="card-desc">Revuelve la tierra de los bosques chinos, renovando la vida del suelo.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="aguila-muralla">
-          <div class="card-media"><img src="assets/imagnes%20animales/Águila%20real.webp" alt="Águila real" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Gran Muralla</div>
-          <div class="card-content"><div class="card-number">027</div><h3 class="card-name">Águila real</h3><p class="card-desc">Patrulla las torres de guardia desde el aire, con visión a 3 kilómetros.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="gato-muralla">
-          <div class="card-media"><img src="assets/imagnes%20animales/Gato%20montés%20chino.webp" alt="Gato montés chino" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Gran Muralla</div>
-          <div class="card-content"><div class="card-number">028</div><h3 class="card-name">Gato montés chino</h3><p class="card-desc">Uno de los felinos más desconocidos y escurridizos de China.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-      </div>
-    </div>
-
-    <div class="maravilla-grupo" data-grupo="petra">
-      <div class="grupo-header">
-        <div class="grupo-meta">
-          <div class="grupo-pais">Jordania · Oriente Medio</div>
-          <h2 class="grupo-nombre">Petra</h2>
-        </div>
-        <div><div class="grupo-count-num">07</div><div class="grupo-count">especies</div></div>
-      </div>
-      <div class="animales-grid">
-        <article class="animal-card" data-id="dromedario-petra">
-          <div class="card-media"><img src="assets/imagnes%20animales/Dromedario.jpg" alt="Dromedario" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Petra</div>
-          <div class="card-content"><div class="card-number">029</div><h3 class="card-name">Dromedario</h3><p class="card-desc">El vehículo del Imperio Nabateo que hizo posible el comercio en el desierto.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="caballo-petra">
-          <div class="card-media"><img src="assets/imagnes%20animales/Caballo%20árabe.webp" alt="Caballo árabe" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Petra</div>
-          <div class="card-content"><div class="card-number">030</div><h3 class="card-name">Caballo árabe</h3><p class="card-desc">Una de las razas más antiguas, guía a los visitantes por el Siq de Petra.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="agama-petra">
-          <div class="card-media"><img src="assets/imagnes%20animales/Agama%20del%20Sinaí.jpg" alt="Agama del Sinaí" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Petra</div>
-          <div class="card-content"><div class="card-number">031</div><h3 class="card-name">Agama del Sinaí</h3><p class="card-desc">Se vuelve azul eléctrico al sol, un contraste asombroso con la piedra roja.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="caracal-petra">
-          <div class="card-media"><img src="assets/imagnes%20animales/Caracal.webp" alt="Caracal" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Petra</div>
-          <div class="card-content"><div class="card-number">032</div><h3 class="card-name">Caracal</h3><p class="card-desc">El lince del desierto, salta 3 metros para atrapar aves en pleno vuelo.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="perro-petra">
-          <div class="card-media"><img src="assets/imagnes%20animales/Perro%20Canaan.jpg" alt="Perro Canaan" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Petra</div>
-          <div class="card-content"><div class="card-number">033</div><h3 class="card-name">Perro de Canaán</h3><p class="card-desc">Una de las razas más antiguas del mundo, guardián milenario de Petra.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="cabra-petra">
-          <div class="card-media"><img src="assets/imagnes%20animales/Cabra%20montés%20(Íbice).jpg" alt="Íbice de Nubia" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Petra</div>
-          <div class="card-content"><div class="card-number">034</div><h3 class="card-name">Íbice de Nubia</h3><p class="card-desc">Escala acantilados verticales con pezuñas que actúan como ventosas.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="buho-petra">
-          <div class="card-media"><img src="assets/imagnes%20animales/Búho%20real%20del%20desierto.jpg" alt="Búho real del desierto" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Petra</div>
-          <div class="card-content"><div class="card-number">035</div><h3 class="card-name">Búho real del desierto</h3><p class="card-desc">Sus plumas aserradas le dan un vuelo absolutamente silencioso.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-      </div>
-    </div>
-
-    <div class="maravilla-grupo" data-grupo="taj-mahal">
-      <div class="grupo-header">
-        <div class="grupo-meta">
-          <div class="grupo-pais">India · Asia del Sur</div>
-          <h2 class="grupo-nombre">Taj Mahal</h2>
-        </div>
-        <div><div class="grupo-count-num">07</div><div class="grupo-count">especies</div></div>
-      </div>
-      <div class="animales-grid">
-        <article class="animal-card" data-id="pavo-taj">
-          <div class="card-media"><img src="assets/imagnes%20animales/Pavo%20real.jpg" alt="Pavo real" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Taj Mahal</div>
-          <div class="card-content"><div class="card-number">036</div><h3 class="card-name">Pavo real</h3><p class="card-desc">El ave nacional de India; sus colores no son pigmentos sino ilusiones ópticas.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="langur-taj">
-          <div class="card-media"><img src="assets/imagnes%20animales/Langur%20gris.webp" alt="Langur gris" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Taj Mahal</div>
-          <div class="card-content"><div class="card-number">037</div><h3 class="card-name">Langur gris</h3><p class="card-desc">Primates venerados que pasean con gran confianza por los tejados del complejo.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="ardilla-taj">
-          <div class="card-media"><img src="assets/imagnes%20animales/Ardilla%20de%20las%20palmeras.avif" alt="Ardilla de las palmeras" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Taj Mahal</div>
-          <div class="card-content"><div class="card-number">038</div><h3 class="card-name">Ardilla de las palmeras</h3><p class="card-desc">La leyenda dice que sus rayas fueron hechas por los dedos del dios Rama.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="vaca-taj">
-          <div class="card-media"><img src="assets/imagnes%20animales/Vaca%20sagrada.jpeg" alt="Vaca sagrada" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Taj Mahal</div>
-          <div class="card-content"><div class="card-number">039</div><h3 class="card-name">Vaca sagrada (Zebú)</h3><p class="card-desc">Símbolo de no violencia, pasea plácidamente por las calles de Agra.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="elefante-taj">
-          <div class="card-media"><img src="assets/imagnes%20animales/Elefante%20asiático.jpg" alt="Elefante asiático" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Taj Mahal</div>
-          <div class="card-content"><div class="card-number">040</div><h3 class="card-name">Elefante asiático</h3><p class="card-desc">Transportó los bloques de mármol blanco para construir el Taj en el siglo XVII.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="ganso-taj">
-          <div class="card-media"><img src="assets/imagnes%20animales/Ganso%20de%20cabeza%20barrada.jpg" alt="Ganso de cabeza barrada" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Taj Mahal</div>
-          <div class="card-content"><div class="card-number">041</div><h3 class="card-name">Ganso de cabeza barrada</h3><p class="card-desc">Migra sobre el Himalaya, volando donde el oxígeno es extremadamente escaso.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="chacal-taj">
-          <div class="card-media"><img src="assets/imagnes%20animales/Chacal%20dorado.webp" alt="Chacal dorado" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Taj Mahal</div>
-          <div class="card-content"><div class="card-number">042</div><h3 class="card-name">Chacal dorado</h3><p class="card-desc">Sus aullidos espectrales resuenan en el silencio nocturno del río Yamuna.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-      </div>
-    </div>
-
-    <div class="maravilla-grupo" data-grupo="cristo-redentor">
-      <div class="grupo-header">
-        <div class="grupo-meta">
-          <div class="grupo-pais">Brasil · América del Sur</div>
-          <h2 class="grupo-nombre">Cristo Redentor</h2>
-        </div>
-        <div><div class="grupo-count-num">07</div><div class="grupo-count">especies</div></div>
-      </div>
-      <div class="animales-grid">
-        <article class="animal-card" data-id="mono-cristo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Mono%20Tití.jpg" alt="Mono Tití" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Cristo Redentor</div>
-          <div class="card-content"><div class="card-number">043</div><h3 class="card-name">Mono Tití</h3><p class="card-desc">Pequeños primates hiperactivos del Parque de la Tijuca, tiene garras en lugar de uñas.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="tucan-cristo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Tucán%20toco.jpg" alt="Tucán toco" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Cristo Redentor</div>
-          <div class="card-content"><div class="card-number">044</div><h3 class="card-name">Tucán toco</h3><p class="card-desc">Su enorme pico naranja es un radiador que regula la temperatura corporal.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="coati-cristo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Coatí%20de%20cola%20anillada.webp" alt="Coatí de cola anillada" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Cristo Redentor</div>
-          <div class="card-content"><div class="card-number">045</div><h3 class="card-name">Coatí de cola anillada</h3><p class="card-desc">Patrullan los miradores del Corcovado buscando el más mínimo descuido.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="mariposa-cristo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Mariposa%20Morfo%20Azul.jpg" alt="Mariposa Morfo Azul" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Cristo Redentor</div>
-          <div class="card-content"><div class="card-number">046</div><h3 class="card-name">Mariposa Morfo Azul</h3><p class="card-desc">Su azul eléctrico no es pigmento, sino el resultado de estructuras microscópicas.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="gavilan-cristo">
-          <div class="card-media"><img src="assets/imagnes%20animales/PortadaGavilán%20pollero.jpg" alt="Gavilán pollero" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Cristo Redentor</div>
-          <div class="card-content"><div class="card-number">047</div><h3 class="card-name">Gavilán pollero</h3><p class="card-desc">Ave de rapiña agresiva que defiende con fiereza su nido en el Corcovado.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="boa-cristo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Boa%20constrictora.jpg" alt="Boa constrictora" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Cristo Redentor</div>
-          <div class="card-content"><div class="card-number">048</div><h3 class="card-name">Boa constrictora</h3><p class="card-desc">Silenciosa guardiana del equilibrio del ecosistema en la selva de Tijuca.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-        <article class="animal-card" data-id="pereza-cristo">
-          <div class="card-media"><img src="assets/imagnes%20animales/Pereza%20de%20tres%20dedos.jpg" alt="Perezoso de tres dedos" loading="lazy"></div>
-          <div class="card-overlay"></div><div class="card-tag">Cristo Redentor</div>
-          <div class="card-content"><div class="card-number">049</div><h3 class="card-name">Perezoso de tres dedos</h3><p class="card-desc">Tan lento que en su pelaje crecen algas verdes que le dan camuflaje perfecto.</p><div class="card-cta"><div class="card-cta-line"></div>Descubrir</div></div>
-        </article>
-      </div>
-    </div>
-
   </div>
-</main>
 
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal-shell" id="modalShell">
-    <button class="modal-close" id="modalClose" aria-label="Cerrar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <div class="modal-img-panel">
-      <img id="modalImg" src="" alt="">
-      <div class="modal-img-overlay"></div>
-      <div class="modal-img-badge" id="modalBadge"></div>
-      <div class="modal-img-num" id="modalImgNum">01</div>
-    </div>
-    <div class="modal-content-panel">
-      <div class="modal-scientific" id="modalScientific"></div>
-      <h2 class="modal-title" id="modalTitle"></h2>
-      <div class="modal-location">
-        <div class="modal-location-dot"></div>
-        <span id="modalLocation"></span>
-      </div>
-      <div class="modal-tags">
-        <span class="modal-tag" id="modalDiet">🌿 Herbívoro</span>
-        <span class="modal-tag" id="modalConservation">✅ Preocupación Menor</span>
-      </div>
-      <div class="modal-section-label">Historia y Hábitat</div>
-      <p class="modal-text" id="modalHistory"></p>
-      <div class="modal-fact-box">
-        <div class="modal-section-label">Dato Curioso</div>
-        <p id="modalFact"></p>
-      </div>
-      <div class="modal-nav">
-        <button class="modal-nav-btn" id="modalPrev">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg>
-          Anterior
-        </button>
-        <span class="modal-nav-indicator" id="modalIndicator">1 / 49</span>
-        <button class="modal-nav-btn" id="modalNext">
-          Siguiente
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+  <footer>
+    <div class="footer-brand">✦ Fauna Maravilla</div>
+    <div class="footer-text">© 2026 Maravillas del Mundo - Proyecto SENATI.</div>
+  </footer>
 
-<footer>
-  <div class="footer-brand">Fauna <em>&</em> Maravillas</div>
-  <div class="footer-divider"></div>
-  <div class="footer-text">Proyecto Grupal · 7 Maravillas del Mundo</div>
-</footer>
+  <script src="js/animales.js"></script>
 
-<script src="js/animales.js"></script>
-
-<script>
+  <script>
     // Script hamburguesa igual al de gastronomia e index
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
 
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('open');
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('open');
     });
 
     navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('open');
-        });
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('open');
+      });
     });
-</script>
+  </script>
 
 </body>
+
 </html>
