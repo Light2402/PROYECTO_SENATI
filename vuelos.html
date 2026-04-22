@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuelos a las Maravillas</title>
+    <link rel="stylesheet" href="css/vuelos.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Las 7 maravillas del mundo</h1>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="maravillas.html">Maravillas</a>
+        <a href="animales.html">Animales</a>
+        <a href="gastronomia.html">Gastronomía</a>
+        <a href="vuelos.html" class="active">Vuelos</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- INTRO SIMPLE -->
+<section class="intro">
+    <h2>Vuelos a las Maravillas</h2>
+    <p>
+        Descubre cómo llegar a las Siete Maravillas del Mundo Moderno. Información sobre aeropuertos,
+        compañías aéreas y rutas para planificar tu viaje a estos destinos extraordinarios.
+    </p>
+</section>
+
+<!-- INDEX / MAP -->
+<section class="world-index">
+    <div class="index-grid">
+        <a href="#peru" class="index-card">
+            <span class="index-flag">🇵🇪</span>
+            <span class="index-name">Perú</span>
+            <span class="index-airport">Cusco</span>
+        </a>
+        <a href="#mexico" class="index-card">
+            <span class="index-flag">🇲🇽</span>
+            <span class="index-name">México</span>
+            <span class="index-airport">Cancún</span>
+        </a>
+        <a href="#brasil" class="index-card">
+            <span class="index-flag">🇧🇷</span>
+            <span class="index-name">Brasil</span>
+            <span class="index-airport">Río de Janeiro</span>
+        </a>
+        <a href="#italia" class="index-card">
+            <span class="index-flag">🇮🇹</span>
+            <span class="index-name">Italia</span>
+            <span class="index-airport">Roma</span>
+        </a>
+        <a href="#india" class="index-card">
+            <span class="index-flag">🇮🇳</span>
+            <span class="index-name">India</span>
+            <span class="index-airport">Nueva Delhi</span>
+        </a>
+        <a href="#jordania" class="index-card">
+            <span class="index-flag">🇯🇴</span>
+            <span class="index-name">Jordania</span>
+            <span class="index-airport">Amán</span>
+        </a>
+        <a href="#china" class="index-card">
+            <span class="index-flag">🇨🇳</span>
+            <span class="index-name">China</span>
+            <span class="index-airport">Pekín</span>
+        </a>
+    </div>
+</section>
+
+<!-- ===== PERÚ ===== -->
+<section class="flight-section" id="peru">
+    <div class="section-num">01</div>
+    <div class="flight-content">
+        <div class="flight-text">
+            <div class="country-badge">
+                <div>
+                    <span class="maravilla-label">Maravilla del Mundo</span>
+                    <h2>Machu Picchu — Perú</h2>
+                </div>
+            </div>
+            <p class="lead-text">El aeropuerto internacional Alejandro Velasco Astete (CUZ) en Cusco es la puerta de entrada principal a Machu Picchu. Conectado con vuelos directos desde Lima y otras ciudades peruanas.</p>
+            <p>Desde Cusco, el viaje continúa en tren o autobús hacia Aguas Calientes, el pueblo base para acceder a la maravilla inca.</p>
+            <div class="flights-grid">
+                <div class="flight-card featured">
+                    <div class="flight-icon">✈️</div>
+                    <div>
+                        <strong>LATAM Airlines</strong>
+                        <p>Vuelos diarios desde Lima a Cusco. Duración aproximada: 1 hora.</p>
+                    </div>
+                </div>
+                <div class="flight-card">
+                    <div class="flight-icon">🛩️</div>
+                    <div>
+                        <strong>Avianca</strong>
+                        <p>Conexiones internacionales con escalas en Bogotá o Lima.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flight-image">
+            <img src="images/cusco-airport.jpg" alt="Aeropuerto de Cusco" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ===== MÉXICO ===== -->
+<section class="flight-section" id="mexico">
+    <div class="section-num">02</div>
+    <div class="flight-content">
+        <div class="flight-text">
+            <div class="country-badge">
+                <div>
+                    <span class="maravilla-label">Maravilla del Mundo</span>
+                    <h2>Chichén Itzá — México</h2>
+                </div>
+            </div>
+            <p class="lead-text">El aeropuerto internacional de Cancún (CUN) es el principal hub para llegar a Chichén Itzá. Recibe vuelos de todo el mundo y ofrece conexiones rápidas a Mérida y Valladolid.</p>
+            <p>Desde Cancún, el trayecto en autobús o coche toma aproximadamente 3-4 horas hacia la zona arqueológica.</p>
+            <div class="flights-grid">
+                <div class="flight-card featured">
+                    <div class="flight-icon">✈️</div>
+                    <div>
+                        <strong>Aeroméxico</strong>
+                        <p>Vuelos directos desde Ciudad de México y conexiones internacionales.</p>
+                    </div>
+                </div>
+                <div class="flight-card">
+                    <div class="flight-icon">🛩️</div>
+                    <div>
+                        <strong>Interjet</strong>
+                        <p>Opciones económicas con rutas desde varios destinos en México.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flight-image">
+            <img src="images/Chichen-Itza_161210453" alt="Chichén Itzá" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ===== BRASIL ===== -->
+<section class="flight-section" id="brasil">
+    <div class="section-num">03</div>
+    <div class="flight-content">
+        <div class="flight-text">
+            <div class="country-badge">
+                <div>
+                    <span class="maravilla-label">Maravilla del Mundo</span>
+                    <h2>Cristo Redentor — Brasil</h2>
+                </div>
+            </div>
+            <p class="lead-text">El aeropuerto internacional de Río de Janeiro (GIG) - Galeão es el principal aeropuerto para llegar a la estatua del Cristo Redentor. Conectado con vuelos nacionales e internacionales.</p>
+            <p>Desde el aeropuerto, el acceso al Corcovado se realiza mediante taxi, autobús o teleférico.</p>
+            <div class="flights-grid">
+                <div class="flight-card featured">
+                    <div class="flight-icon">✈️</div>
+                    <div>
+                        <strong>GOL Airlines</strong>
+                        <p>Vuelos desde São Paulo y otras ciudades brasileñas.</p>
+                    </div>
+                </div>
+                <div class="flight-card">
+                    <div class="flight-icon">🛩️</div>
+                    <div>
+                        <strong>LATAM Airlines</strong>
+                        <p>Conexiones internacionales con escalas en São Paulo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flight-image">
+            <img src="images/rio-airport.jpg" alt="Aeropuerto de Río de Janeiro" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ===== ITALIA ===== -->
+<section class="flight-section" id="italia">
+    <div class="section-num">04</div>
+    <div class="flight-content">
+        <div class="flight-text">
+            <div class="country-badge">
+                <div>
+                    <span class="maravilla-label">Maravilla del Mundo</span>
+                    <h2>Coliseo Romano — Italia</h2>
+                </div>
+            </div>
+            <p class="lead-text">El aeropuerto de Roma Fiumicino (FCO) es el principal aeropuerto internacional de Italia. Ofrece conexiones directas desde todo el mundo hacia la Ciudad Eterna.</p>
+            <p>Desde Fiumicino, el traslado al centro de Roma toma aproximadamente 45 minutos en tren o taxi.</p>
+            <div class="flights-grid">
+                <div class="flight-card featured">
+                    <div class="flight-icon">✈️</div>
+                    <div>
+                        <strong>Alitalia</strong>
+                        <p>La aerolínea nacional italiana con vuelos directos desde Europa y América.</p>
+                    </div>
+                </div>
+                <div class="flight-card">
+                    <div class="flight-icon">🛩️</div>
+                    <div>
+                        <strong>Ryanair</strong>
+                        <p>Opciones low-cost desde varios destinos europeos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flight-image">
+            <img src="images/roma-airport.jpg" alt="Aeropuerto de Roma" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ===== INDIA ===== -->
+<section class="flight-section" id="india">
+    <div class="section-num">05</div>
+    <div class="flight-content">
+        <div class="flight-text">
+            <div class="country-badge">
+                <div>
+                    <span class="maravilla-label">Maravilla del Mundo</span>
+                    <h2>Taj Mahal — India</h2>
+                </div>
+            </div>
+            <p class="lead-text">El aeropuerto internacional Indira Gandhi (DEL) en Nueva Delhi es el principal hub aéreo de India. Conectado con vuelos de todo el mundo.</p>
+            <p>Desde Delhi, el viaje al Taj Mahal en Agra toma aproximadamente 3 horas en tren o coche.</p>
+            <div class="flights-grid">
+                <div class="flight-card featured">
+                    <div class="flight-icon">✈️</div>
+                    <div>
+                        <strong>Air India</strong>
+                        <p>La aerolínea nacional con vuelos directos desde Medio Oriente y Asia.</p>
+                    </div>
+                </div>
+                <div class="flight-card">
+                    <div class="flight-icon">🛩️</div>
+                    <div>
+                        <strong>IndiGo</strong>
+                        <p>La aerolínea low-cost más grande de India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flight-image">
+            <img src="images/delhi-airport.jpg" alt="Aeropuerto de Delhi" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ===== JORDANIA ===== -->
+<section class="flight-section" id="jordania">
+    <div class="section-num">06</div>
+    <div class="flight-content">
+        <div class="flight-text">
+            <div class="country-badge">
+                <div>
+                    <span class="maravilla-label">Maravilla del Mundo</span>
+                    <h2>Petra — Jordania</h2>
+                </div>
+            </div>
+            <p class="lead-text">El aeropuerto internacional Queen Alia (AMM) en Amán es la principal puerta de entrada a Jordania. Conectado con vuelos desde Europa, Asia y Medio Oriente.</p>
+            <p>Desde Amán, el viaje a Petra toma aproximadamente 3 horas en coche o autobús.</p>
+            <div class="flights-grid">
+                <div class="flight-card featured">
+                    <div class="flight-icon">✈️</div>
+                    <div>
+                        <strong>Royal Jordanian</strong>
+                        <p>La aerolínea nacional jordana con conexiones globales.</p>
+                    </div>
+                </div>
+                <div class="flight-card">
+                    <div class="flight-icon">🛩️</div>
+                    <div>
+                        <strong>Emirates</strong>
+                        <p>Vuelos desde Dubai con conexiones a Petra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flight-image">
+            <img src="images/amman-airport.jpg" alt="Aeropuerto de Amán" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ===== CHINA ===== -->
+<section class="flight-section" id="china">
+    <div class="section-num">07</div>
+    <div class="flight-content">
+        <div class="flight-text">
+            <div class="country-badge">
+                <div>
+                    <span class="maravilla-label">Maravilla del Mundo</span>
+                    <h2>Gran Muralla China — China</h2>
+                </div>
+            </div>
+            <p class="lead-text">El aeropuerto internacional de Pekín Capital (PEK) es el principal aeropuerto de China. Conectado con vuelos de todo el mundo hacia la capital china.</p>
+            <p>Desde Pekín, el acceso a la Gran Muralla se realiza mediante tren, autobús o coche, tomando aproximadamente 1-2 horas.</p>
+            <div class="flights-grid">
+                <div class="flight-card featured">
+                    <div class="flight-icon">✈️</div>
+                    <div>
+                        <strong>Air China</strong>
+                        <p>La aerolínea nacional china con vuelos directos desde Asia y Europa.</p>
+                    </div>
+                </div>
+                <div class="flight-card">
+                    <div class="flight-icon">🛩️</div>
+                    <div>
+                        <strong>China Southern</strong>
+                        <p>Conexiones desde el sur de Asia y Oceanía.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flight-image">
+            <img src="images/beijing-airport.jpg" alt="Aeropuerto de Pekín" loading="lazy">
+        </div>
+    </div>
+</section>
+
+</main>
+
+<script src="js/scroll-animations.js"></script>
+<script src="js/vuelos.js"></script>
+
+</body>
+</html>
