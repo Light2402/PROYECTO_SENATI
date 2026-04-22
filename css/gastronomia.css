@@ -430,25 +430,26 @@ nav a.active::after { width: 100%; }
     letter-spacing: 0.5px;
 }
 
-/* ===== CLOSING SECTION ===== */
+/* ===== CLOSING SECTION — MODIFICADA ===== */
 .closing-section {
-    padding: 100px 40px;
-    background: linear-gradient(160deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 120px 40px;
+    background: linear-gradient(135deg, #0a1f27 0%, var(--dark) 50%, var(--primary) 100%);
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-top: 4px solid var(--accent);
 }
 
 .closing-section::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(243,156,18,0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at 50% 50%, rgba(243,156,18,0.12) 0%, transparent 60%);
     pointer-events: none;
 }
 
 .closing-content {
-    max-width: 700px;
+    max-width: 850px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -456,22 +457,29 @@ nav a.active::after { width: 100%; }
 
 .closing-content h2 {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 900;
     color: #fff;
     margin-bottom: 24px;
 }
 
 .closing-content p {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.8);
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
     line-height: 1.9;
     margin-bottom: 40px;
+    font-style: italic;
 }
 
 .closing-flags {
+    display: inline-block;
     font-size: 2.2rem;
-    letter-spacing: 8px;
+    letter-spacing: 12px;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ===== FOOTER — IDÉNTICO AL ORIGINAL ===== */
@@ -523,15 +531,11 @@ footer p {
     .gastro-img-container { position: static; }
     .section-num { font-size: 5rem; top: 20px; right: 5%; }
     .gastro-section { padding: 70px 5%; }
-    .hero-content h2 { font-size: 2.6rem; }
     .closing-content h2 { font-size: 2.2rem; }
 }
 
 @media (max-width: 600px) {
     header h1 { font-size: 1.5rem; letter-spacing: 1px; }
-    .hero-content h2 { font-size: 2rem; }
-    .hero-stats { gap: 16px; }
-    .stat-num { font-size: 2rem; }
     .gastro-text h2 { font-size: 1.8rem; }
     .img-principal { height: 250px; }
     .gastro-gallery img { height: 130px; }
@@ -547,11 +551,7 @@ footer p {
 ::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
 ::selection { background: var(--accent); color: white; }
 
-
-/* ==========================================================================
-   ESTILOS PARA "INGREDIENTES ESENCIALES" (AÑADIDOS)
-   ========================================================================== */
-
+/* ===== ESTILOS PARA INGREDIENTES ESENCIALES ===== */
 .key-ingredients-container {
     margin-top: 25px;
     padding: 20px;
@@ -618,4 +618,43 @@ footer p {
     line-height: 1.4 !important;
     color: #777 !important;
     margin-bottom: 0 !important;
+}
+
+.prestige-card {
+    background: #fdf2e9; /* Un tono crema elegante */
+    border-left: 5px solid #d35400; /* Color naranja/tierra */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    opacity: 0; /* Para el efecto del scroll */
+    transition: all 0.8s ease;
+}
+
+.prestige-card.visible {
+    opacity: 1;
+}
+
+.prestige-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #8e44ad; /* Color púrpura real */
+    display: flex;
+    align-items: center;
+}
+
+.star-icon {
+    margin-right: 10px;
+}
+
+.restaurant-info strong {
+    font-size: 1.4rem;
+    display: block;
+    color: #2c3e50;
+}
+
+.restaurant-info p {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-top: 5px;
 }
