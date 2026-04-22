@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuelos a las Maravillas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/vuelos.css">
 </head>
-
 <body>
 
+<!-- HEADER — SIN CAMBIOS -->
 <header>
     <h1>Las 7 maravillas del mundo</h1>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </button>
     <nav id="nav-menu">
         <a href="index.html">Inicio</a>
@@ -25,314 +24,740 @@
     </nav>
 </header>
 
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="plane-trail"></div>
+    <div class="hero-content">
+        <div class="hero-eyebrow">✈ Rutas desde Lima, Perú</div>
+        <h1 class="hero-title">
+            Vuela a las<br>
+            <span class="highlight">7 Maravillas</span>
+        </h1>
+        <p class="hero-subtitle">
+            Guía completa de vuelos con salida desde Lima hacia los destinos más extraordinarios del mundo.
+        </p>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-num">7</span>
+                <span class="stat-label">Destinos</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">20+</span>
+                <span class="stat-label">Aerolíneas</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">LIM</span>
+                <span class="stat-label">Origen</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        Explorar
+    </div>
+</section>
+
+<!-- ORIGIN BANNER -->
+<div class="origin-banner">
+    <div class="origin-inner">
+        <div class="origin-badge">
+            <span class="origin-flag">🇵🇪</span>
+            <div class="origin-text">
+                <strong>Aeropuerto Internacional Jorge Chávez</strong>
+                <span>LIMA — LIM · Hub principal de salida</span>
+            </div>
+        </div>
+        <div class="origin-arrow">→</div>
+        <p class="origin-note">Todos los vuelos y precios indicados parten desde Lima, Perú</p>
+    </div>
+</div>
+
+<!-- QUICK NAV DESTINOS -->
+<nav class="quick-nav" aria-label="Navegación rápida destinos">
+    <div class="quick-nav-inner">
+        <a href="#peru"     class="nav-pill"><span class="pill-flag">🇵🇪</span> Machu Picchu</a>
+        <a href="#mexico"   class="nav-pill"><span class="pill-flag">🇲🇽</span> Chichén Itzá</a>
+        <a href="#brasil"   class="nav-pill"><span class="pill-flag">🇧🇷</span> Cristo Redentor</a>
+        <a href="#italia"   class="nav-pill"><span class="pill-flag">🇮🇹</span> Coliseo Romano</a>
+        <a href="#india"    class="nav-pill"><span class="pill-flag">🇮🇳</span> Taj Mahal</a>
+        <a href="#jordania" class="nav-pill"><span class="pill-flag">🇯🇴</span> Petra</a>
+        <a href="#china"    class="nav-pill"><span class="pill-flag">🇨🇳</span> Gran Muralla</a>
+    </div>
+</nav>
+
 <main>
 
-<!-- INTRO SIMPLE -->
-<section class="intro">
-    <h2>Vuelos a las Maravillas</h2>
-    <p>
-        Descubre cómo llegar a las Siete Maravillas del Mundo Moderno. Información sobre aeropuertos,
-        compañías aéreas y rutas para planificar tu viaje a estos destinos extraordinarios.
-    </p>
-</section>
-
-<!-- INDEX / MAP -->
-<section class="world-index">
-    <div class="index-grid">
-        <a href="#peru" class="index-card">
-            <span class="index-flag">🇵🇪</span>
-            <span class="index-name">Perú</span>
-            <span class="index-airport">Cusco</span>
-        </a>
-        <a href="#mexico" class="index-card">
-            <span class="index-flag">🇲🇽</span>
-            <span class="index-name">México</span>
-            <span class="index-airport">Cancún</span>
-        </a>
-        <a href="#brasil" class="index-card">
-            <span class="index-flag">🇧🇷</span>
-            <span class="index-name">Brasil</span>
-            <span class="index-airport">Río de Janeiro</span>
-        </a>
-        <a href="#italia" class="index-card">
-            <span class="index-flag">🇮🇹</span>
-            <span class="index-name">Italia</span>
-            <span class="index-airport">Roma</span>
-        </a>
-        <a href="#india" class="index-card">
-            <span class="index-flag">🇮🇳</span>
-            <span class="index-name">India</span>
-            <span class="index-airport">Nueva Delhi</span>
-        </a>
-        <a href="#jordania" class="index-card">
-            <span class="index-flag">🇯🇴</span>
-            <span class="index-name">Jordania</span>
-            <span class="index-airport">Amán</span>
-        </a>
-        <a href="#china" class="index-card">
-            <span class="index-flag">🇨🇳</span>
-            <span class="index-name">China</span>
-            <span class="index-airport">Pekín</span>
-        </a>
-    </div>
-</section>
-
-<!-- ===== PERÚ ===== -->
+<!-- ===== 01 · PERÚ ===== -->
 <section class="flight-section" id="peru">
-    <div class="section-num">01</div>
-    <div class="flight-content">
-        <div class="flight-text">
-            <div class="country-badge">
-                <div>
-                    <span class="maravilla-label">Maravilla del Mundo</span>
-                    <h2>Machu Picchu — Perú</h2>
+    <div class="section-header">
+        <div class="section-num-wrap"><div class="section-num">01</div></div>
+        <div class="section-meta">
+            <p class="wonder-label">Maravilla del Mundo</p>
+            <h2 class="section-title">Machu Picchu — <span class="country">Perú</span></h2>
+        </div>
+    </div>
+    <div class="flight-layout">
+        <div class="flight-panel">
+            <div class="airport-img-wrap">
+                <img src="img/aeropuerto-cusco.jpg" alt="Aeropuerto Alejandro Velasco Astete, Cusco" loading="lazy">
+                <span class="airport-img-label">✈ Aeropuerto Alejandro Velasco Astete — Cusco (CUZ)</span>
+            </div>
+            <div class="route-display">
+                <div class="route-city">
+                    <span class="route-code">LIM</span>
+                    <span class="route-name">Lima</span>
+                </div>
+                <div class="route-middle">
+                    <span class="route-plane">✈</span>
+                    <div class="route-line"></div>
+                    <span class="route-duration">~1 hora</span>
+                </div>
+                <div class="route-city">
+                    <span class="route-code">CUZ</span>
+                    <span class="route-name">Cusco</span>
                 </div>
             </div>
-            <p class="lead-text">El aeropuerto internacional Alejandro Velasco Astete (CUZ) en Cusco es la puerta de entrada principal a Machu Picchu. Conectado con vuelos directos desde Lima y otras ciudades peruanas.</p>
-            <p>Desde Cusco, el viaje continúa en tren o autobús hacia Aguas Calientes, el pueblo base para acceder a la maravilla inca.</p>
-            <div class="flights-grid">
-                <div class="flight-card featured">
-                    <div class="flight-icon">✈️</div>
-                    <div>
-                        <strong>LATAM Airlines</strong>
-                        <p>Vuelos diarios desde Lima a Cusco. Duración aproximada: 1 hora.</p>
-                    </div>
+            <div class="info-strips">
+                <div class="info-strip">
+                    <span class="strip-icon">⏱</span>
+                    <span class="strip-value">1 hora</span>
+                    <span class="strip-label">Vuelo directo</span>
                 </div>
-                <div class="flight-card">
-                    <div class="flight-icon">🛩️</div>
-                    <div>
-                        <strong>Avianca</strong>
-                        <p>Conexiones internacionales con escalas en Bogotá o Lima.</p>
+                <div class="info-strip">
+                    <span class="strip-icon">🚂</span>
+                    <span class="strip-value">+3 horas</span>
+                    <span class="strip-label">Cusco → Aguas Calientes</span>
+                </div>
+                <div class="info-strip">
+                    <span class="strip-icon">📅</span>
+                    <span class="strip-value">Diario</span>
+                    <span class="strip-label">Frecuencia</span>
+                </div>
+            </div>
+            <p class="airlines-title">Aerolíneas recomendadas desde Lima</p>
+            <div class="airlines-list">
+                <div class="airline-row featured">
+                    <div class="airline-icon">✈️</div>
+                    <div class="airline-info">
+                        <span class="airline-name">LATAM Airlines</span>
+                        <span class="airline-desc">Múltiples vuelos diarios Lima → Cusco. La ruta más frecuente y confiable.</span>
                     </div>
+                    <span class="airline-tag direct">Directo</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛩</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Sky Airline Perú</span>
+                        <span class="airline-desc">Vuelos económicos desde Lima, varias salidas al día.</span>
+                    </div>
+                    <span class="airline-tag direct">Directo</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛫</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Avianca</span>
+                        <span class="airline-desc">Conexiones internacionales con escala en Lima hacia Cusco.</span>
+                    </div>
+                    <span class="airline-tag connection">Escala</span>
                 </div>
             </div>
         </div>
-        <div class="flight-image">
-            <img src="images/cusco-airport.jpg" alt="Aeropuerto de Cusco" loading="lazy">
+        <div class="tips-panel">
+            <div class="tips-card">
+                <div class="tips-card-title">💡 Consejos de viaje</div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Aclimatación:</strong> Llega a Cusco un día antes para adaptarte a los 3,400 m de altitud antes de subir a Machu Picchu.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Tren desde Cusco:</strong> PeruRail e Inca Rail conectan Cusco con Aguas Calientes. Reserva con anticipación.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Temporada ideal:</strong> Mayo a octubre (temporada seca). Evita enero-febrero por lluvias intensas.</p></div>
+            </div>
+            <div class="price-card">
+                <p class="price-label">Rango de precios desde Lima</p>
+                <span class="price-range">$80 – $200 USD</span>
+                <p class="price-note">Solo vuelo Lima → Cusco (ida y vuelta). Precios varían según aerolínea y anticipación.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===== MÉXICO ===== -->
+<!-- ===== 02 · MÉXICO ===== -->
 <section class="flight-section" id="mexico">
-    <div class="section-num">02</div>
-    <div class="flight-content">
-        <div class="flight-text">
-            <div class="country-badge">
-                <div>
-                    <span class="maravilla-label">Maravilla del Mundo</span>
-                    <h2>Chichén Itzá — México</h2>
+    <div class="section-header">
+        <div class="section-num-wrap"><div class="section-num">02</div></div>
+        <div class="section-meta">
+            <p class="wonder-label">Maravilla del Mundo</p>
+            <h2 class="section-title">Chichén Itzá — <span class="country">México</span></h2>
+        </div>
+    </div>
+    <div class="flight-layout">
+        <div class="flight-panel">
+            <div class="airport-img-wrap">
+                <img src="img/aeropuerto-cancun.jpg" alt="Aeropuerto Internacional de Cancún" loading="lazy">
+                <span class="airport-img-label">✈ Aeropuerto Internacional de Cancún (CUN)</span>
+            </div>
+            <div class="route-display">
+                <div class="route-city">
+                    <span class="route-code">LIM</span>
+                    <span class="route-name">Lima</span>
+                </div>
+                <div class="route-middle">
+                    <span class="route-plane">✈</span>
+                    <div class="route-line"></div>
+                    <span class="route-duration">~7 – 10 horas</span>
+                </div>
+                <div class="route-city">
+                    <span class="route-code">CUN</span>
+                    <span class="route-name">Cancún</span>
                 </div>
             </div>
-            <p class="lead-text">El aeropuerto internacional de Cancún (CUN) es el principal hub para llegar a Chichén Itzá. Recibe vuelos de todo el mundo y ofrece conexiones rápidas a Mérida y Valladolid.</p>
-            <p>Desde Cancún, el trayecto en autobús o coche toma aproximadamente 3-4 horas hacia la zona arqueológica.</p>
-            <div class="flights-grid">
-                <div class="flight-card featured">
-                    <div class="flight-icon">✈️</div>
-                    <div>
-                        <strong>Aeroméxico</strong>
-                        <p>Vuelos directos desde Ciudad de México y conexiones internacionales.</p>
-                    </div>
+            <div class="info-strips">
+                <div class="info-strip">
+                    <span class="strip-icon">⏱</span>
+                    <span class="strip-value">7–10 h</span>
+                    <span class="strip-label">Con escala</span>
                 </div>
-                <div class="flight-card">
-                    <div class="flight-icon">🛩️</div>
-                    <div>
-                        <strong>Interjet</strong>
-                        <p>Opciones económicas con rutas desde varios destinos en México.</p>
+                <div class="info-strip">
+                    <span class="strip-icon">🚌</span>
+                    <span class="strip-value">~3 horas</span>
+                    <span class="strip-label">Cancún → Chichén Itzá</span>
+                </div>
+                <div class="info-strip">
+                    <span class="strip-icon">🔄</span>
+                    <span class="strip-value">1–2 escalas</span>
+                    <span class="strip-label">Conexiones</span>
+                </div>
+            </div>
+            <p class="airlines-title">Aerolíneas recomendadas desde Lima</p>
+            <div class="airlines-list">
+                <div class="airline-row featured">
+                    <div class="airline-icon">✈️</div>
+                    <div class="airline-info">
+                        <span class="airline-name">LATAM Airlines</span>
+                        <span class="airline-desc">Lima → Ciudad de México → Cancún. Conexión más cómoda para latinoamericanos.</span>
                     </div>
+                    <span class="airline-tag connection">Escala</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛩</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Aeroméxico</span>
+                        <span class="airline-desc">Lima → Ciudad de México (escala) → Cancún. Buenas frecuencias diarias.</span>
+                    </div>
+                    <span class="airline-tag connection">Escala</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛫</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Avianca</span>
+                        <span class="airline-desc">Lima → Bogotá → Cancún. Alternativa con escala en Colombia.</span>
+                    </div>
+                    <span class="airline-tag connection">Escala</span>
                 </div>
             </div>
         </div>
-        <div class="flight-image">
-            <img src="images/Chichen-Itza_161210453" alt="Chichén Itzá" loading="lazy">
+        <div class="tips-panel">
+            <div class="tips-card">
+                <div class="tips-card-title">💡 Consejos de viaje</div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Mejor base:</strong> Cancún o Mérida. Desde Mérida son solo 1.5 horas a Chichén Itzá en auto.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Visita temprano:</strong> Abre a las 8 AM. Llega antes de las 10 AM para evitar el calor y las multitudes.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Temporada:</strong> Diciembre a abril. Los equinoccios (marzo/septiembre) tienen alta demanda; reserva con meses de anticipación.</p></div>
+            </div>
+            <div class="price-card">
+                <p class="price-label">Rango de precios desde Lima</p>
+                <span class="price-range">$400 – $900 USD</span>
+                <p class="price-note">Vuelo Lima → Cancún ida y vuelta, con una escala. Precios incluyen tasas.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===== BRASIL ===== -->
+<!-- ===== 03 · BRASIL ===== -->
 <section class="flight-section" id="brasil">
-    <div class="section-num">03</div>
-    <div class="flight-content">
-        <div class="flight-text">
-            <div class="country-badge">
-                <div>
-                    <span class="maravilla-label">Maravilla del Mundo</span>
-                    <h2>Cristo Redentor — Brasil</h2>
+    <div class="section-header">
+        <div class="section-num-wrap"><div class="section-num">03</div></div>
+        <div class="section-meta">
+            <p class="wonder-label">Maravilla del Mundo</p>
+            <h2 class="section-title">Cristo Redentor — <span class="country">Brasil</span></h2>
+        </div>
+    </div>
+    <div class="flight-layout">
+        <div class="flight-panel">
+            <div class="airport-img-wrap">
+                <img src="img/aeropuerto-rio.jpg" alt="Aeropuerto Internacional Galeão, Río de Janeiro" loading="lazy">
+                <span class="airport-img-label">✈ Aeropuerto Internacional Galeão — Río de Janeiro (GIG)</span>
+            </div>
+            <div class="route-display">
+                <div class="route-city">
+                    <span class="route-code">LIM</span>
+                    <span class="route-name">Lima</span>
+                </div>
+                <div class="route-middle">
+                    <span class="route-plane">✈</span>
+                    <div class="route-line"></div>
+                    <span class="route-duration">~5 – 8 horas</span>
+                </div>
+                <div class="route-city">
+                    <span class="route-code">GIG</span>
+                    <span class="route-name">Río de Janeiro</span>
                 </div>
             </div>
-            <p class="lead-text">El aeropuerto internacional de Río de Janeiro (GIG) - Galeão es el principal aeropuerto para llegar a la estatua del Cristo Redentor. Conectado con vuelos nacionales e internacionales.</p>
-            <p>Desde el aeropuerto, el acceso al Corcovado se realiza mediante taxi, autobús o teleférico.</p>
-            <div class="flights-grid">
-                <div class="flight-card featured">
-                    <div class="flight-icon">✈️</div>
-                    <div>
-                        <strong>GOL Airlines</strong>
-                        <p>Vuelos desde São Paulo y otras ciudades brasileñas.</p>
-                    </div>
+            <div class="info-strips">
+                <div class="info-strip">
+                    <span class="strip-icon">⏱</span>
+                    <span class="strip-value">5–8 h</span>
+                    <span class="strip-label">Con escala</span>
                 </div>
-                <div class="flight-card">
-                    <div class="flight-icon">🛩️</div>
-                    <div>
-                        <strong>LATAM Airlines</strong>
-                        <p>Conexiones internacionales con escalas en São Paulo.</p>
+                <div class="info-strip">
+                    <span class="strip-icon">🚡</span>
+                    <span class="strip-value">~1.5 horas</span>
+                    <span class="strip-label">GIG → Corcovado</span>
+                </div>
+                <div class="info-strip">
+                    <span class="strip-icon">🔄</span>
+                    <span class="strip-value">1 escala</span>
+                    <span class="strip-label">Vía São Paulo</span>
+                </div>
+            </div>
+            <p class="airlines-title">Aerolíneas recomendadas desde Lima</p>
+            <div class="airlines-list">
+                <div class="airline-row featured">
+                    <div class="airline-icon">✈️</div>
+                    <div class="airline-info">
+                        <span class="airline-name">LATAM Airlines</span>
+                        <span class="airline-desc">Lima → São Paulo (GRU) → Río de Janeiro. La mejor opción para volar a Brasil.</span>
                     </div>
+                    <span class="airline-tag connection">Escala</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛩</div>
+                    <div class="airline-info">
+                        <span class="airline-name">GOL Airlines</span>
+                        <span class="airline-desc">Conexión desde São Paulo. Buenas tarifas en temporada baja.</span>
+                    </div>
+                    <span class="airline-tag connection">Escala</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛫</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Avianca</span>
+                        <span class="airline-desc">Lima → Bogotá → Río de Janeiro. Alternativa vía Colombia.</span>
+                    </div>
+                    <span class="airline-tag connection">Escala</span>
                 </div>
             </div>
         </div>
-        <div class="flight-image">
-            <img src="images/rio-airport.jpg" alt="Aeropuerto de Río de Janeiro" loading="lazy">
+        <div class="tips-panel">
+            <div class="tips-card">
+                <div class="tips-card-title">💡 Consejos de viaje</div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Aeropuerto alternativo:</strong> Santos Dumont (SDU) está más cerca del centro de Río.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Subida al Corcovado:</strong> Usa el tren oficial desde el barrio de Santa Teresa. Compra boletos online.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Temporada:</strong> Abril a junio y agosto a octubre. Evita el Carnaval si no deseas multitudes y precios altos.</p></div>
+            </div>
+            <div class="price-card">
+                <p class="price-label">Rango de precios desde Lima</p>
+                <span class="price-range">$350 – $750 USD</span>
+                <p class="price-note">Lima → Río de Janeiro ida y vuelta. LATAM suele ofrecer las mejores tarifas.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===== ITALIA ===== -->
+<!-- ===== 04 · ITALIA ===== -->
 <section class="flight-section" id="italia">
-    <div class="section-num">04</div>
-    <div class="flight-content">
-        <div class="flight-text">
-            <div class="country-badge">
-                <div>
-                    <span class="maravilla-label">Maravilla del Mundo</span>
-                    <h2>Coliseo Romano — Italia</h2>
+    <div class="section-header">
+        <div class="section-num-wrap"><div class="section-num">04</div></div>
+        <div class="section-meta">
+            <p class="wonder-label">Maravilla del Mundo</p>
+            <h2 class="section-title">Coliseo Romano — <span class="country">Italia</span></h2>
+        </div>
+    </div>
+    <div class="flight-layout">
+        <div class="flight-panel">
+            <div class="airport-img-wrap">
+                <img src="img/aeropuerto-roma.jpg" alt="Aeropuerto de Roma Fiumicino" loading="lazy">
+                <span class="airport-img-label">✈ Aeropuerto Leonardo da Vinci — Roma Fiumicino (FCO)</span>
+            </div>
+            <div class="route-display">
+                <div class="route-city">
+                    <span class="route-code">LIM</span>
+                    <span class="route-name">Lima</span>
+                </div>
+                <div class="route-middle">
+                    <span class="route-plane">✈</span>
+                    <div class="route-line"></div>
+                    <span class="route-duration">~16 – 22 horas</span>
+                </div>
+                <div class="route-city">
+                    <span class="route-code">FCO</span>
+                    <span class="route-name">Roma</span>
                 </div>
             </div>
-            <p class="lead-text">El aeropuerto de Roma Fiumicino (FCO) es el principal aeropuerto internacional de Italia. Ofrece conexiones directas desde todo el mundo hacia la Ciudad Eterna.</p>
-            <p>Desde Fiumicino, el traslado al centro de Roma toma aproximadamente 45 minutos en tren o taxi.</p>
-            <div class="flights-grid">
-                <div class="flight-card featured">
-                    <div class="flight-icon">✈️</div>
-                    <div>
-                        <strong>Alitalia</strong>
-                        <p>La aerolínea nacional italiana con vuelos directos desde Europa y América.</p>
-                    </div>
+            <div class="info-strips">
+                <div class="info-strip">
+                    <span class="strip-icon">⏱</span>
+                    <span class="strip-value">16–22 h</span>
+                    <span class="strip-label">Con escala(s)</span>
                 </div>
-                <div class="flight-card">
-                    <div class="flight-icon">🛩️</div>
-                    <div>
-                        <strong>Ryanair</strong>
-                        <p>Opciones low-cost desde varios destinos europeos.</p>
+                <div class="info-strip">
+                    <span class="strip-icon">🚆</span>
+                    <span class="strip-value">45 min</span>
+                    <span class="strip-label">FCO → Centro Roma</span>
+                </div>
+                <div class="info-strip">
+                    <span class="strip-icon">🔄</span>
+                    <span class="strip-value">1–2 escalas</span>
+                    <span class="strip-label">Conexiones</span>
+                </div>
+            </div>
+            <p class="airlines-title">Aerolíneas recomendadas desde Lima</p>
+            <div class="airlines-list">
+                <div class="airline-row featured">
+                    <div class="airline-icon">✈️</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Iberia / Air Europa</span>
+                        <span class="airline-desc">Lima → Madrid → Roma. Ruta popular con escala en España. Vuelos frecuentes.</span>
                     </div>
+                    <span class="airline-tag connection">1 escala</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛩</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Air France / KLM</span>
+                        <span class="airline-desc">Lima → París o Amsterdam → Roma. Excelente servicio transatlántico.</span>
+                    </div>
+                    <span class="airline-tag connection">1 escala</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛫</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Copa Airlines</span>
+                        <span class="airline-desc">Lima → Panamá → Roma. Opción con buenas tarifas vía Centroamérica.</span>
+                    </div>
+                    <span class="airline-tag connection">Escala</span>
                 </div>
             </div>
         </div>
-        <div class="flight-image">
-            <img src="images/roma-airport.jpg" alt="Aeropuerto de Roma" loading="lazy">
+        <div class="tips-panel">
+            <div class="tips-card">
+                <div class="tips-card-title">💡 Consejos de viaje</div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Visado:</strong> Los peruanos necesitan visa Schengen para entrar a Italia. Tramítala con al menos 8 semanas de anticipación.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Coliseo:</strong> Reserva entrada online con semanas de antelación. Entrada combinada con el Foro Romano.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Mejor temporada:</strong> Abril-junio o septiembre-octubre. Julio-agosto es muy caloroso y concurrido.</p></div>
+            </div>
+            <div class="price-card">
+                <p class="price-label">Rango de precios desde Lima</p>
+                <span class="price-range">$700 – $1,500 USD</span>
+                <p class="price-note">Lima → Roma ida y vuelta. Monitorea ofertas con 3-4 meses de anticipación.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===== INDIA ===== -->
+<!-- ===== 05 · INDIA ===== -->
 <section class="flight-section" id="india">
-    <div class="section-num">05</div>
-    <div class="flight-content">
-        <div class="flight-text">
-            <div class="country-badge">
-                <div>
-                    <span class="maravilla-label">Maravilla del Mundo</span>
-                    <h2>Taj Mahal — India</h2>
+    <div class="section-header">
+        <div class="section-num-wrap"><div class="section-num">05</div></div>
+        <div class="section-meta">
+            <p class="wonder-label">Maravilla del Mundo</p>
+            <h2 class="section-title">Taj Mahal — <span class="country">India</span></h2>
+        </div>
+    </div>
+    <div class="flight-layout">
+        <div class="flight-panel">
+            <div class="airport-img-wrap">
+                <img src="img/aeropuerto-delhi.jpg" alt="Aeropuerto Internacional Indira Gandhi, Nueva Delhi" loading="lazy">
+                <span class="airport-img-label">✈ Aeropuerto Internacional Indira Gandhi — Nueva Delhi (DEL)</span>
+            </div>
+            <div class="route-display">
+                <div class="route-city">
+                    <span class="route-code">LIM</span>
+                    <span class="route-name">Lima</span>
+                </div>
+                <div class="route-middle">
+                    <span class="route-plane">✈</span>
+                    <div class="route-line"></div>
+                    <span class="route-duration">~24 – 32 horas</span>
+                </div>
+                <div class="route-city">
+                    <span class="route-code">DEL</span>
+                    <span class="route-name">Nueva Delhi</span>
                 </div>
             </div>
-            <p class="lead-text">El aeropuerto internacional Indira Gandhi (DEL) en Nueva Delhi es el principal hub aéreo de India. Conectado con vuelos de todo el mundo.</p>
-            <p>Desde Delhi, el viaje al Taj Mahal en Agra toma aproximadamente 3 horas en tren o coche.</p>
-            <div class="flights-grid">
-                <div class="flight-card featured">
-                    <div class="flight-icon">✈️</div>
-                    <div>
-                        <strong>Air India</strong>
-                        <p>La aerolínea nacional con vuelos directos desde Medio Oriente y Asia.</p>
-                    </div>
+            <div class="info-strips">
+                <div class="info-strip">
+                    <span class="strip-icon">⏱</span>
+                    <span class="strip-value">24–32 h</span>
+                    <span class="strip-label">Viaje total</span>
                 </div>
-                <div class="flight-card">
-                    <div class="flight-icon">🛩️</div>
-                    <div>
-                        <strong>IndiGo</strong>
-                        <p>La aerolínea low-cost más grande de India.</p>
+                <div class="info-strip">
+                    <span class="strip-icon">🚄</span>
+                    <span class="strip-value">~3 horas</span>
+                    <span class="strip-label">Delhi → Agra (Taj)</span>
+                </div>
+                <div class="info-strip">
+                    <span class="strip-icon">🔄</span>
+                    <span class="strip-value">2 escalas</span>
+                    <span class="strip-label">Conexiones</span>
+                </div>
+            </div>
+            <p class="airlines-title">Aerolíneas recomendadas desde Lima</p>
+            <div class="airlines-list">
+                <div class="airline-row featured">
+                    <div class="airline-icon">✈️</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Emirates</span>
+                        <span class="airline-desc">Lima → Miami → Dubai → Nueva Delhi. Gran comodidad en vuelos de larga distancia.</span>
                     </div>
+                    <span class="airline-tag connection">2 escalas</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛩</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Turkish Airlines</span>
+                        <span class="airline-desc">Lima → Bogotá → Estambul → Nueva Delhi. Excelente relación calidad-precio.</span>
+                    </div>
+                    <span class="airline-tag connection">2 escalas</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛫</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Iberia + Air India</span>
+                        <span class="airline-desc">Lima → Madrid → Nueva Delhi. Conexión limpia con un solo cambio en Europa.</span>
+                    </div>
+                    <span class="airline-tag connection">Escala</span>
                 </div>
             </div>
         </div>
-        <div class="flight-image">
-            <img src="images/delhi-airport.jpg" alt="Aeropuerto de Delhi" loading="lazy">
+        <div class="tips-panel">
+            <div class="tips-card">
+                <div class="tips-card-title">💡 Consejos de viaje</div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Visa de India:</strong> Peruanos pueden solicitar e-Visa online hasta 4 días antes del viaje. Proceso sencillo y económico.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Tren Shatabdi:</strong> El tren rápido Delhi–Agra tarda solo 2 horas. Reserva en irctc.co.in.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Mejor época:</strong> Octubre a marzo. El verano indio (abril-junio) supera los 40°C.</p></div>
+            </div>
+            <div class="price-card">
+                <p class="price-label">Rango de precios desde Lima</p>
+                <span class="price-range">$900 – $1,800 USD</span>
+                <p class="price-note">Lima → Nueva Delhi ida y vuelta. Turkish Airlines suele tener las mejores tarifas.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===== JORDANIA ===== -->
+<!-- ===== 06 · JORDANIA ===== -->
 <section class="flight-section" id="jordania">
-    <div class="section-num">06</div>
-    <div class="flight-content">
-        <div class="flight-text">
-            <div class="country-badge">
-                <div>
-                    <span class="maravilla-label">Maravilla del Mundo</span>
-                    <h2>Petra — Jordania</h2>
+    <div class="section-header">
+        <div class="section-num-wrap"><div class="section-num">06</div></div>
+        <div class="section-meta">
+            <p class="wonder-label">Maravilla del Mundo</p>
+            <h2 class="section-title">Petra — <span class="country">Jordania</span></h2>
+        </div>
+    </div>
+    <div class="flight-layout">
+        <div class="flight-panel">
+            <div class="airport-img-wrap">
+                <img src="img/aeropuerto-aman.jpg" alt="Aeropuerto Internacional Queen Alia, Amán" loading="lazy">
+                <span class="airport-img-label">✈ Aeropuerto Internacional Queen Alia — Amán (AMM)</span>
+            </div>
+            <div class="route-display">
+                <div class="route-city">
+                    <span class="route-code">LIM</span>
+                    <span class="route-name">Lima</span>
+                </div>
+                <div class="route-middle">
+                    <span class="route-plane">✈</span>
+                    <div class="route-line"></div>
+                    <span class="route-duration">~22 – 30 horas</span>
+                </div>
+                <div class="route-city">
+                    <span class="route-code">AMM</span>
+                    <span class="route-name">Amán</span>
                 </div>
             </div>
-            <p class="lead-text">El aeropuerto internacional Queen Alia (AMM) en Amán es la principal puerta de entrada a Jordania. Conectado con vuelos desde Europa, Asia y Medio Oriente.</p>
-            <p>Desde Amán, el viaje a Petra toma aproximadamente 3 horas en coche o autobús.</p>
-            <div class="flights-grid">
-                <div class="flight-card featured">
-                    <div class="flight-icon">✈️</div>
-                    <div>
-                        <strong>Royal Jordanian</strong>
-                        <p>La aerolínea nacional jordana con conexiones globales.</p>
-                    </div>
+            <div class="info-strips">
+                <div class="info-strip">
+                    <span class="strip-icon">⏱</span>
+                    <span class="strip-value">22–30 h</span>
+                    <span class="strip-label">Viaje total</span>
                 </div>
-                <div class="flight-card">
-                    <div class="flight-icon">🛩️</div>
-                    <div>
-                        <strong>Emirates</strong>
-                        <p>Vuelos desde Dubai con conexiones a Petra.</p>
+                <div class="info-strip">
+                    <span class="strip-icon">🚗</span>
+                    <span class="strip-value">~3 horas</span>
+                    <span class="strip-label">Amán → Petra</span>
+                </div>
+                <div class="info-strip">
+                    <span class="strip-icon">🔄</span>
+                    <span class="strip-value">1–2 escalas</span>
+                    <span class="strip-label">Conexiones</span>
+                </div>
+            </div>
+            <p class="airlines-title">Aerolíneas recomendadas desde Lima</p>
+            <div class="airlines-list">
+                <div class="airline-row featured">
+                    <div class="airline-icon">✈️</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Royal Jordanian + Iberia</span>
+                        <span class="airline-desc">Lima → Madrid → Amán. La ruta más directa con excelente conexión en Madrid.</span>
                     </div>
+                    <span class="airline-tag connection">1 escala</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛩</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Emirates</span>
+                        <span class="airline-desc">Lima → Miami → Dubai → Amán. Gran confort en viajes largos hacia Medio Oriente.</span>
+                    </div>
+                    <span class="airline-tag connection">2 escalas</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛫</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Turkish Airlines</span>
+                        <span class="airline-desc">Lima → Bogotá → Estambul → Amán. Precios competitivos, buena calidad.</span>
+                    </div>
+                    <span class="airline-tag connection">2 escalas</span>
                 </div>
             </div>
         </div>
-        <div class="flight-image">
-            <img src="images/amman-airport.jpg" alt="Aeropuerto de Amán" loading="lazy">
+        <div class="tips-panel">
+            <div class="tips-card">
+                <div class="tips-card-title">💡 Consejos de viaje</div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Jordan Pass:</strong> Incluye visa de entrada y acceso a más de 40 sitios, incluida Petra. Ahorra tiempo y dinero.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Noche en Petra:</strong> El espectáculo "Petra by Night" (lunes, miércoles y jueves) es imperdible.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Temporada:</strong> Marzo-mayo y septiembre-noviembre. El verano supera los 38°C en zonas desérticas.</p></div>
+            </div>
+            <div class="price-card">
+                <p class="price-label">Rango de precios desde Lima</p>
+                <span class="price-range">$850 – $1,600 USD</span>
+                <p class="price-note">Lima → Amán ida y vuelta. Incluye tasas aeroportuarias. Sin incluir Jordan Pass.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===== CHINA ===== -->
+<!-- ===== 07 · CHINA ===== -->
 <section class="flight-section" id="china">
-    <div class="section-num">07</div>
-    <div class="flight-content">
-        <div class="flight-text">
-            <div class="country-badge">
-                <div>
-                    <span class="maravilla-label">Maravilla del Mundo</span>
-                    <h2>Gran Muralla China — China</h2>
+    <div class="section-header">
+        <div class="section-num-wrap"><div class="section-num">07</div></div>
+        <div class="section-meta">
+            <p class="wonder-label">Maravilla del Mundo</p>
+            <h2 class="section-title">Gran Muralla China — <span class="country">China</span></h2>
+        </div>
+    </div>
+    <div class="flight-layout">
+        <div class="flight-panel">
+            <div class="airport-img-wrap">
+                <img src="img/aeropuerto-pekin.jpg" alt="Aeropuerto Internacional de Pekín Capital" loading="lazy">
+                <span class="airport-img-label">✈ Aeropuerto Internacional de Pekín Capital (PEK)</span>
+            </div>
+            <div class="route-display">
+                <div class="route-city">
+                    <span class="route-code">LIM</span>
+                    <span class="route-name">Lima</span>
+                </div>
+                <div class="route-middle">
+                    <span class="route-plane">✈</span>
+                    <div class="route-line"></div>
+                    <span class="route-duration">~26 – 36 horas</span>
+                </div>
+                <div class="route-city">
+                    <span class="route-code">PEK</span>
+                    <span class="route-name">Pekín</span>
                 </div>
             </div>
-            <p class="lead-text">El aeropuerto internacional de Pekín Capital (PEK) es el principal aeropuerto de China. Conectado con vuelos de todo el mundo hacia la capital china.</p>
-            <p>Desde Pekín, el acceso a la Gran Muralla se realiza mediante tren, autobús o coche, tomando aproximadamente 1-2 horas.</p>
-            <div class="flights-grid">
-                <div class="flight-card featured">
-                    <div class="flight-icon">✈️</div>
-                    <div>
-                        <strong>Air China</strong>
-                        <p>La aerolínea nacional china con vuelos directos desde Asia y Europa.</p>
-                    </div>
+            <div class="info-strips">
+                <div class="info-strip">
+                    <span class="strip-icon">⏱</span>
+                    <span class="strip-value">26–36 h</span>
+                    <span class="strip-label">Viaje total</span>
                 </div>
-                <div class="flight-card">
-                    <div class="flight-icon">🛩️</div>
-                    <div>
-                        <strong>China Southern</strong>
-                        <p>Conexiones desde el sur de Asia y Oceanía.</p>
+                <div class="info-strip">
+                    <span class="strip-icon">🚄</span>
+                    <span class="strip-value">1–2 horas</span>
+                    <span class="strip-label">Pekín → Gran Muralla</span>
+                </div>
+                <div class="info-strip">
+                    <span class="strip-icon">🔄</span>
+                    <span class="strip-value">1–2 escalas</span>
+                    <span class="strip-label">Conexiones</span>
+                </div>
+            </div>
+            <p class="airlines-title">Aerolíneas recomendadas desde Lima</p>
+            <div class="airlines-list">
+                <div class="airline-row featured">
+                    <div class="airline-icon">✈️</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Air China</span>
+                        <span class="airline-desc">Lima → Los Ángeles → Pekín. Ruta popular con escala en EE.UU. La aerolínea nacional china.</span>
                     </div>
+                    <span class="airline-tag connection">1 escala</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛩</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Korean Air</span>
+                        <span class="airline-desc">Lima → Ciudad de México → Seúl → Pekín. Excelente servicio asiático.</span>
+                    </div>
+                    <span class="airline-tag connection">2 escalas</span>
+                </div>
+                <div class="airline-row">
+                    <div class="airline-icon">🛫</div>
+                    <div class="airline-info">
+                        <span class="airline-name">Emirates + China Southern</span>
+                        <span class="airline-desc">Lima → Dubai → Guangzhou → Pekín. Buenas tarifas en temporada baja.</span>
+                    </div>
+                    <span class="airline-tag connection">2 escalas</span>
                 </div>
             </div>
         </div>
-        <div class="flight-image">
-            <img src="images/beijing-airport.jpg" alt="Aeropuerto de Pekín" loading="lazy">
+        <div class="tips-panel">
+            <div class="tips-card">
+                <div class="tips-card-title">💡 Consejos de viaje</div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Visa China:</strong> Los peruanos necesitan visa. Tramítala en la Embajada China en Lima con 4-6 semanas de anticipación.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Sección recomendada:</strong> Mutianyu es más accesible y menos concurrida que Badaling. Teleférico disponible.</p></div>
+                <div class="tip-item"><div class="tip-dot"></div><p class="tip-text"><strong>Temporada:</strong> Abril-junio o septiembre-octubre. Los inviernos son muy fríos y los veranos húmedos en Pekín.</p></div>
+            </div>
+            <div class="price-card">
+                <p class="price-label">Rango de precios desde Lima</p>
+                <span class="price-range">$900 – $2,000 USD</span>
+                <p class="price-note">Lima → Pekín ida y vuelta. Uno de los destinos más largos desde Sudamérica. Reserva con 3+ meses.</p>
+            </div>
         </div>
+    </div>
+
+    <div class="footer-cta">
+        <h2>¿Listo para despegar? ✈️</h2>
+        <p>Compara precios en LATAM, Iberia, Emirates y Turkish Airlines para encontrar la mejor tarifa desde Lima hacia tu maravilla favorita.</p>
     </div>
 </section>
 
 </main>
 
-<script src="js/scroll-animations.js"></script>
-<script src="js/vuelos.js"></script>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+}
+
+const sections = document.querySelectorAll('.flight-section[id]');
+const pills = document.querySelectorAll('.nav-pill');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            pills.forEach(p => { p.classList.remove('active'); });
+            const active = document.querySelector(`.nav-pill[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+        }
+    });
+}, { threshold: 0.3 });
+
+sections.forEach(s => observer.observe(s));
+</script>
 
 </body>
 </html>

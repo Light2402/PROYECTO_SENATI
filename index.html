@@ -3,44 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre las 7 maravillas del mundo: construcciones extraordinarias que muestran la grandeza de la humanidad. Explora maravillas antiguas y modernas con información detallada e inmersiva.">
-    <meta name="keywords" content="maravillas del mundo, arquitectura, historia, construcciones famosas, patrimonio mundial, turismo">
+    <meta name="description" content="Descubre las 7 maravillas del mundo: construcciones extraordinarias que muestran la grandeza de la humanidad.">
+    <meta name="keywords" content="maravillas del mundo, arquitectura, historia, construcciones famosas, patrimonio mundial">
     <meta name="author" content="Proyecto SENATI">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#1a5f7a">
-    
-    <meta property="og:title" content="Las 7 Maravillas del Mundo - Una Experiencia Inmersiva">
-    <meta property="og:description" content="Descubre las construcciones más impresionantes creadas por la humanidad. Un viaje visual por las maravillas antiguas y modernas del mundo.">
+    <meta name="theme-color" content="#0d1b2a">
+    <meta property="og:title" content="Las 7 Maravillas del Mundo">
+    <meta property="og:description" content="Descubre las construcciones más impresionantes creadas por la humanidad.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ejemplo.com">
-    <meta property="og:image" content="images/national.webp">
-    <meta property="og:site_name" content="Maravillas del Mundo">
-    <meta property="og:locale" content="es_ES">
-    
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
+    <title>Las 7 Maravillas del Mundo — Historia & Arquitectura</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    
-    <link rel="canonical" href="https://ejemplo.com">
-    
-    <title>Las 7 Maravillas del Mundo - Historia, Arquitectura y Patrimonio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- HEADER IGUAL AL DE GASTRONOMÍA -->
-<header>
-    <h1>Las 7 maravillas del mundo</h1>
-
+<header id="header">
+    <a href="index.html" class="header-logo">
+        <div class="logo-emblem">VII</div>
+        <div class="logo-text">
+            Las 7 maravillas del mundo
+            <span>Proyecto SENATI · 2026</span>
+        </div>
+    </a>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </button>
-
-    <nav id="nav-menu">
+    <nav id="nav-menu" role="navigation" aria-label="Menú principal">
         <a href="index.html" class="active">Inicio</a>
         <a href="maravillas.html">Maravillas</a>
         <a href="animales.html">Animales</a>
@@ -49,154 +39,216 @@
     </nav>
 </header>
 
-<main role="main" aria-label="Contenido principal">
+<section class="hero" aria-label="Banner principal">
+    <div class="hero-bg" role="img" aria-label="Chichén Itzá de fondo"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-eyebrow">Patrimonio de la Humanidad</div>
+        <h1>Las <em>Siete</em><br>Maravillas</h1>
+        <p class="hero-desc">
+            Viaja por las construcciones más extraordinarias que la humanidad
+            ha erguido a lo largo de su historia.
+        </p>
+        <div class="hero-actions">
+            <a href="maravillas.html" class="btn-primary">Explorar Maravillas</a>
+            <a href="#sobre" class="btn-outline">Conocer más</a>
+        </div>
+    </div>
+</section>
 
-    <section class="hero" aria-label="Banner principal">
-        <div class="hero-content">
-            <h2>Las Siete Maravillas del Mundo</h2>
-            <p>Descubre las construcciones más impresionantes creadas por la humanidad</p>
-            <a href="maravillas.html" class="btn" role="button">Explorar Maravillas</a>
+<main role="main">
+
+    <section id="sobre" class="section" aria-label="Introducción">
+        <div class="section-header">
+            <span class="section-tag">Origen e Historia</span>
+            <h2 class="section-title">¿Qué son las <span class="accent">maravillas</span> del mundo?</h2>
+            <div class="section-rule"></div>
+        </div>
+        <div class="intro-grid">
+            <div class="intro-text">
+                <p>Nuestro planeta alberga paisajes e infraestructuras de una belleza extraordinaria. A lo largo de la historia, la humanidad ha levantado construcciones que desafían el tiempo y la razón.</p>
+                <p>La UNESCO ha declarado más de <strong style="color:var(--gold)">900 lugares</strong> como Patrimonio de la Humanidad: monumentos, pinturas, cuevas, sitios arqueológicos y naturales que representan el legado del pasado para las generaciones futuras.</p>
+                <p>Las 7 maravillas del mundo antiguo fueron compiladas por el pintor Maerten van Heemskerck en el siglo XIV. De ellas, <em>únicamente la Gran Pirámide de Giza permanece en pie</em>; las otras seis han desaparecido.</p>
+                <p>A finales del siglo XX surgió la necesidad de renovar esta lista. En <strong style="color:var(--gold)">2007</strong>, más de 100 millones de personas votaron en todo el mundo para elegir las nuevas siete maravillas modernas.</p>
+            </div>
+            <div class="intro-visual">
+                <img src="images/Piramides.jpg" alt="Gran Pirámide de Giza, la única maravilla antigua que perdura" loading="lazy">
+                <div class="intro-visual-label">
+                    <p>Gran Pirámide de Giza — La única que permanece</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <article class="intro" role="region" aria-label="Introducción">
-        <h2>¿Qué son las maravillas del mundo?</h2>
-        <p>
-            Sabemos que nuestro planeta es un lugar en el que encontramos paisajes increíbles y a lo largo de la historia poco a poco se han ido edificando 
-            construcciones que son realmente preciosas.
-
-            Actualmente hay más de 900 lugares arquitectónicos, naturales y culturales que la UNESCO ha declarado como patrimonio de la humanidad y otros como maravillas 
-            del mundo según la New Open World Corporation.
-
-            Es importante conocer la diferencia entre uno y otro. El patrimonio de la humanidad es el legado que recibimos del pasado y que se transmitirá a generaciones futuras, pueden ser monumentos, 
-            pinturas cuevas, sitios arqueológicos, naturales o en peligro de extinción.
-
-            Las 7 maravillas del mundo antiguo fueron seleccionadas por el pintor Maerten van Heemskerck en el siglo XIV, de las cuales sólo la pirámide de Giza siguen en pie, 
-            mientras las otras 6 han desaparecido.
-            A finales del S. XX y a principios del S. XXI surgió la necesidad de establecer nuevas maravillas para que pudieran ser apreciadas, son sitios naturales o edificaciones 
-            impresionantes que fueron sometidas a una votación mundial en 2007. 
-        </p>
-    </article>
-
-    <article class="overview" role="region" aria-label="Características principales">
-        <h2>¿Por qué son especiales?</h2>
-        <p style="text-align: center; margin-bottom: 20px;">Estas obras destacan por:</p>
-        <ul class="skills-list" role="list">
-            <li role="listitem">Importancia histórica y cultural</li>
-            <li role="listitem">Complejidad técnica y construcción</li>
-            <li role="listitem">Impacto duradero en la civilización</li>
-            <li role="listitem">Valor artístico y arquitectónico</li>
-        </ul>
-    </article>
-
-    <article class="overview" role="region" aria-label="Versiones históricas">
-        <h2>Versiones de las maravillas</h2>
-
-        <h3>Mundo antiguo</h3>
-        <div class="cards" role="list">
-            <div class="card" role="listitem">
-                <img src="images/Piramides.jpg" alt="Gran Pirámide de Guiza" loading="lazy">
-                <h4>Gran Pirámide de Guiza</h4>
+    <div class="pillars">
+        <div style="max-width:1240px;margin:0 auto;">
+            <div class="pillars-grid">
+                <div class="pillar fade-up">
+                    <span class="pillar-icon">🏛️</span>
+                    <h3>Valor Histórico</h3>
+                    <p>Cada maravilla es testigo de civilizaciones antiguas y modernas que marcaron el curso de la historia universal.</p>
+                </div>
+                <div class="pillar fade-up">
+                    <span class="pillar-icon">⚙️</span>
+                    <h3>Ingenio Técnico</h3>
+                    <p>Su construcción representó la cúspide del conocimiento de ingeniería y arquitectura de su época.</p>
+                </div>
+                <div class="pillar fade-up">
+                    <span class="pillar-icon">🌍</span>
+                    <h3>Impacto Global</h3>
+                    <p>Su influencia trasciende fronteras y culturas, siendo reconocidas por toda la humanidad como símbolos universales.</p>
+                </div>
+                <div class="pillar fade-up">
+                    <span class="pillar-icon">🎨</span>
+                    <h3>Valor Artístico</h3>
+                    <p>La belleza de su diseño y la perfección de sus proporciones continúan inspirando a artistas y arquitectos hoy en día.</p>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="card" role="listitem">
-                <img src="images/jardines-babilonia-.jpg" alt="Jardines Colgantes de Babilonia" loading="lazy">
-                <h4>Jardines Colgantes de Babilonia</h4>
+    <section class="section" aria-label="Versiones de las maravillas">
+        <div class="section-header">
+            <span class="section-tag">Catálogo</span>
+            <h2 class="section-title">Las dos <span class="accent">eras</span> de las maravillas</h2>
+            <div class="section-rule"></div>
+            <p class="section-sub">Desde las antiguas obras del Mediterráneo hasta las modernas maravillas seleccionadas por el mundo entero.</p>
+        </div>
+
+        <div class="version-block">
+            <div class="version-label"><h3>Mundo Antiguo</h3></div>
+            <div class="cards-grid-ancient">
+                <div class="wonder-card featured fade-up">
+                    <div class="card-img-wrap">
+                        <img class="card-img" src="images/Piramides.jpg" alt="Gran Pirámide de Guiza" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-name">Gran Pirámide de Guiza</div>
+                        <div class="card-tag">Egipto · Única superviviente</div>
+                    </div>
+                </div>
+                <div class="wonder-card featured fade-up">
+                    <div class="card-img-wrap">
+                        <img class="card-img" src="images/jardines-babilonia-.jpg" alt="Jardines Colgantes de Babilonia" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-name">Jardines Colgantes de Babilonia</div>
+                        <div class="card-tag">Irak · Desaparecida</div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <h3 style="margin-top: 40px;">Maravillas modernas</h3>
-        <div class="cards" role="list">
-            <div class="card" role="listitem">
-                <img src="images/machu-picchu.jpg" alt="Machu Picchu" loading="lazy">
-                <h4>Machu Picchu</h4>
-            </div>
-            <div class="card" role="listitem">
-                <img src="images/chichen itza.jpeg" alt="Chichén Itzá" loading="lazy">
-                <h4>Chichén Itzá</h4>
-            </div>
-            <div class="card" role="listitem">
-                <img src="images/Cristo-Redentor.jpg" alt="Cristo Redentor" loading="lazy">
-                <h4>Cristo Redentor</h4>
-            </div>
-            <div class="card" role="listitem">
-                <img src="images/Coliseo-Romano.jpg" alt="Coliseo Romano" loading="lazy">
-                <h4>Coliseo Romano</h4>
-            </div>
-            <div class="card" role="listitem">
-                <img src="images/taj-mahal.jpg" alt="Taj Mahal" loading="lazy">
-                <h4>Taj Mahal</h4>
-            </div>
-            <div class="card" role="listitem">
-                <img src="images/muralla-china.jpg" alt="Gran Muralla China" loading="lazy">
-                <h4>Gran Muralla China</h4>
-            </div>
-            <div class="card" role="listitem">
-                <img src="images/petra.webp" alt="Petra" loading="lazy">
-                <h4>Petra</h4>
+        <div class="version-block">
+            <div class="version-label"><h3>Maravillas Modernas (2007)</h3></div>
+            <div class="cards-grid">
+                <div class="wonder-card fade-up">
+                    <div class="card-img-wrap"><img class="card-img" src="images/machu-picchu.jpg" alt="Machu Picchu" loading="lazy"></div>
+                    <div class="card-body"><div class="card-name">Machu Picchu</div><div class="card-tag">Perú · Inca</div></div>
+                </div>
+                <div class="wonder-card fade-up">
+                    <div class="card-img-wrap"><img class="card-img" src="images/chichen itza.jpeg" alt="Chichén Itzá" loading="lazy"></div>
+                    <div class="card-body"><div class="card-name">Chichén Itzá</div><div class="card-tag">México · Maya</div></div>
+                </div>
+                <div class="wonder-card fade-up">
+                    <div class="card-img-wrap"><img class="card-img" src="images/Cristo-Redentor.jpg" alt="Cristo Redentor" loading="lazy"></div>
+                    <div class="card-body"><div class="card-name">Cristo Redentor</div><div class="card-tag">Brasil · Arte Deco</div></div>
+                </div>
+                <div class="wonder-card fade-up">
+                    <div class="card-img-wrap"><img class="card-img" src="images/Coliseo-Romano.jpg" alt="Coliseo Romano" loading="lazy"></div>
+                    <div class="card-body"><div class="card-name">Coliseo Romano</div><div class="card-tag">Italia · Imperio Romano</div></div>
+                </div>
+                <div class="wonder-card fade-up">
+                    <div class="card-img-wrap"><img class="card-img" src="images/taj-mahal.jpg" alt="Taj Mahal" loading="lazy"></div>
+                    <div class="card-body"><div class="card-name">Taj Mahal</div><div class="card-tag">India · Imperio Mogol</div></div>
+                </div>
+                <div class="wonder-card fade-up">
+                    <div class="card-img-wrap"><img class="card-img" src="images/muralla-china.jpg" alt="Gran Muralla China" loading="lazy"></div>
+                    <div class="card-body"><div class="card-name">Gran Muralla China</div><div class="card-tag">China · Dinastía Qin</div></div>
+                </div>
+                <div class="wonder-card fade-up">
+                    <div class="card-img-wrap"><img class="card-img" src="images/petra.webp" alt="Petra" loading="lazy"></div>
+                    <div class="card-body"><div class="card-name">Petra</div><div class="card-tag">Jordania · Nabateo</div></div>
+                </div>
             </div>
         </div>
-    </article>
+    </section>
 
-    <article class="overview summary" role="region" aria-label="Conclusión">
-        <h2>En resumen</h2>
-        <p>
-            Las maravillas del mundo representan la creatividad, el ingenio y la grandeza de las civilizaciones humanas.
-            Son testimonios de lo que podemos lograr cuando combinamos visión, trabajo dedicado y maestría en la construcción.
-            Cada maravilla cuenta una historia única de ambición, innovación y belleza que trasciende el tiempo.
-        </p>
-        <div class="cta-section" style="text-align: center; margin-top: 30px;">
-            <p><strong>¿Listo para una experiencia extraordinaria?</strong></p>
-            <a href="maravillas.html" class="btn">Explorar en Detalle</a>
+    <div class="summary-band">
+        <div class="summary-inner">
+            <div>
+                <h2>El legado que<br>nos <em>define</em></h2>
+                <p>Las maravillas del mundo representan la creatividad, el ingenio y la grandeza de las civilizaciones humanas. Son testimonios de lo que podemos lograr cuando combinamos visión, trabajo dedicado y maestría en la construcción. Cada maravilla cuenta una historia única de ambición, innovación y belleza que trasciende el tiempo.</p>
+                <a href="maravillas.html" class="btn-primary" style="display:inline-flex;">Explorar en Detalle →</a>
+            </div>
+            <div class="quote-block">
+                <blockquote>"La arquitectura es el testigo insobornable de la historia, porque no se puede hablar de una gran época si no es a través de sus grandes construcciones."</blockquote>
+                <cite>— Octavio Paz</cite>
+            </div>
         </div>
-    </article>
+    </div>
 
 </main>
 
-<footer role="contentinfo" aria-label="Pie de página">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h4>Sobre Nosotros</h4>
-            <p>Dedicados a explorar y compartir la historia, arquitectura y magnificencia de las maravillas del mundo.</p>
+<footer role="contentinfo">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h4>Maravillas del Mundo</h4>
+            <span class="tagline">Proyecto SENATI · 2026</span>
+            <p>Dedicados a explorar y compartir la historia, arquitectura y magnificencia de las construcciones más extraordinarias de la humanidad.</p>
         </div>
-        
-        <div class="footer-section">
-            <h4>Enlaces Rápidos</h4>
-            <ul role="list" style="list-style: none;">
-                <li><a href="index.html" style="color: white; text-decoration: none;">Inicio</a></li>
-                <li><a href="maravillas.html" style="color: white; text-decoration: none;">Maravillas</a></li>
-                <li><a href="animales.html" style="color: white; text-decoration: none;">Fauna</a></li>
-                <li><a href="gastronomia.html" style="color: white; text-decoration: none;">Gastronomía</a></li>
+        <div class="footer-col">
+            <h5>Explorar</h5>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="maravillas.html">Maravillas</a></li>
+                <li><a href="animales.html">Fauna</a></li>
+                <li><a href="gastronomia.html">Gastronomía</a></li>
+                <li><a href="vuelos.html">Vuelos</a></li>
             </ul>
         </div>
-
-        <div class="footer-section">
-            <h4>Contáctanos</h4>
-            <p>Email: info@maravillas.com</p>
+        <div class="footer-col">
+            <h5>Categorías</h5>
+            <ul>
+                <li><a href="#">Mundo Antiguo</a></li>
+                <li><a href="#">Maravillas Modernas</a></li>
+                <li><a href="#">Patrimonio UNESCO</a></li>
+                <li><a href="#">Arquitectura</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Contacto</h5>
+            <p>¿Tienes preguntas o sugerencias?</p>
+            <p style="margin-top:12px; color:var(--gold);">info@maravillas.com</p>
         </div>
     </div>
-    
     <div class="footer-bottom">
-        <p>&copy; 2026 Maravillas del Mundo - Proyecto SENATI.</p>
+        <p>© 2026 <span>Maravillas del Mundo</span> — Proyecto SENATI</p>
+        <p>Diseñado con dedicación y pasión por la historia</p>
     </div>
 </footer>
 
 <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('open');
     });
-
     navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('open');
         });
     });
-</script>
 
+    const faders = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+        });
+    }, { threshold: 0.12 });
+    faders.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
