@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!-- HEADER — SIN CAMBIOS -->
+<!-- HEADER -->
 <header>
     <h1>Las 7 maravillas del mundo</h1>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú">
@@ -28,7 +28,13 @@
 <section class="hero">
     <div class="hero-bg-img"></div>
     <div class="hero-overlay"></div>
-    <div class="plane-trail"></div>
+    
+    <!-- Aviones -->
+    <div class="plane plane-left"></div>
+    <div class="plane plane-right"></div>
+    <div class="plane plane-left-2"></div>
+    <div class="plane plane-right-2"></div>
+    
     <div class="hero-content">
         <div class="hero-eyebrow">✈ Rutas desde Lima, Perú</div>
         <h1 class="hero-title">
@@ -74,16 +80,37 @@
     </div>
 </div>
 
-<!-- QUICK NAV DESTINOS -->
+<!-- QUICK NAV -->
 <nav class="quick-nav" aria-label="Navegación rápida destinos">
     <div class="quick-nav-inner">
-        <a href="#peru"     class="nav-pill"><span class="pill-flag">🇵🇪</span> Machu Picchu</a>
-        <a href="#mexico"   class="nav-pill"><span class="pill-flag">🇲🇽</span> Chichén Itzá</a>
-        <a href="#brasil"   class="nav-pill"><span class="pill-flag">🇧🇷</span> Cristo Redentor</a>
-        <a href="#italia"   class="nav-pill"><span class="pill-flag">🇮🇹</span> Coliseo Romano</a>
-        <a href="#india"    class="nav-pill"><span class="pill-flag">🇮🇳</span> Taj Mahal</a>
-        <a href="#jordania" class="nav-pill"><span class="pill-flag">🇯🇴</span> Petra</a>
-        <a href="#china"    class="nav-pill"><span class="pill-flag">🇨🇳</span> Gran Muralla</a>
+        <a href="#peru" class="dest-link">
+            <span class="dest-flag">🇵🇪</span>
+            <span class="dest-name">Machu Picchu</span>
+        </a>
+        <a href="#mexico" class="dest-link">
+            <span class="dest-flag">🇲🇽</span>
+            <span class="dest-name">Chichén Itzá</span>
+        </a>
+        <a href="#brasil" class="dest-link">
+            <span class="dest-flag">🇧🇷</span>
+            <span class="dest-name">Cristo Redentor</span>
+        </a>
+        <a href="#italia" class="dest-link">
+            <span class="dest-flag">🇮🇹</span>
+            <span class="dest-name">Coliseo Romano</span>
+        </a>
+        <a href="#india" class="dest-link">
+            <span class="dest-flag">🇮🇳</span>
+            <span class="dest-name">Taj Mahal</span>
+        </a>
+        <a href="#jordania" class="dest-link">
+            <span class="dest-flag">🇯🇴</span>
+            <span class="dest-name">Petra</span>
+        </a>
+        <a href="#china" class="dest-link">
+            <span class="dest-flag">🇨🇳</span>
+            <span class="dest-name">Gran Muralla</span>
+        </a>
     </div>
 </nav>
 
@@ -733,6 +760,14 @@
 
 </main>
 
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-brand">✦ Mundo Maravilla</p>
+        <p class="footer-copy">© 2026 Maravillas del Mundo - Proyecto SENATI.</p>
+    </div>
+</footer>
+
 <script>
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
@@ -744,13 +779,13 @@ if (hamburger && navMenu) {
 }
 
 const sections = document.querySelectorAll('.flight-section[id]');
-const pills = document.querySelectorAll('.nav-pill');
+const links = document.querySelectorAll('.dest-link');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            pills.forEach(p => { p.classList.remove('active'); });
-            const active = document.querySelector(`.nav-pill[href="#${entry.target.id}"]`);
+            links.forEach(l => { l.classList.remove('active'); });
+            const active = document.querySelector(`.dest-link[href="#${entry.target.id}"]`);
             if (active) active.classList.add('active');
         }
     });
